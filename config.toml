@@ -1,0 +1,50 @@
+baseURL = "http://localhost:1313"
+theme = "nightfall"
+title = "Aiman Zafry"
+languageCode = "en-us"
+
+[menu]
+  [[menu.header]]
+    name = "blog"
+    weight = 0
+    url = "blog"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "about"
+
+[params]
+user = "hello"
+hostname = "gohugo.io"
+  [params.author]
+    name = "Aiman Alzafry"  # Website and RSS feed author
+    email = "Aiman.Zafry@outlook.com"  # RSS feed email address
+
+
+readingTime = false  # Show reading time on post page
+published = false  # Show published data on post page
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/gohugoio"
+target = "_blank"
+aria = "GitHub Profile"
+
+[[params.social]]
+key = 1
+name = "twitter"
+url = "https://www.example.com"
+aria = "Twitter Profile"
+
+[[params.social]]
+key = 2
+name = "linkedin"
+url = "https://www.example.com"
+aria = "LinkedIn Profile"
+
+[[params.social]]
+key = 3
+name = "email"
+url = "mailto:email@example.com"
+aria = "My e-Mail Address"
