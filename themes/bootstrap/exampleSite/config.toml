@@ -1,13 +1,14 @@
 baseurl = "https://example.com/"
 title = "Bootstrap demo"
-theme = "bootstrap"
-
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
 # Pagination
 paginate = 3
 paginatePath = "page"
+
+# Theme to use
+theme = "hugo-bootstrap-5"
 
 [taxonomies]
   tag = "tags"
@@ -72,20 +73,12 @@ paginatePath = "page"
 [permalinks]
   post = "/:year/:month/:title/"
 
-
-[menu]
-  [[menu.header]]
-    name = "blog"
-    weight = 0
-    url = "blog"
-  [[menu.header]]
-    name = "about"
-    weight = 1
-    url = "about"
-
 [params]
   # Main sections (currently used for the recent posts in the sidebar)
   mainSections = ["post"]
+
+  # Default author
+  author = "John Doe"
 
   # Date format (default: Jan 2, 2006)
   # date_format = "Jan 2, 2006"
@@ -110,38 +103,3 @@ paginatePath = "page"
   [params.footer]
     # Color scheme for the footer (default: "light")
     # colorScheme = "dark"
-
-user = "hello"
-hostname = "gohugo.io"
-  [params.author]
-    name = "Hugo Nightfall"  # Website and RSS feed author
-    email = "email@example.com"  # RSS feed email address
-
-
-readingTime = true  # Show reading time on post page
-published = true  # Show published data on post page
-
-[[params.social]]
-key = 0
-name = "github"
-url = "https://github.com/gohugoio"
-target = "_blank"
-aria = "GitHub Profile"
-
-[[params.social]]
-key = 1
-name = "twitter"
-url = "https://www.example.com"
-aria = "Twitter Profile"
-
-[[params.social]]
-key = 2
-name = "linkedin"
-url = "https://www.example.com"
-aria = "LinkedIn Profile"
-
-[[params.social]]
-key = 3
-name = "email"
-url = "mailto:email@example.com"
-aria = "My e-Mail Address"
