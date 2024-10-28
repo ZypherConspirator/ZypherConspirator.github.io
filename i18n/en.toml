@@ -23,6 +23,9 @@
 [tags]
   other = "tags"
 
+[image]
+  other = "image"
+
 [categories]
   other = "categories"
 

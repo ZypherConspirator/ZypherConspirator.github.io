@@ -1,125 +1,34 @@
-baseurl = "https://example.com/"
-title = "Bootstrap demo"
-theme = "bootstrap"
+baseurl = "http://localhost:1313"
+title = "Aiman Zafry"
 
-languageCode = "en-us"
-defaultContentLanguage = "en"
-
-# Pagination
-paginate = 3
-paginatePath = "page"
-
-[taxonomies]
-  tag = "tags"
-  category = "categories"
-
-# Google analytics
-# googleAnalytics = ""
-
-[languages.en]
-  languageName = "English"
-
-  # Replace the default footer message with a localized message
-  # copyright = "Hugo template made with ❤ by Xzya"
-
-  [[languages.en.menu.main]]
-    url = "/"
-    name = "Home"
-    weight = 1
-  [[languages.en.menu.main]]
-    url = "/about/"
-    name = "About"
-    weight = 2
-  [[languages.en.menu.main]]
-    url = "/contact/"
-    name = "Contact"
-    weight = 3
-
-[languages.es]
-  languageName = "Español"
-
-  [[languages.es.menu.main]]
-    url = "/es/"
-    name = "Casa"
-    weight = 1
-  [[languages.es.menu.main]]
-    url = "/about/"
-    name = "Acerca de"
-    weight = 2
-  [[languages.es.menu.main]]
-    url = "/contact/"
-    name = "Contacto"
-    weight = 3
-
-[languages.de]
-  languageName = "Deutsch"
-
-  [[languages.de.menu.main]]
-    url = "/de/"
-    name = "Start"
-    weight = 1
-  [[languages.de.menu.main]]
-    url = "/about/"
-    name = "Über uns"
-    weight = 2
-  [[languages.de.menu.main]]
-    url = "/contact/"
-    name = "Kontakt"
-    weight = 3
-
-# Links format
-
-[permalinks]
-  post = "/:year/:month/:title/"
-
-
-[menu]
+[menus]
   [[menu.header]]
     name = "blog"
     weight = 0
-    url = "blog"
+    url = "post"
   [[menu.header]]
     name = "about"
     weight = 1
     url = "about"
 
 [params]
-  # Main sections (currently used for the recent posts in the sidebar)
-  mainSections = ["post"]
-
-  # Date format (default: Jan 2, 2006)
-  # date_format = "Jan 2, 2006"
-
-  # Display post summaries instead of content in list templates (default: true)
-  # truncate = false
-
-  [params.sidebar]
-    # Whether to show the recent posts or not (default: true)
-    # showRecent = false
-
-    # Whether to show the taxonomies or not (default: true)
-    # showTaxonomy = false
-
-    # How many posts to show on the sidebar (Default: 5)
-    # num_recent_posts = 5
-
-  [params.header]
-    # Color scheme for the header (default: "light")
-    # colorScheme = "dark"
-
-  [params.footer]
-    # Color scheme for the footer (default: "light")
-    # colorScheme = "dark"
-
 user = "hello"
-hostname = "gohugo.io"
   [params.author]
-    name = "Hugo Nightfall"  # Website and RSS feed author
-    email = "email@example.com"  # RSS feed email address
+    name = "Aiman Alzafry"  # Website and RSS feed author
+    job = "3D Generalist / Scriptwriter"
+    email = "aiman.zafry@outlook.com"  # RSS feed email address
 
+[[params.highlight]]
+key = 0
+page = "emoji-support"
 
-readingTime = true  # Show reading time on post page
-published = true  # Show published data on post page
+[[params.highlight]]
+key = 1
+page = "migrate-from-jekyll"
+
+[[params.highlight]]
+key = 2
+page = "rich-content"
 
 [[params.social]]
 key = 0
@@ -130,18 +39,13 @@ aria = "GitHub Profile"
 
 [[params.social]]
 key = 1
-name = "twitter"
-url = "https://www.example.com"
-aria = "Twitter Profile"
-
-[[params.social]]
-key = 2
 name = "linkedin"
 url = "https://www.example.com"
 aria = "LinkedIn Profile"
 
 [[params.social]]
-key = 3
+key = 2
 name = "email"
 url = "mailto:email@example.com"
 aria = "My e-Mail Address"
+

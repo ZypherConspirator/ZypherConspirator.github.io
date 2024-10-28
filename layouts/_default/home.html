@@ -1,0 +1,21 @@
+{{ define "title"}}
+Home | {{ .Site.Params.author.name }}
+{{ end }}
+
+{{ define "main" }}
+<main class="position-absolute top-50 start-50 translate-middle mx-auto">
+        <div class="align-self-center container">
+            <h1 class="row justify-content-center">{{ .Site.Params.author.name }}</h1>
+            <h5 class="row justify-content-center">{{ .Site.Params.author.job }}</h1>
+        </div>
+        {{ if isset .Site.Params "social" }}
+        <div class="container justify-content-center py-1 ">
+            <ul class="nav justify-content-center">
+                {{ range sort .Site.Params.social "key"}}
+                    <a href="{{ .url | safeURL }}" type="button" class="btn btn-secondary nav-item mx-2 postListLink" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+</main>
+{{ end }}

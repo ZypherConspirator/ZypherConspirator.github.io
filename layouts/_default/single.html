@@ -1,0 +1,12 @@
+{{ define "title"}}
+{{ .Title }} | {{ .Site.Params.author.name }}
+{{ end }}
+
+{{ define "main" }}
+<section class="container py-5">
+    <h1>{{ .Title }}</h1>
+    <div>
+        {{ .Content }}
+    </div>
+</section>
+{{ end }}

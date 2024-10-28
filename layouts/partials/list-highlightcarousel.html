@@ -1,0 +1,39 @@
+{{ if isset .Site.Params "highlight" }}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+        {{ range $index, $highlight := sort .Site.Params.highlight "key" }}
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $index }}" {{ if eq $index 0 }}class="active"{{ end }} aria-label="Slide {{ add $index 1 }}"></button>
+        {{ end }}
+    </div>
+
+    <!-- Carousel Inner -->
+    <div class="carousel-inner">
+        {{ range $index, $highlight := sort .Site.Params.highlight "key" }}
+            {{ $post := site.GetPage .page }}
+            {{ with $post }}
+            <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+                <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:500px;" class="d-block w-100" alt="{{ .Title }}">
+                <div class="carousel-caption d-none d-md-block bg-dark">
+                    <h5>{{ .Title }}</h5>
+                    <p>{{ .Summary }}</p>
+                </div>
+            </div>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+{{ end }}
+
+

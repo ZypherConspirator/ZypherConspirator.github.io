@@ -8,10 +8,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+}s
 
 a {
   @include v.primary-color;
+  text-decoration: none;
 }
 
 pre code {
@@ -37,3 +38,4 @@ code {
 @-ms-viewport{
   width: device-width;
 }
+

@@ -1,22 +1,15 @@
-<header class="headerWrapper">
-    <div class="header">
-        <div>
-            <a class="terminal" href="{{ .Site.BaseURL }}">
-                <span>{{ .Site.Params.user }}@{{ .Site.Params.hostname }} ~ $</span>
-            </a>
+<header class="header p-1 showHeaderOnTop">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="{{ .Site.BaseURL }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+            <span class="fs-4">{{ .Site.Params.user }}</span>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+            {{ range .Site.Menus.header }}
+            <li><a href="{{ .URL | absURL }}" class="nav-link px-2 text-secondary"title="{{ .Title }}">{{- .Name -}}</a></li>
+            {{ end }}
+        </ul>
         </div>
-        <input class="side-menu" type="checkbox" id="side-menu">
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <nav class="headerLinks">
-            <ul>
-                {{ range .Site.Menus.header }}
-                <li>
-                    <a href="{{ .URL | absURL }}" title="{{ .Title }}" >
-                        ~/{{- .Name -}}
-                    </a>
-                </li>
-                {{ end }}
-            </ul>
-        </nav>
     </div>
 </header>
