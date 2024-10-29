@@ -9,10 +9,12 @@ comedic short based on a true ghost story in UNIMAS.
 {{< rawhtml >}}
 <div class="py-2">
 {{< /rawhtml >}}
+
 {{< youtube kRjExZfpbsc >}}
+
 {{< rawhtml >}}
 </div>
-{{ < /rawhtml >}}
+{{< /rawhtml >}}
 ## Summary
 
 released on : 2024
