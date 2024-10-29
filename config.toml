@@ -3,7 +3,7 @@ title = "Aiman Zafry"
 
 [module]
   [module.hugoVersion]
-    min = "0.114.0"
+    min = "0.134.2"
 
 [params.style]
 color = 'red'
