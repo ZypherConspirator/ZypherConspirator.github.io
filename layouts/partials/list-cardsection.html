@@ -7,7 +7,7 @@
             <div class="row g-0 border rounded overflow-hidden shadow-sm d-flex flex-fill">
             <a class="postListLink" href="{{ .Permalink }}">
                 <div class="col-auto d-none d-lg-block">
-                    <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}" style="object-fit: cover; max-height: 310px;">
+                    <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" style="object-fit: cover; max-height: 310px;">
                 </div>
                 <div class="card-body ">
                     {{ if .Description}}

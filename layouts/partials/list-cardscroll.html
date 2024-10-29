@@ -7,7 +7,7 @@
                     <a class="postListLink" href="{{ .Permalink }}">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col-auto d-none d-lg-block">
-                            <img class="" src="{{ .Params.image }}" alt="{{ .Title }}" style="object-fit: cover;" width="200" height="150">
+                            <img class="" src="{{ .Params.image }}" alt="{{ .Title }}" loading=”lazy” style="object-fit: cover;" width="200" height="150">
                         </div>
                         <div class="col p-4 d-flex flex-column position-static">
                             {{ if .Description}}

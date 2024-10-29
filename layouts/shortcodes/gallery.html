@@ -4,7 +4,7 @@
             <div id="image" class="gal">
                 {{ if $.Page.Params.gallery }}
                     {{ range $.Page.Params.gallery }}
-                        <img src="{{ . }}" alt="Gallery image">
+                        <img src="{{ . }}">
                     {{ end }}
                 {{ else }}
                     <p>No images available in the gallery.</p>
