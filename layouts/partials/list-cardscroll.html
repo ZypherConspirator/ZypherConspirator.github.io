@@ -1,0 +1,26 @@
+<section class="py-2">
+    <div class="container">
+        <h2 class="row justify-content-center">{{ .Title }}</h2>
+        <div class="row g-2 justify-content-center px-3 px-md-5">
+            {{ range .Pages }}
+                <div class="col-md-6 justify-content-center">
+                    <a class="postListLink" href="{{ .Permalink }}">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="" src="{{ .Params.image }}" alt="{{ .Title }}" style="object-fit: cover;" width="200" height="150">
+                        </div>
+                        <div class="col p-4 d-flex flex-column position-static">
+                            {{ if .Description}}
+                            <strong class="d-inline-block mb-2 text-primary-emphasis">{{.Description}}</strong>
+                            {{ end }}
+                            <h4 class="mb-0">{{ .Title }}</h4>
+                            <p class="card-text mb-auto">{{ .Summary | truncate 100 | safeHTML }}</p>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+<div class="py-1"></div>

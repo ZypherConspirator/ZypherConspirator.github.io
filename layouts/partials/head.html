@@ -21,7 +21,7 @@
   "vars" $vars
 }}
 
-{{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
+{{ $style := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 
 {{ partial "custom-head.html" . }}

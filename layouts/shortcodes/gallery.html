@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <div id="image" class="gal">
+                {{ if $.Page.Params.gallery }}
+                    {{ range $.Page.Params.gallery }}
+                        <img src="{{ . }}" alt="Gallery image">
+                    {{ end }}
+                {{ else }}
+                    <p>No images available in the gallery.</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styles -->
+<style>
+.gal {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}	
+
+.gal img { 
+    width: 100%; 
+    padding: 7px 0;
+}
+
+.modal-img {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+    .gal {
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
+    }
+}
+</style>

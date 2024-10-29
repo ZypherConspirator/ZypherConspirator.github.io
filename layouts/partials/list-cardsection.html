@@ -1,0 +1,27 @@
+<section class="py-2">
+    <div class="container">
+        <h2 class="row justify-content-center">{{ .Title }}</h2>
+        <div class="row g-2 justify-content-center px-3 px-md-5 ">
+        {{ range .Pages }}
+        <div class="col-md-6 d-flex">
+            <div class="row g-0 border rounded overflow-hidden shadow-sm d-flex flex-fill">
+            <a class="postListLink" href="{{ .Permalink }}">
+                <div class="col-auto d-none d-lg-block">
+                    <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}" style="object-fit: cover; max-height: 310px;">
+                </div>
+                <div class="card-body ">
+                    {{ if .Description}}
+                    <strong class="d-inline-block mb-2 text-primary-emphasis">{{.Description}}</strong>
+                    {{ end }}
+                    <h5 class="card-title">{{ .Title }}</h5>
+                    <p class="card-text">{{ .Summary | truncate 100 | safeHTML }}</p>
+                </div>
+            </a>
+            </div>
+        </div>
+        {{ end }}
+        </div>
+    </div>
+</section>
+<div class="py-1"></div>
+

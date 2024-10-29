@@ -14,11 +14,16 @@
             {{ $post := site.GetPage .page }}
             {{ with $post }}
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
-                <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:500px;" class="d-block w-100" alt="{{ .Title }}">
-                <div class="carousel-caption d-none d-md-block bg-dark">
+                <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:500px;" class="d-block w-100 " alt="{{ .Title }}">
+                <span class="p-2 carousel-caption d-none d-md-block ">
+                    <a class="postListLink" href="{{ .Permalink }}">
                     <h5>{{ .Title }}</h5>
-                    <p>{{ .Summary }}</p>
-                </div>
+                    {{ if .Description}}
+                    <p>{{.Description}}</p>
+                    {{ end }}
+                    <p>{{ .Summary | truncate 80 | safeHTML }}</p>
+                </a>
+            </span>
             </div>
             {{ end }}
         {{ end }}
@@ -35,5 +40,3 @@
     </button>
 </div>
 {{ end }}
-
-

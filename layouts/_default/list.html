@@ -3,35 +3,13 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="container py-5">
-        <h2 class="row justify-content-center">{{ .Title }}</h2>
+    <section class="container py-3">
+        <h2 class="row justify-content-center py-2">Highlights</h2>
         <div class="row g-2 justify-content-center px-3 px-md-5">
         {{ partial "list-highlightcarousel.html" . }}
         </div>
     </section>
-    {{ range .Sections.ByWeight }}
-    <section class="py-1">
-        <div class="container">
-            <h2 class="row justify-content-center">{{ .Title }}</h2>
-            <div class="row g-2 justify-content-center px-3 px-md-5">
-                {{ range .Pages }}
-                <div class="col-lg-4 col-md-6 my-3 z-3" >
-                    <a class="postListLink" href="{{ .Permalink }}">
-                    <div class="card my-3 h-100" title="{{ .Title }}">
-                        <div class="card-head">
-                            <img class="card-img-top" src="{{ .Params.image }}" alt="{{ .Title }}">
-                        </div>
-                        <div class="card-body bg-transparent p-3">
-                            <h5 class="card-title bg-transparent mt-1" >{{ .Title }}</h5>
-                            <div class="card-text bg-transparent secondary-font"> {{ .Summary | truncate 100 | safeHTML }}</div>
-                        </div>
-                    </div>
-                </a>
-                </div>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-    <div class="py-1"></div>
-    {{ end }}
+    {{ partial "list-cardsection.html" ($.Site.GetPage "section" "Anim") }}
+
+    {{ partial "list-cardscroll.html" ($.Site.GetPage "section" "proj") }}
 {{ end }}

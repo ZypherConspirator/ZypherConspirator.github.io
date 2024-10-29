@@ -1,6 +1,13 @@
 baseurl = "http://localhost:1313"
 title = "Aiman Zafry"
 
+[module]
+  [module.hugoVersion]
+    min = "0.114.0"
+
+[params.style]
+color = 'red'
+
 [menus]
   [[menu.header]]
     name = "blog"
@@ -15,37 +22,37 @@ title = "Aiman Zafry"
 user = "hello"
   [params.author]
     name = "Aiman Alzafry"  # Website and RSS feed author
-    job = "3D Generalist / Scriptwriter"
+    job = "3D Generalist"
     email = "aiman.zafry@outlook.com"  # RSS feed email address
 
 [[params.highlight]]
 key = 0
-page = "emoji-support"
+page = "Precipes"
 
 [[params.highlight]]
 key = 1
-page = "migrate-from-jekyll"
+page = "ScrewUp"
 
 [[params.highlight]]
 key = 2
-page = "rich-content"
+page = "WarHammer"
 
 [[params.social]]
 key = 0
-name = "github"
-url = "https://github.com/gohugoio"
+name = "Github"
+url = "https://github.com/azulconspirator"
 target = "_blank"
 aria = "GitHub Profile"
 
 [[params.social]]
-key = 1
-name = "linkedin"
-url = "https://www.example.com"
-aria = "LinkedIn Profile"
+key = 2
+name = "Instagram"
+url = "https://www.instagram.com/acelz_artistry/"
+aria = "Instagram"
 
 [[params.social]]
 key = 2
-name = "email"
-url = "mailto:email@example.com"
+name = "Email"
+url = "mailto:aiman.zafry@outlook.com"
 aria = "My e-Mail Address"
 
