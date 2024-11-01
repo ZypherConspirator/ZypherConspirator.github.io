@@ -10,13 +10,14 @@ body {
   min-height: 100vh;
 }
 
-a, a:active, span {
+a, span {
   text-decoration: none;
   @include v.primary-color;
 }
 
-a:hover {
-  color: v.$white;
+a:hover, a:active {
+	background: v.$coloryellow;
+  	color: v.$white;
 }
 
 pre code {
@@ -89,4 +90,19 @@ code {
 	@media print {
 		.title, .with { color: #000 }
 	}
+}
+
+.carousel-item > .pickgradient 
+{
+  mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 70%);
+}
+
+.carousel-item > span > a > p
+{
+	text-shadow: 2px 2px 4px #000000;
+}
+
+.gal > img:hover
+{
+	transform: scale(1.1);
 }

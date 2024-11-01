@@ -11,24 +11,24 @@ title = "Aiman Zafry"
   [[menu.header]]
     name = "Animations"
     weight = 1
-    Img = ""
-    url = "post"
+    params = { Img = "/img/cat/Reel.png" }
+    url = "anim"
   [[menu.header]]
     name = "Projects"
     weight = 5
-    Img = ""
-    url = "about"
+    params = { Img = "/img/cat/applevector.png" }
+    url = "proj"
   [[menu.header]]
     name = "Notes"
     weight = 10
-    Img = ""
-    url = "about"
+    params = { Img = "/img/cat/book.png" }
+    url = "notes"
 
 [params]
 user = "hello"
   [params.author]
     name = "Aiman Alzafry"  # Website and RSS feed author
-    job = "3D Generalist"
+    job = "3D Artist"
     email = "aiman.zafry@outlook.com"  # RSS feed email address
 
 [[params.highlight]]

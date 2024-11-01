@@ -1,0 +1,7 @@
+{{ define "title"}}
+{{ .Title }} | {{ .Site.Params.author.name }}
+{{ end }}
+
+{{ define "main" }}
+    {{ partial "list-cardscroll.html" ($.Site.GetPage "section" "proj") }}
+{{ end }}

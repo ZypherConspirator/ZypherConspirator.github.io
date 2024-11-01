@@ -1,7 +1,7 @@
 ---
 title: Warhammer 40 Skins
 description: Risk Of Rain 2 Mod
-image: https://placehold.co/600x400/EEE/31343C
+image: https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ16dpMdLS6EPhHK?embed=1
 ---
 <!--more-->
 ---
@@ -30,5 +30,8 @@ after all that, we move to texturing, usually i put some vector paint first as i
 then to unity. its compiled by utilizing a skinbuilder made by @kingenderbrine & @runefox on the Risk of Rain 2 Modding Discord. it simply the process of making it workable but the coding isnt that hard to figure out if it were to come down to it.
 
 then lastly trouble shooting, usually u have the process of figuring out the scaling of the model to look well in game.
+
+![a](https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ16dpMdLS6EPhHK?embed=1)
+{{< gif "https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ6P_v-5tIovUiKD" >}}
 
 ---
