@@ -5,6 +5,7 @@
 # Generated files by hugo
 /public/
 /themes/
+/themes&/
 /resources/_gen/
 /assets/jsconfig.json
 hugo_stats.json
