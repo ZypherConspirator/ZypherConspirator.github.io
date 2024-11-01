@@ -3,19 +3,45 @@ Home | {{ .Site.Params.author.name }}
 {{ end }}
 
 {{ define "main" }}
-<main class="position-absolute top-50 start-50 translate-middle mx-auto">
-        <div class="align-self-center container">
-            <h1 class="row justify-content-center">{{ .Site.Params.author.name }}</h1>
-            <h5 class="row justify-content-center">-- {{ .Site.Params.author.job }} --</h1>
+<div class="pt-5">
+
+        <div class="pb-5">
+            <div class="align-self-center container">
+                <h1 class="row justify-content-center">{{ .Site.Params.author.name }}</h1>
+                <h5 class="row justify-content-center">-- {{ .Site.Params.author.job }} --</h1>
+            </div>
+            {{ if isset .Site.Params "social" }}
+            <div class="container justify-content-center py-1 ">
+                <ul class="nav justify-content-center">
+                    {{ range sort .Site.Params.social "key"}}
+                        <a href="{{ .url | safeURL }}" type="button" class="btn btn-secondary nav-item mx-2 postListLink" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
+                            <i class="{{ .falogo }}"></i> {{ .name }}
+                        </a>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
         </div>
-        {{ if isset .Site.Params "social" }}
-        <div class="container justify-content-center py-1 ">
-            <ul class="nav justify-content-center">
-                {{ range sort .Site.Params.social "key"}}
-                    <a href="{{ .url | safeURL }}" type="button" class="btn btn-secondary nav-item mx-2 postListLink" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>{{ .name }}</a>
+        <div class="pb-5">
+        {{ partial "list-highlightcarousel.html" . }}
+        </div>
+        <div class="fluid-container">
+            <div class="row justify-content-center">
+
+                {{ range .Site.Menus.header }}
+                <div class="col-3 d-flex flex-column">
+                    <div class="card">
+                        <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
+                        <img src="{{ .Params.Img }}" class="card-img-top" alt="{{ .Name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ .Name }}</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
                 {{ end }}
-            </ul>
+                
+            </div>
         </div>
-        {{ end }}
-</main>
+</div>
 {{ end }}

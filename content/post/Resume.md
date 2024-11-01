@@ -1,5 +1,5 @@
 ---
-title: Migrate to Hugo from Jekyll
+title: Resume
 image: /images/MadVeteranPic/MulT.png
 ---
 

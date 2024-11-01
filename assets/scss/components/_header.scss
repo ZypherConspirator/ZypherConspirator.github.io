@@ -1,7 +1,7 @@
 @use "../utils/variables" as v;
 
 .header {
-  background-color: v.$backgroundDarker;
+  border-bottom: 2px solid v.$white;
 }
 
 .headerWrapper {

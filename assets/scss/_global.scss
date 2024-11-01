@@ -8,11 +8,15 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}s
+}
 
-a {
-  @include v.primary-color;
+a, a:active, span {
   text-decoration: none;
+  @include v.primary-color;
+}
+
+a:hover {
+  color: v.$white;
 }
 
 pre code {
@@ -39,3 +43,50 @@ code {
   width: device-width;
 }
 
+.iconplus {
+	margin-bottom: 10px;
+	div {
+		margin: 0 4%;
+		padding: 0;
+		aspect-ratio: 1;
+		box-shadow: inset 0px 0px v.$coloryellow, inset 0px 0px v.$coloryellow;
+		transition-property: box-shadow;
+		transition-duration: 0.1s;
+		display: flex;
+		align-items: flex-start;
+		background-size: cover;
+		user-select: none;
+		.corner {
+			display: none;
+			user-select: none;
+			font-size: 12px;
+			background: v.$coloryellow;
+			color: v.$backgroundDark;
+			margin: 0;
+			padding: 0 4%;
+		}
+	}
+	.title, .with {
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		display: block;
+	}
+	.with {
+		color: v.$coloryellow;
+	}
+	&, &:visited, &:hover, &:active, &:focus {
+		text-decoration: none;
+		background: none;
+		color: v.$white;
+	}
+	&:hover, &:active {
+		div {
+			box-shadow: inset 4px 4px v.$coloryellow, inset -4px -4px v.$coloryellow;
+			.corner { display: inline-block }
+		}
+	}
+	@media print {
+		.title, .with { color: #000 }
+	}
+}

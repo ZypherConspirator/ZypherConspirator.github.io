@@ -1,15 +1,7 @@
-<header class="header p-1 showHeaderOnTop">
+<header class="header p-1 mt-4 showHeaderOnTop">
     <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="{{ .Site.BaseURL }}" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-            <span class="fs-4">{{ .Site.Params.user }}</span>
-        </a>
-
-        <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
-            {{ range .Site.Menus.header }}
-            <li><a href="{{ .URL | absURL }}" class="nav-link px-2 text-secondary"title="{{ .Title }}">{{- .Name -}}</a></li>
-            {{ end }}
-        </ul>
-        </div>
+        <div>
+            <a href="/" class="">AceAlz</a><span>{{ replace .RelPermalink "/" " / "}}</span>
+          </div>
     </div>
 </header>

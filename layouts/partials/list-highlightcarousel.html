@@ -1,5 +1,5 @@
 {{ if isset .Site.Params "highlight" }}
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide p-0" data-bs-ride="carousel">
     
     <!-- Carousel Indicators -->
     <div class="carousel-indicators">
@@ -14,7 +14,7 @@
             {{ $post := site.GetPage .page }}
             {{ with $post }}
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
-                <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:500px;" class="d-block w-100 " alt="{{ .Title }}">
+                <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" class="d-block w-100 " alt="{{ .Title }}">
                 <span class="p-2 carousel-caption d-none d-md-block ">
                     <a class="postListLink" href="{{ .Permalink }}">
                     <h5>{{ .Title }}</h5>

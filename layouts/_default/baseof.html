@@ -25,14 +25,15 @@
     {{ partial "head.html" . }}
 
 </head>
-    {{ partial "header.html" . }}
     <body class ="d-flex flex-column h-100">
-            
-            
-                    {{ block "main" . }}
-                    {{ end }}
-            {{ partial "footer.html" . }}
-
+    <div class="container" style="max-width:740px">
+    {{ if not (.Eq (site.GetPage "home")) }}
+        {{ partial "header.html" . }}
+    {{ end }}
+        {{ block "main" . }}
+        {{ end }}
+    {{ partial "footer.html" . }}
+    </div>
         <!-- Bootstrap and Popper -->
         <script
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"

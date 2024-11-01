@@ -9,12 +9,19 @@ title = "Aiman Zafry"
 
 [menus]
   [[menu.header]]
-    name = "blog"
-    weight = 0
+    name = "Animations"
+    weight = 1
+    Img = ""
     url = "post"
   [[menu.header]]
-    name = "about"
-    weight = 1
+    name = "Projects"
+    weight = 5
+    Img = ""
+    url = "about"
+  [[menu.header]]
+    name = "Notes"
+    weight = 10
+    Img = ""
     url = "about"
 
 [params]
@@ -42,16 +49,19 @@ name = "Github"
 url = "https://github.com/azulconspirator"
 target = "_blank"
 aria = "GitHub Profile"
+falogo= "fa-brands fa-github"
 
 [[params.social]]
 key = 2
 name = "Instagram"
 url = "https://www.instagram.com/acelz_artistry/"
 aria = "Instagram"
+falogo= "fa-brands fa-instagram"
 
 [[params.social]]
 key = 2
 name = "Email"
 url = "mailto:aiman.zafry@outlook.com"
 aria = "My e-Mail Address"
+falogo= "fa-regular fa-envelope"
 
