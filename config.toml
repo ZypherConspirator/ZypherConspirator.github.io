@@ -11,7 +11,7 @@ title = "Aiman Zafry"
   [[menu.header]]
     name = "Animations"
     weight = 1
-    params = { Img = "/img/cat/Reel.png" }
+    params = { Img = "/img/cat/reel.png" }
     url = "anim"
   [[menu.header]]
     name = "Projects"

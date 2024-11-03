@@ -19,7 +19,7 @@
   padding: var(--#{$prefix}alert-padding-y) var(--#{$prefix}alert-padding-x);
   margin-bottom: var(--#{$prefix}alert-margin-bottom);
   color: var(--#{$prefix}alert-color);
-  background-color: var(--#{$prefix}alert-bg);
+
   border: var(--#{$prefix}alert-border);
   @include border-radius(var(--#{$prefix}alert-border-radius));
 }

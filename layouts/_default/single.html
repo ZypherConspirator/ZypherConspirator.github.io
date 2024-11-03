@@ -3,10 +3,18 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="container py-5">
-    <h1>{{ .Title }}</h1>
-    <div>
-        {{ .Content }}
-    </div>
+    <section class="container">
+        
+            <div class="alert my-2 p-2" role="alert" style="border: 2px solid #ffff;">
+                <b>{{ .Title }}</b>
+                {{if (compare.Eq (replace .Parent "Page" "") "(/notes)") }}
+                <br>
+                {{ .PublishDate | time.Format ":date_medium" }}
+                {{ end }}
+            </div>
+
+        <div style="text-align: justify;">
+            {{ .Content }}
+        </div>
     </section>
 {{ end }}

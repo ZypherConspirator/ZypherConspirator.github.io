@@ -22,19 +22,19 @@ Home | {{ .Site.Params.author.name }}
             </div>
             {{ end }}
         </div>
-        <div class="pb-5">
+        <div class="pb-3">
         {{ partial "list-highlightcarousel.html" . }}
         </div>
         <div class="fluid-container">
             <div class="row justify-content-center mb-4">
 
                 {{ range .Site.Menus.header }}
-                <div class="col-3 d-flex flex-column">
+                <div class="col-4 d-flex flex-column">
                     <div class="card">
                         <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
                         <img src="{{ .Params.Img }}" class="card-img-top" alt="{{ .Name }}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ .Name }}</h5>
+                        <div class="">
+                            <h5 class="card-title text-center">{{ .Name }}</h5>
                         </div>
                         </a>
                     </div>
