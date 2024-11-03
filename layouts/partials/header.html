@@ -1,7 +1,17 @@
 <header class="header p-1 mt-4 showHeaderOnTop">
     <div class="container">
-        <div>
-            <a href="/" class="">AceAlz</a><span>{{ replace .RelPermalink "/" " / "}}</span>
-          </div>
+        <a href="/"><strong>AceAlz</strong></a>
+        
+        <!-- Start breadcrumb trail -->
+        {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "/" }}
+        {{ $path := "/" }}
+        
+        {{ range $index, $element := split $url "/" }}
+            {{ if and (ne $element "") (lt $index 2) }} <!-- Limit to first section -->
+                {{ $path = printf "%s%s/" $path $element }}
+                <span> / </span>
+                <a href="{{ $path }}">{{ $element | title }}</a>
+            {{ end }}
+        {{ end }}
     </div>
 </header>

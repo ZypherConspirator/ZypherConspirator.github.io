@@ -15,15 +15,15 @@
             {{ with $post }}
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                 <div class="pickgradient">
-                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" class="d-block w-100 " alt="{{ .Title }}">
+                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
                 </div>
-                <span class="p-2 carousel-caption d-none d-md-block ">
+                <span class="p-2 carousel-caption ">
                     <a class="postListLink" href="{{ .Permalink }}">
                         <h5 style="text-shadow: 2px 2px 4px #000000;">{{ .Title }}</h5>
                         {{ if .Description}}
                         <p>{{.Description}}</p>
                         {{ end }}
-                        <p>{{ .Summary | truncate 80 }}</p>
+                        <p class="d-none d-md-block">{{ .Summary | truncate 80 }}</p>
                     </a>
                 </span>
             </div>

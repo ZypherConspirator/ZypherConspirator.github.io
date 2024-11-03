@@ -16,7 +16,7 @@ title = "Aiman Zafry"
   [[menu.header]]
     name = "Projects"
     weight = 5
-    params = { Img = "/img/cat/applevector.png" }
+    params = { Img = "/img/cat/apple.png" }
     url = "proj"
   [[menu.header]]
     name = "Notes"
@@ -29,6 +29,7 @@ user = "hello"
   [params.author]
     name = "Aiman Alzafry"  # Website and RSS feed author
     job = "3D Artist"
+    img = "/img/cat/AceTagLogo.png"
     email = "aiman.zafry@outlook.com"  # RSS feed email address
 
 [[params.highlight]]
@@ -64,4 +65,7 @@ name = "Email"
 url = "mailto:aiman.zafry@outlook.com"
 aria = "My e-Mail Address"
 falogo= "fa-regular fa-envelope"
+
+[markup.goldmark.parser.attribute]
+block = true # default is false
 

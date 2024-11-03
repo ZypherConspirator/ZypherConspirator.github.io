@@ -31,7 +31,11 @@ then to unity. its compiled by utilizing a skinbuilder made by @kingenderbrine &
 
 then lastly trouble shooting, usually u have the process of figuring out the scaling of the model to look well in game.
 
+
+
+
 ![a](https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ16dpMdLS6EPhHK?embed=1)
-{{< gif "https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ6P_v-5tIovUiKD" >}}
+{ .row }
+
 
 ---
