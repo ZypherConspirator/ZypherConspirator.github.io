@@ -1,7 +1,8 @@
 ---
 title: Precipes
+ProdTeam : Final Year Project
 image: https://placehold.co/600x400/EEE/31343C
-description: Final Year Project
+
 ---
 Experimental Short on approaches of Life
 <!--more-->

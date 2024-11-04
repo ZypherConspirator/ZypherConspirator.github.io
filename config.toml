@@ -60,6 +60,14 @@ aria = "Instagram"
 falogo= "fa-brands fa-instagram"
 
 [[params.social]]
+key = 0
+name = "Resume"
+url = "/resume"
+target = ""
+aria = ""
+falogo= "fa-solid fa-address-card"
+
+[[params.social]]
 key = 2
 name = "Email"
 url = "mailto:aiman.zafry@outlook.com"

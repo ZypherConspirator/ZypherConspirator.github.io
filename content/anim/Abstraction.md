@@ -1,6 +1,6 @@
 ---
 title: Malaysian Abstraction
-description : by Haiyaa Productions
+ProdTeam : by Haiyaa Productions
 image: http://img.youtube.com/vi/i7h0MklKHiU/0.jpg
 ---
 an Animated Abstract short on the patterns and identities that makes up Malaysia

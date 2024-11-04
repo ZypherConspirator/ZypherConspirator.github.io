@@ -1,3 +1,3 @@
 ---
-title: ror2
+title: Risk of Rain 2 mod
 ---

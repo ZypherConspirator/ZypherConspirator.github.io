@@ -14,7 +14,34 @@
             </div>
 
         <div style="text-align: justify;">
+            <!-- Modal for Image Viewing -->
+            <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-dialog-centered"> <!-- Removed modal-lg for responsive sizing -->
+                    <div class="modal-content">
+                        <div class="modal-body text-center"> <!-- Center the image inside modal -->
+                            <img class="img-fluid" src="" alt="Image" style="max-width: 100%; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
             {{ .Content }}
         </div>
     </section>
+    <script>
+        $(function() 
+        {     
+            $('.thumbnail').click(function(e) 
+            {
+                e.preventDefault();
+                $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
+                $("#image-modal").modal('show');
+            });
+        
+            $('#image-modal .modal-body img').on('click', function() 
+            {
+                $("#image-modal").modal('hide')
+            });
+        
+        });
+        </script>
 {{ end }}

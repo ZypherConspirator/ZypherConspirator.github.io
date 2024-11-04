@@ -1,6 +1,6 @@
 ---
 title: Screw Up
-description : by Aduh Studios
+ProdTeam : by Aduh Studios
 image: http://img.youtube.com/vi/LKWoF1ADKOA/0.jpg
 ---
 3D Animated Short about a Robot Wandering the Wasteland trying to fix its broken arm

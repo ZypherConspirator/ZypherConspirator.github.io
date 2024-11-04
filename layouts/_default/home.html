@@ -3,43 +3,42 @@ Home | {{ .Site.Params.author.name }}
 {{ end }}
 
 {{ define "main" }}
-<div class="">
-
-        <div class="pb-3">
-            <div class="row justify-content-center align-self-center container">
-                <h1 class="row justify-content-center">{{ .Site.Params.author.name }}</h1>
-                <h5 class="row justify-content-center">-- {{ .Site.Params.author.job }} --</h1>
-            </div>
-            {{ if isset .Site.Params "social" }}
-                <ul class="nav justify-content-center align-self-center ">
-                    {{ range sort .Site.Params.social "key"}}
-                        <a href="{{ .url | safeURL }}" type="button" class="btn btn-secondary nav-item mx-2 postListLink" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
-                            <i class="{{ .falogo }}"></i> {{ .name }}
-                        </a>
-                    {{ end }}
-                </ul>
+<div class="container py-3">
+    <div class="row justify-content-center d-flex">
+        <h1 class="col-12 d-flex d-column justify-content-center">{{ .Site.Params.author.name }}</h1>
+        <h5 class="col-12 d-flex d-column justify-content-center">-- {{ .Site.Params.author.job }} --</h1>
+        {{ if isset .Site.Params "social" }}
+        <div class="d-flex flex-row justify-content-around m-0 p-0">
+            {{ range sort .Site.Params.social "key"}}
+                <a href="{{ .url | safeURL }}" type="button" class="col btn btn-secondary nav-item m-2 postListLink" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
+                    <i class="{{ .falogo }}"></i><samp class="d-none d-sm-block"> {{ .name }}</samp>
+                </a>
             {{ end }}
         </div>
-        <div class="pb-3">
-        {{ partial "list-highlightcarousel.html" . }}
-        </div>
-        <div class="fluid-container">
-            <div class="row flex-md-row justify-content-center mb-4">
+        {{ end }}
+    </div>
+</div>
 
-                {{ range .Site.Menus.header }}
-                <div class="col-12 col-sm-4 d-flex flex-column py-2">
-                    <div class="card">
-                        <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
-                        <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
-                        <div class="">
-                            <h5 class="card-title text-center">{{ .Name }}</h5>
-                        </div>
-                        </a>
-                    </div>
+<div class="pb-3">
+{{ partial "list-highlightcarousel.html" . }}
+</div>
+
+<div class="fluid-container">
+    <div class="row flex-md-row justify-content-center mb-4">
+
+        {{ range .Site.Menus.header }}
+        <div class="col-12 col-sm-4 d-flex flex-column py-2">
+            <div class="card">
+                <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
+                <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
+                <div class="">
+                    <h5 class="card-title text-center">{{ .Name }}</h5>
                 </div>
-                {{ end }}
-                
+                </a>
             </div>
         </div>
+        {{ end }}
+        
+    </div>
 </div>
 {{ end }}
