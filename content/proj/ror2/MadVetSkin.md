@@ -38,7 +38,6 @@ its made by utilizing a skinbuilder made by @kingenderbrine & @runefox on the Ri
 
 i did do some bit of modification to the code but nothing substantial.
 
----
-{{< gallery >}}
+{{< gallery name="gallery" >}}
 
 ---

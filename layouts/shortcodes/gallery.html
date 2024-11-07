@@ -1,12 +1,13 @@
+{{ $galleryName := .Get "name" }}
+
 <div class="container">
     <div class="col-md-12">
         <div class="row">
-
-
             <!-- Gallery Section -->
             <div id="image" class="gal">
-                {{ if $.Page.Params.gallery }}
-                    {{ range $.Page.Params.gallery }}
+                {{ $gallery := index $.Page.Params $galleryName }}
+                {{ if $gallery }}
+                    {{ range $gallery }}
                     <a href="#" class="thumbnail">
                         <img src="{{ . }}" style="object-fit: cover;">
                     </a>
