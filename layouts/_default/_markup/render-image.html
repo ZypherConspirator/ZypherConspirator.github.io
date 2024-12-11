@@ -1,6 +1,6 @@
 {{ $imageURL := .Destination }}
 <div class="row">
     <a href="#" target="_blank" class="thumbnail">
-        <img src="{{ $imageURL }}" class="img-fluid">
+        <img data-src="{{ $imageURL }}" class="img-fluid lozad" loading="lazy">
     </a>
 </div>

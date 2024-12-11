@@ -15,7 +15,7 @@
             {{ with $post }}
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                 <div class="pickgradient">
-                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
+                    <img class="lozad" data-src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
                 </div>
                 <span class="p-2 carousel-caption ">
                     <a class="postListLink" href="{{ .Permalink }}">

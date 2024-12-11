@@ -1,21 +1,21 @@
 ---
 title: Illustrations
-image: https://1drv.ms/i/s!Aq5Cj-A1pv-4iHp1OYbMJSqHxaEl?embed=1
+image: https://drive.google.com/thumbnail?id=1haITTpnt7-DtNwFTkj4KLWdK2gl1rh7X&sz=w1000
 description: Various
 gallery:
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHp1OYbMJSqHxaEl?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHkQmvceJ1pGpqtq?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQAbijSn1TRT_d_j?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQdfE1p9wkAJ6h7I?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQGeqcg3qk0Gvhb9?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQnSdPYmCEjWWX1T?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQgV1WnMQ7PAC5WS?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQZGgDSpo_BL70BC?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQXuKwPpSsdkRqsW?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQouTg35nQaqWcA9?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQQwBnbp_3Jes5JK?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQMiNLTafIxWOhOa?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iQIfoBVW8M4e62Sb?embed=1
+- https://drive.google.com/thumbnail?id=1w2TFEm3mjkLeAO_-eZldWcQdzu6VnoD0&sz=w1000
+- https://drive.google.com/thumbnail?id=1IGrNSS7KPiNHoTggGL8Rt5FM4EwOiYrY&sz=w1000
+- https://drive.google.com/thumbnail?id=1beiUkUoRfTKWntMY_sC5Xx3Vw4jKEnUI&sz=w1000
+- https://drive.google.com/thumbnail?id=1WgC1vhtSY-FlSA-szefhFnU8R1zLpk0e&sz=w1000
+- https://drive.google.com/thumbnail?id=1Vl4qPJ6EPvKJ_e3jq9J_eISG0wobXKkv&sz=w1000
+- https://drive.google.com/thumbnail?id=1_7C9MJlVTD7sx1NdoLKIaX8-XrAVHAVO&sz=w1000
+- https://drive.google.com/thumbnail?id=13R8CKGy3o4tXQ6EhY4a8QxR_588cax2O&sz=w1000
+- https://drive.google.com/thumbnail?id=1E7F2zxkPbK_277_0INhQPSpsqTQd2urI&sz=w1000
+- https://drive.google.com/thumbnail?id=1swCM3GaYQu9IR-W45B65QXRUpUps9TUG&sz=w1000
+- https://drive.google.com/thumbnail?id=1moEU_YgFgJOAwoN7f8-2FgIhv81sRXVt&sz=w1000
+- https://drive.google.com/thumbnail?id=1J2n8Hycvqs8t_RwkQJ-gb-qTBAlYiiLt&sz=w1000
+- https://drive.google.com/thumbnail?id=1CYTBsQ_OQTVrylbQWii__RrGpkg8ryy7&sz=w1000
+- https://drive.google.com/thumbnail?id=1haITTpnt7-DtNwFTkj4KLWdK2gl1rh7X&sz=w1000
   
 ---
 <!--more-->

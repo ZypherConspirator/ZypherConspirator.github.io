@@ -9,7 +9,7 @@
                 {{ if $gallery }}
                     {{ range $gallery }}
                     <a href="#" class="thumbnail">
-                        <img src="{{ . }}" style="object-fit: cover;">
+                        <img data-src="{{ . }}" style="object-fit: cover;" class="lozad" loading="lazy">
                     </a>
                     {{ end }}
                 {{ else }}

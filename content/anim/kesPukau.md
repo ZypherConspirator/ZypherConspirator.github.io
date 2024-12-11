@@ -9,9 +9,7 @@ comedic short based on a true ghost story in UNIMAS.
 {{< rawhtml >}}
 <div class="py-2">
 {{< /rawhtml >}}
-
 {{< youtube kRjExZfpbsc >}}
-
 {{< rawhtml >}}
 </div>
 {{< /rawhtml >}}
@@ -27,5 +25,5 @@ made by:
 - Aiman - Director / Scriptwriter / Animator
 - Maybelle -  Document Manager / Animator
 - Cha - Editor / Sound Director / Animator
-- Firdaus -  Storyboard Artist / Animator
+- Firdaus -  Storyboard Artist / Asset Maker / Lead Animator
 ---

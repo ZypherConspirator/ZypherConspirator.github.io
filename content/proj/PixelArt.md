@@ -1,21 +1,21 @@
 ---
 title: Pixel Art
-image: https://1drv.ms/i/s!Aq5Cj-A1pv-4iHAwbN2GajTD1Oyg?embed=1
+image: https://drive.google.com/thumbnail?id=1jOJ2L010A15Nah2sKNwQkANRbRdL45_9&sz=w1000
 gallery:
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iG7KY8ZP1WNezT-v?embed=1
-  - https://1drv.ms/i/c/b8ffa635e08f42ae/UQSuQo_gNab_IIC4dQQAAAAAADDIiVtYiqaj85k?width=256
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iG--6Tz9ZRmSsRFL?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHLGkgkbX247MFsa?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHAwbN2GajTD1Oyg?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHcgbEIpb_mSQ9Pb?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHaHkoz7_p-afBXC?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHQs9OdV1UZ6_8kN?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHP_GgTPMUVLgTvj?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iHGw7XbRtDVvYZZR?embed=1
-  - https://1drv.ms/i/c/b8ffa635e08f42ae/IQRotb9CV-Y8TLVuIuNYArV-AX_2PM3WzjsKHqCxvw4zISY
-  - https://1drv.ms/i/c/b8ffa635e08f42ae/IQSIXVNCseFOS6RYJp1g8hgKAcc2HMOexrW9z4mhkV0sV60
-  - https://1drv.ms/i/c/b8ffa635e08f42ae/IQT8MMLH_UHdT7sx8uu1sp4LAWNQHu5-bZDZRGpRJTXNHzI
-  - https://1drv.ms/i/c/b8ffa635e08f42ae/IQTYSjoRRiFuTppWjSFOiBbFAVdbg80P5oKxvnw2SqJxKuA
+- https://drive.google.com/thumbnail?id=1jOJ2L010A15Nah2sKNwQkANRbRdL45_9&sz=w1000
+- https://drive.google.com/thumbnail?id=19Ay-ZC4Wzdo9AgNnjVi4XXLO9et2dE_a&sz=w1000
+- https://drive.google.com/thumbnail?id=1ujDvsJ-ZJ9SOPcvEtIUqRiuKOqTHPqjF&sz=w1000
+- https://drive.google.com/thumbnail?id=1RV46ki3Pr0g6Ho1N98XdYIS70ZljZtr2&sz=w1000
+- https://drive.google.com/thumbnail?id=1C7Z6WM3DqcwwJzUls2m4hiwPBql9GPSq&sz=w1000
+- https://drive.google.com/thumbnail?id=1ejYw6zonD0d1ekeB3CwAEYba6NaTXZlD&sz=w1000
+- https://drive.google.com/thumbnail?id=1d1CcVT83MugQA1AE-4e_yWsvPs23ZFcT&sz=w1000
+- https://drive.google.com/thumbnail?id=1c8ARj38OO9syIJcXMUb1YC6B3NKwttm-&sz=w1000
+- https://drive.google.com/thumbnail?id=1stJaBZeSoWkfL15mtjCebqWfzPFQyrCa&sz=w1000
+- https://drive.google.com/thumbnail?id=13wkbQNqVdDa-hHmDmf9MtisTLZ2mQg13&sz=w1000
+- https://drive.google.com/thumbnail?id=1MQooOPUFRZ531BcFSgX0gI2zQ4XQRQnT&sz=w1000
+- https://drive.google.com/thumbnail?id=17Iu4W5nBvm03zOrm3UDAyWFz6IviGn7n&sz=w1000
+- https://drive.google.com/thumbnail?id=1FQdDHIa3aoEUXTA-zrTkE64Ak0H5eSJU&sz=w1000
+- https://drive.google.com/thumbnail?id=1aVwaoyYnZjJdIhe5aT-vp3o5U07iSphS&sz=w1000
 ---
 <!--more-->
 ---

@@ -3,7 +3,7 @@ title: Malaysian Abstraction
 ProdTeam : by Haiyaa Productions
 image: http://img.youtube.com/vi/i7h0MklKHiU/0.jpg
 ---
-an Animated Abstract short on the patterns and identities that makes up Malaysia
+Abstract short on the patterns and identities that makes up Malaysia
 <!--more-->
 ---
 {{< rawhtml >}}
@@ -24,7 +24,7 @@ made with : Clip Studio Paint, Blender, Adobe After Effects, Adobe Premiere Pro
 
 made by:
 - Aiman - Director / Scriptwriter / Animator
-- Maybelle -  Asset Artist
+- Maybelle -  Document Manager / Asset Artist
 - Cha - Editor / Sound Director
 - Firdaus -  Storyboard Artist / Asset Artist
 ---

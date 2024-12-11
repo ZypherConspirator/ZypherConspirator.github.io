@@ -1,8 +1,7 @@
 ---
-title: Precipes
+title: Eidologue
 ProdTeam : Final Year Project
 image: https://placehold.co/600x400/EEE/31343C
-
 ---
 Experimental Short on approaches of Life
 <!--more-->

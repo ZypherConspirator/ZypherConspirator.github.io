@@ -1,17 +1,18 @@
 ---
 title: Mad Veteran Skinpack
-description: Risk of Rain 2 Mod 
-image: https://1drv.ms/i/s!Aq5Cj-A1pv-4iGkIkSbIRpOaQGdl?embed=1
+image: https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000
 gallery:
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGkIkSbIRpOaQGdl?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGYkFCtOVISHSb09?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGXW06E8ZzsAsHuU?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGhMvhqgZU_5riFt?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGfsWFkB0Pxi8MXZ?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGOPdQBLNXEOpIaT?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGJOWmNuGRfh1-xC?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iGR4iU9tFzs0Uxu4?embed=1
-  - https://1drv.ms/i/s!Aq5Cj-A1pv-4iF84nLRkwytwO_n_?embed=1
+- https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000
+- https://drive.google.com/thumbnail?id=17FdqXULptuMYQTDreWq0yczHEcmLNFWy&sz=w1000
+- https://drive.google.com/thumbnail?id=1EhSy2dkfgyz4i646XeiaDj7GJerMmr0M&sz=w1000
+- https://drive.google.com/thumbnail?id=1Il1SnG2UIQEKPjz-BiAdSxv2zDnGma18&sz=w1000
+- https://drive.google.com/thumbnail?id=1bkkLhFAznSIOPmitAJ0Hb09Fwj0sjsy8&sz=w1000
+- https://drive.google.com/thumbnail?id=1lOf9tqWefHwJDLSLOpBtFNpX-OUS7pTe&sz=w1000
+- https://drive.google.com/thumbnail?id=1pA-sLun1ku8BtCE-ZPcF6VK-pRAu3u3y&sz=w1000
+- https://drive.google.com/thumbnail?id=1qezgo9VYRLMdbgomwYoCJHrRWga1jCOw&sz=w1000
+- https://drive.google.com/thumbnail?id=1sIhK8yBbn43qZI_6n5Vr1Q7eaAmdIPlY&sz=w1000
+- https://drive.google.com/thumbnail?id=1wql-ceGQCXbRFDsz0k7B8zQPLoTZI_jS&sz=w1000
+- https://drive.google.com/thumbnail?id=1xYtYX1n43TK079TjJd5QOM7OH1I0ECZb&sz=w1000
 ---
 <!--more-->
 ---
