@@ -9,7 +9,6 @@
     min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
     height: $card-height;
     word-wrap: break-word;
-    background-color: $card-bg;
     background-clip: border-box;
     border: $card-border-width solid $card-border-color;
     @include border-radius($card-border-radius);
@@ -20,15 +19,15 @@
       margin-left: 0;
     }
   
-    > .list-group {
+    > .list-group 
+    {
       border-top: inherit;
       border-bottom: inherit;
-  
+
       &:first-child {
         border-top-width: 0;
         @include border-top-radius($card-inner-border-radius);
       }
-  
       &:last-child  {
         border-bottom-width: 0;
         @include border-bottom-radius($card-inner-border-radius);

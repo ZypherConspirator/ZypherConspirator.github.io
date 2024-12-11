@@ -101,3 +101,41 @@ code {
 {
 	text-shadow: 2px 2px 4px #000000;
 }
+
+.notecategory {
+	display: inline-block !important;
+	margin: 0 !important;
+	font-size: 80%;
+	line-height: 80%;
+	top: -1px;
+	padding: 4px 8px;
+	background-color: v.$coloryellow;
+	color: v.$backgroundDark;
+	border-radius: 10px;
+}
+
+.list-group-item 
+{
+  background-color:transparent;
+  color: v.$darkerwhite;
+  border-color: v.$darkerwhite;
+}
+
+.card:hover {
+	background-color: adjust-hue($color: v.$coloryellow, $degrees: 5);
+	img
+	{
+		filter: brightness(50%);
+	}
+	.notecategory
+	{
+		background-color: v.$darkGrey;
+		color:v.$darkerwhite;
+	}
+}
+
+.alert-secondary:hover 
+{
+	background: adjust-hue($color: v.$coloryellow, $degrees: 5);
+	color:v.$darkGrey;
+}

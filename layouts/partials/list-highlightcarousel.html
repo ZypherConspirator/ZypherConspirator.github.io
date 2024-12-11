@@ -15,10 +15,17 @@
             {{ with $post }}
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                 <div class="pickgradient">
-                    <img class="lozad" data-src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
+                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
                 </div>
                 <span class="p-2 carousel-caption ">
-                    <a class="postListLink" href="{{ .Permalink }}">
+                    {{ $Permalink := .Permalink }}
+                    {{ range .Params.tags }} 
+                        {{ if ne . "Coming Soon" }} 
+                        <a class="postListLink" href="{{ $Permalink }}">
+                        {{ else }} 
+                        <a class="postListLink" href="">
+                        {{ end }}
+                    {{ end }}
                         <h5 style="text-shadow: 2px 2px 4px #000000;">{{ .Title }}</h5>
                         {{ if .Description}}
                         <p>{{.Description}}</p>

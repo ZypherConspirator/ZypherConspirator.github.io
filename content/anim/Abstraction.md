@@ -1,6 +1,9 @@
 ---
 title: Malaysian Abstraction
 ProdTeam : by Haiyaa Productions
+tags : 
+    - Experimental
+    - Uni Project
 image: http://img.youtube.com/vi/i7h0MklKHiU/0.jpg
 ---
 Abstract short on the patterns and identities that makes up Malaysia
@@ -22,9 +25,13 @@ made with : Clip Studio Paint, Blender, Adobe After Effects, Adobe Premiere Pro
 
 ## Production
 
-made by:
-- Aiman - Director / Scriptwriter / Animator
-- Maybelle -  Document Manager / Asset Artist
-- Cha - Editor / Sound Director
-- Firdaus -  Storyboard Artist / Asset Artist
+{{< bootstrap-table table_class="table table-dark table-striped table-bordered" >}}
+|Crew            | Roles                               |
+|-----------------|------------------------------------|
+| Aiman           | Director / Scriptwriter / Animator |
+| Maybelle        | Document Manager / Asset Artist    |
+| Cha             | Editor / Sound Director |
+| Nur Firdaus     | Storyboard Artist / Asset Artist |
+{{< /bootstrap-table >}}
+
 ---

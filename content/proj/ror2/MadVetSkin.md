@@ -1,5 +1,5 @@
 ---
-title: Mad Veteran Skinpack
+title: Mad Veteran
 image: https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000
 gallery:
 - https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000

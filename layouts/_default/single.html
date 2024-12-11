@@ -19,13 +19,13 @@
                 <div class="modal-dialog modal-dialog-centered"> <!-- Removed modal-lg for responsive sizing -->
                     <div class="modal-content">
                         <div class="modal-body text-center"> <!-- Center the image inside modal -->
-                            <img class="img-fluid" src="" alt="Image" style="max-width: 100%; height: auto;">
+                            <img class="position-absolute top-50 start-50 translate-middle" src="" alt="Image" style="min-width:fit-content(60%); max-height: 900px;">
                         </div>
                     </div>
                 </div>
             </div>
-            {{ .Content }}
         </div>
+        {{ .Content }}
     </section>
     <script>
         $(function() 

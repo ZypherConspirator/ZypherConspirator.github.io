@@ -1,5 +1,5 @@
 ---
-title: Warhammer 40K Skins
+title: Warhammer 40K
 image: https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ16dpMdLS6EPhHK?embed=1
 ---
 series of character skins is based on the famous Grim-Dark Fantasy tabletop game, Warhammer 40K. 
@@ -35,7 +35,7 @@ Betrayer during the Horus Heresy, bitter enemies of the Imperial Fists. Pragmati
 chosen warrior from the Black Templars Space Marine Chapter, Selected through visions of the God-Emperor, filling them with holy purpose. Wields the legendary Black Sword and dons black armor.
 
 ---
-### Tau Commander
+### [Tau Commander](https://thunderstore.io/package/KrononConspirator/40K_Tau_Commander_Paladin/)
 ##### [Paladin](https://thunderstore.io/package/Paladin_Alliance/PaladinMod/)
 
 ![a](https://lh3.googleusercontent.com/d/1V6NBo23DLPnV5vyUbfKB1c75Bwlf1Bnl)

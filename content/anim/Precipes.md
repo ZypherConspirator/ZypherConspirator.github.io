@@ -1,7 +1,9 @@
 ---
 title: Eidologue
-ProdTeam : Final Year Project
-image: https://placehold.co/600x400/EEE/31343C
+tags : 
+- Final Year Project
+- Coming Soon
+image: https://placehold.co/600x400?text=Coming+Soon
 ---
 Experimental Short on approaches of Life
 <!--more-->
