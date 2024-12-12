@@ -1,6 +1,6 @@
 ---
 title: Warhammer 40K
-image: https://1drv.ms/i/s!Aq5Cj-A1pv-4iQ16dpMdLS6EPhHK?embed=1
+image: https://lh3.googleusercontent.com/d/1RKxFvLyBpsCUJgP4H01pHSo_FmBkxjuI
 ---
 series of character skins is based on the famous Grim-Dark Fantasy tabletop game, Warhammer 40K. 
 <!--more-->

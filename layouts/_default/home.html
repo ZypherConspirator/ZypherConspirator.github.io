@@ -28,9 +28,9 @@ Home | {{ .Site.Params.author.name }}
 
         {{ range .Site.Menus.header }}
         <div class="col-12 col-sm-4 d-flex flex-column py-2">
-            <div class="card">
+            <div class="card mainpage-item">
                 <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
-                <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
+                <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block py-2" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
                 <div class="">
                     <h5 class="card-title text-center">{{ .Name }}</h5>
                 </div>

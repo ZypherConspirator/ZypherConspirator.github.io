@@ -1,6 +1,6 @@
 <section class="py-2">
     <div class="container p-0">
-        <h1 class="row justify-content-center">{{ .Title }}</h1>
+        <h2 class="row justify-content-center">{{ .Title }}</h2>
 
         <div class="row justify-content-center">
             {{ range .Pages }}
@@ -9,7 +9,7 @@
                     <a class="postListLink" href="{{ .Permalink }}">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ .Params.image }}'); background-position: center;background-size: cover;">
                         <div class="col p-3 d-flex flex-column position-static">
-                            <h5 class="mb-0">{{ .Title }}</h5>
+                            <h3 class="mb-0">{{ .Title }}</h3>
                             <p class="card-text mb-auto">{{ .Summary | truncate 100 }}</p>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
             {{ end }}
             {{ end }}
             {{ range .Sections }}
-            <h2 class="row justify-content-center">{{ .Title }}</h2>
+            <h3 class="row justify-content-center">{{ .Title }}</h3>
                 {{ range .Pages }}
                     <div class="col-md-4 justify-content-center">
                         <a class="postListLink" href="{{ .Permalink }}">

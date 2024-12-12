@@ -123,6 +123,11 @@ code {
 
 .card:hover {
 	background-color: adjust-hue($color: v.$coloryellow, $degrees: 5);
+	text-shadow: 2px 2px 4px #000000;
+	.list-group-item 
+	{
+		color: v.$white;
+	}
 	img
 	{
 		filter: brightness(50%);
@@ -138,4 +143,18 @@ code {
 {
 	background: adjust-hue($color: v.$coloryellow, $degrees: 5);
 	color:v.$darkGrey;
+}
+
+.mainpage-item 
+{
+	img
+	{
+		filter: invert(0.7);
+		&:visited, &:hover, &:active, &:focus {
+			filter: invert(0);
+		}
+	}
+	
+
+
 }

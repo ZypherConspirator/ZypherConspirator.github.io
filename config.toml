@@ -25,24 +25,25 @@ title = "Aiman Zafry"
     url = "notes"
 
 [params]
-user = "hello"
   [params.author]
     name = "Aiman Alzafry"  # Website and RSS feed author
     job = "3D Artist"
     img = "/img/cat/AceTagLogo.png"
     email = "aiman.zafry@outlook.com"  # RSS feed email address
 
-[[params.highlight]]
-key = 0
-page = "Precipes"
+
 
 [[params.highlight]]
-key = 1
+key = 0
 page = "ScrewUp"
 
 [[params.highlight]]
-key = 2
+key = 1
 page = "WarHammer"
+
+[[params.highlight]]
+key = 2
+page = "Precipes"
 
 [[params.social]]
 key = 0
