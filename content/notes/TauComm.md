@@ -4,52 +4,74 @@ Date: 2024-11-03
 ---
 ## Tau Commander
 
-for this Skin Modding Project il be making the [Tau Commander](https://warhammer40k.fandom.com/wiki/T'au_Commander) from the WarHammer 40K series for a community made character [Paladin](https://thunderstore.io/package/Paladin_Alliance/PaladinMod/).
+For this skin modding project, I’ll be creating the [Tau Commander](https://warhammer40k.fandom.com/wiki/T'au_Commander) from the Warhammer 40K series for a community-made character, [Paladin](https://thunderstore.io/package/Paladin_Alliance/PaladinMod/).
 
-#### Skin Modding?
-Skin Modding has it easy when it comes to Game modding. due to the logic of the game, Skins are usually just models overlay-ed over a rig of a character. simple example would be in League of legends or Dota 2 where the visuals of the character can vary but the animation of the characters are largely the same.
-simply means i would need to reuse the Armature/Rig of the character im making. since paladin is a community made character, the Base model is available to the public.
+---
+### What is Modding?
+Modding, short for modification, involves altering a game’s content to create new or enhanced experiences. Mods can range from small tweaks to major overhauls, including new characters, maps, and game mechanics. 
 
-#### Process
-as all of my projects go, ive started with drafting the visual for this character. i decided to based it off the famous Tau Hero, Commander Farsight. He Has a figure on the Games Workshop Marketplace but the images are not vary clear thus ive tasked my good friend, artist & Animator, [NoahSingka](https://www.instagram.com/noahsingka/), to do the drawing.
+---
+### What is Skin Modding?
+Skin modding, a subset of modding, focuses on customizing a character’s appearance without changing its core functionality or animations. Skin modding simplifies game modding by overlaying models onto the rig of an existing character. For example, games like *League of Legends* or *Dota 2* allow characters to have varying appearances while maintaining the same animations. 
 
-![sketch](https://lh3.googleusercontent.com/d/181V7BhJH0onfgh-P0h9EAhydOozd-ohK)
+---
+### Process
 
-after that ive moved on to blender, starting with blocking then slowly laying out the details for the character. Risk of Rain 2 utilizes very low poly art style of its game and character designs take liberty of this freedom to not follow realistic conventions such as disconnected heads, cartoonish movements, exaggerated actions, etc. I also use this to my advantage & it also fits the game, 2 birds with 1 stone as the saying goes.
+#### 1. Concept and Design
+As with all my projects, I started by drafting a visual design. I based the skin on the iconic Tau hero, Commander Farsight. While there are references available on the Games Workshop Marketplace, they lack clarity. To overcome this, I collaborated with my friend, artist and animator [NoahSingka](https://www.instagram.com/noahsingka/), who created a detailed concept sketch.
 
-one of the main issues of translating characters like this is to consider their scale. most of these kinds of design are built around a certain body shape. Tau Commanders are specifically Top Heavy yet Paladin is design with realistic proportion. this can easily be solve with tweaking some elements like armor size its can easily mask the problem away. i took quite a liberty with the design of the commander due to scarcity of accurate references.
+![Sketch](https://lh3.googleusercontent.com/d/181V7BhJH0onfgh-P0h9EAhydOozd-ohK)
 
-during the mid section ive notice it that design errors were made on my part. Noah did warn me that even he didn't know the full design so errors to be expected. after that i moved on to Vertex painting. this is a technique ive seen a lot used where they used this data set to put a base color first. Vertex Paint has a odd property of sticking even with major deformation without the need of textures.
+#### 1a. Acquiring Base Rig
+Since this approach requires reusing the armature/rig of the character being modded, I need to get Paladin's Armature. Since Paladin is a community-made character, the base model is publicly available on Github, making the process more accessible.
 
-then i jumped to weight painting, for robot-likes like these are simple Select Mesh and single Weight Procedure. did struggle a bit as mirroring and naming conventions of the rig did cause a bit of confusion.
+#### 2. Modeling in Blender
+I moved into Blender, beginning with blocking out the basic shapes and progressively adding details. *Risk of Rain 2* employs a low-poly art style, allowing for creative liberties, such as disconnected head structures and exaggerated proportions. This freedom aligns perfectly with the game's aesthetic and helped streamline the design process.
 
-after that i wanted to do texturing, which needs me to UV unwrap the model. this took several hours as i tried to figure out where does it need Seams on any separated mesh in on the model. here the end result of that
+One major challenge was adapting the Tau Commander’s top-heavy design to Paladin’s realistic proportions. I resolved this by tweaking armor sizes to mask the differences effectively. Due to the scarcity of accurate references, I also took liberties with the design.
 
-![Character UVmap, Character Seams only](https://lh3.googleusercontent.com/d/1bOvGcgsltmT_8mgOxx5aXdjHMP1rYh-b)
+Midway through the process, I identified some design errors. As Noah had warned, inaccuracies were inevitable given the limited references. Adjustments were made to correct these issues before moving on.
 
-i baked the vertex colors into an image then moved over to Adobe Substance Painter to get started. Had to make sure the normal direction of the mesh isn't messed up and Bake the Mesh Maps first for it to be workable in the substance painter. since its a robot i just had to consider how to make it shiny but still rugged. i utilized normal maps to further enhance the visual while still attempting to optimize the model. adding details such as indents and bolts without making it a High poly mesh issue.
+#### 3. Vertex Painting
+Vertex painting was used to apply base colors to the model. This technique adheres well to deformations and eliminates the need for initial textures. It’s a straightforward and effective approach for low-poly models like this one.
 
-do love seeing it in hi-res preview in substance
+#### 4. Weight Painting
+Since the model is robotic, weight painting was relatively simple. I applied single-weight painting to the mesh. However, mirroring issues and rig naming conventions caused some confusion, requiring additional troubleshooting.
 
-![substance painter screenshot](https://lh3.googleusercontent.com/d/1CWY39XhNOhgmyOtmqagkB0cKnDn1lnww)
+#### 5. UV Unwrapping
+Next, I UV-unwrapped the model, a meticulous process that involved placing seams on various parts of the mesh. This step took several hours, but the result was a clean and workable UV map.
 
-after thats done i exported the textures out, specifically
-- Diffuse Texture with Specular in alpha channel
-- Normal Map (DirectX)
+![Character UV Map, Character Seams Only](https://lh3.googleusercontent.com/d/1bOvGcgsltmT_8mgOxx5aXdjHMP1rYh-b)
 
-this is due to the shaders packed the game shader as such, im just following the conventions.
-moving it over blender it will lose some detail but it isn't the priority.
+#### 6. Texturing in Substance Painter
+After baking the vertex colors into an image, I imported the model into Adobe Substance Painter. Before painting, I ensured the mesh normals were correct and baked the mesh maps. Being a robot, the challenge was balancing a shiny yet rugged appearance. Normal maps were used to enhance visual details like indents and bolts without increasing polygon count.
 
-after some more fiddling around in Blender with WeightPaints and minor detail i moved on to the sword
+Substance Painter’s high-resolution previews were particularly satisfying:
 
-i took the liberty of modifying the base Sword as it already has most of the weight paint figured out (The Sword Rig is Bendy, figuring that out will take time). i took the design for Commander Farsight's signature sword (Quite a lot of references on it). finished it off to texturing, which i did the same texturing process as the body.
+![Substance Painter Screenshot](https://lh3.googleusercontent.com/d/1CWY39XhNOhgmyOtmqagkB0cKnDn1lnww)
 
-i continued to Unity 2019 to make the mod. i imported the FBX and textures. made its own categories as did my other skin projects. textures were put under a specialized Material, this is does to the uniqueness of its code. Material Variables has to be translated into it then it could be used in-game. then compiled it as .DLL .
+The textures were exported in the following formats:
+- **Diffuse Texture** (with Specular in the alpha channel)
+- **Normal Map** (DirectX format)
+
+These formats match the shader conventions of *Risk of Rain 2*. Although Blender loses some texture detail during import, this was not a priority.
+
+#### 7. Sword Design
+I modified Paladin’s base sword, leveraging its existing weight paint to save time. The design was inspired by Commander Farsight’s signature sword, for which I had ample references. Texturing followed the same process as the body.
+
+#### 8. Integration in Unity
+The model and textures were imported into Unity 2019. I created new categories for the skin, set up specialized materials to match the game’s shaders, and configured everything according to *Risk of Rain 2* conventions. Using the community-made Skin Builder Tool, The final output was compiled as a .DLL file.
 
 ![Unity Pics](https://lh3.googleusercontent.com/d/1jHeDDBdsALWUnckUPCcqMnbJbDhtdpYK)
 
-i used R2modman to launch the game in Modded mode and project completed. took around 4 days but 2 days were filled with distractions else i could finished it earlier.
+#### 9. Final Testing
+Using R2modman, I launched the game in modded mode to test the skin. Despite some distractions, the project was completed in approximately four days.
 
-![in-game 1](https://lh3.googleusercontent.com/d/1ViFVDaYV82463A8NLgpbNs6_46PuvMid)
-![in-game 2](https://lh3.googleusercontent.com/d/1V6NBo23DLPnV5vyUbfKB1c75Bwlf1Bnl)
+![In-game Screenshot 1](https://lh3.googleusercontent.com/d/1ViFVDaYV82463A8NLgpbNs6_46PuvMid)
+![In-game Screenshot 2](https://lh3.googleusercontent.com/d/1V6NBo23DLPnV5vyUbfKB1c75Bwlf1Bnl)
+
 ---
+### Conclusion
+
+This Project was fun. This Commander had me doing a lot of research in terms of Lore for this Relatively New faction in the Warhammer 40K story. W40K related project always had a way with making me challenge the notion of "does have enough detail?" in a game that has aesthetics in low detail.
+in Any Case, The Tau Commander Paladin is now ready for battle!
