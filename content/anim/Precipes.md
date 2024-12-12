@@ -4,6 +4,7 @@ tags :
 - Final Year Project
 - Coming Soon
 image: https://placehold.co/600x400?text=Coming+Soon
+weight: 14
 ---
 Experimental Short on approaches of Life
 <!--more-->

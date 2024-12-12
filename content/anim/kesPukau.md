@@ -5,6 +5,7 @@ tags :
     - 2D
     - Uni Project
 image: http://img.youtube.com/vi/kRjExZfpbsc/0.jpg
+weight: 1
 ---
 comedic short based on a true ghost story in UNIMAS.
 <!--more-->

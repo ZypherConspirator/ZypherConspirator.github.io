@@ -5,6 +5,7 @@ tags :
     - 3D
     - Uni Project
 image: http://img.youtube.com/vi/LKWoF1ADKOA/0.jpg
+weight: 12
 ---
 a Short about a Robot Wandering the Wasteland trying to fix its broken arm
 <!--more-->
