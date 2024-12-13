@@ -234,8 +234,11 @@ code {
 }
 
 
-.modal-img {
-    width: 100%;
+.modal img {
+	@media (max-width: 500px) 
+	{
+		width: 100% !important;
+	}
 }
 
 .highlight-title
@@ -257,4 +260,16 @@ code {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.carousel-inner
+{
+	img
+	{
+		@media (max-width: 500px) 
+		{
+			max-height: 250px !important;
+		}
+	}
+	
 }
