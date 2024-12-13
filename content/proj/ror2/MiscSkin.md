@@ -14,12 +14,12 @@ galleryMastery:
 GalleryHGFacelift:
 - url: https://lh3.googleusercontent.com/d/1lb-ReHA891ipfb-s5IrwSF5Yp8QHVMaQ
   name: Malenia Seraphim
+- url: https://lh3.googleusercontent.com/d/1a00llBWd_UPTnKYkcmaipdMSthEZlCsq
+  name: Ganon Conquerer
 - url: https://lh3.googleusercontent.com/d/1Ttr3O_z8mFuc2dHSv_gFhrV45pnCtIsN
   name: Deku Hopper Mastery
 - url: https://lh3.googleusercontent.com/d/1INZWplTOZ5xIw6PDU4A6PmQUbdw1DZ0u
   name: Deku Hopper
-- url: https://lh3.googleusercontent.com/d/1a00llBWd_UPTnKYkcmaipdMSthEZlCsq
-  name: Ganon Conquerer
 
 galleryEtc:
 - url: https://lh3.googleusercontent.com/d/1sZPWFMeGb2HENyfvBw8ZYECXqtMrGLtM
@@ -39,7 +39,6 @@ galleryEtc:
 
 ---
 here is few of the skins that ive made so far in my Skin Modding Journey. the rest can be found on my thunderstore page [here](https://thunderstore.io/package/KrononConspirator/) and [here](https://thunderstore.io/package/Kronon_Conspirator/).
----
 
 #### Mastery
 implemented directly in the based mod, meant to celebrate an aspect of the character. designed to be an achievement for the player.

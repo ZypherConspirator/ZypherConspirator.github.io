@@ -95,7 +95,7 @@ code {
 .carousel-item > .pickgradient 
 {
 	position: relative;
-	mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 70%);
+	mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,1) 70%);
 }
 
 .carousel-item > span > a > p
@@ -242,3 +242,19 @@ code {
 {
 	letter-spacing: 3px;
 }  
+
+.svg-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1; /* Ensure it's behind the content */
+	overflow: hidden;
+}
+
+.svg-background svg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
