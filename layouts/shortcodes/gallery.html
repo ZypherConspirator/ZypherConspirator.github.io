@@ -1,4 +1,6 @@
 {{ $galleryName := .Get "name" }}
+{{ $showName := .Get "showName" }}
+{{ $showLike := .Get "showLike" }}
 
 <div class="container">
     <div class="col-md-12">
@@ -9,7 +11,11 @@
                 {{ if $gallery }}
                     {{ range $gallery }}
                     <a href="#" class="thumbnail">
-                        <img data-src="{{ . }}" style="object-fit: cover;" class="lozad" loading="lazy">
+                        <div class="d-flex gal-wrap py-2">
+                        {{ if eq $showName "true" }}{{if .name }} <span class="bottom">{{ .name }}</span> {{ end }}{{ end }}
+                        {{if eq $showLike "true" }}{{if .likes }} <span class="corner">♥ {{ .likes }}</span> {{ end }}{{ end }}
+                        <img data-src="{{ .url }}" alt="{{ .name }}" class="lozad" loading="lazy">
+                        </div>
                     </a>
                     {{ end }}
                 {{ else }}
@@ -19,33 +25,3 @@
         </div>
     </div>
 </div>
-        
-<!-- CSS -->
-<style>
-.gal {
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
-}
-
-.gal img { 
-    width: 100%; 
-    padding: 7px 0;
-}
-
-.modal-img {
-    width: 100%;
-}
-
-@media (max-width: 500px) {
-    .gal {
-        -webkit-column-count: 1;
-        -moz-column-count: 1;
-        column-count: 1;
-    }
-}
-
-.gal img:hover {
-    transform: scale(1.1);
-}
-</style>

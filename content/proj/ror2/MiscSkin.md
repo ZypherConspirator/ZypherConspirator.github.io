@@ -38,18 +38,14 @@ Mastery skins for
 - Desolator
 - Headhunter
 
-Cebela YT
-
 HGFacelift
 - Deku
 - Ganon
-
-Kamen Rider Zero One
 
 Library fo Ruina
 Yan Distorted 
 R-Corp
 
+Kamen Rider Zero One
+Cebela YT
 Heretic Unalloyed
-
-{{< gallery name="galleryMastery" >}}

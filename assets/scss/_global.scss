@@ -161,3 +161,78 @@ code {
 	width: 100%;
 	object-fit: fill !important; 
 }
+
+.gal 
+{
+	position: relative;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    @media (max-width: 500px) 
+    {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+	img 
+    { 
+        width: 100%; 
+        object-fit: cover;
+    }
+    .corner 
+    {
+        display: none;
+        user-select: none;
+        font-size: 12px;
+        margin: 0;
+        padding: 0 4%;
+		box-shadow: inset 4px 4px v.$coloryellow, inset -4px -4px v.$coloryellow;
+		background-color: v.$coloryellow;
+		color: v.$darkGrey;
+		z-index: 1000;
+	}
+	.bottom 
+    {
+        display: none;
+        user-select: none;
+        font-size: 14px;
+        margin: 0;
+        padding: 0 4%;
+		box-shadow: inset 4px 4px v.$coloryellow, inset -4px -4px v.$coloryellow;
+		background-color: v.$coloryellow;
+		color: v.$darkGrey;
+		z-index: 1000;
+	}
+	.gal-wrap
+	{
+		position: relative;
+		&:hover 
+		{
+			img
+			{
+				transform: scale(1.1);
+				outline: v.$coloryellow solid 4px ;
+				z-index: 900;
+			}
+			.corner 
+			{
+				display: inline-block;
+				position: absolute;
+				top: 8px;
+				left: 0px;
+			}
+			.bottom 
+			{
+				display: inline-block;
+				position: absolute;
+				bottom: 8px;
+				right: 0px;
+			}
+		}
+	}
+}
+
+
+.modal-img {
+    width: 100%;
+}
