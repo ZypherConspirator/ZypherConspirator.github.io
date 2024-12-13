@@ -94,7 +94,8 @@ code {
 
 .carousel-item > .pickgradient 
 {
-  mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 70%);
+	position: relative;
+	mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.65) 70%);
 }
 
 .carousel-item > span > a > p
@@ -236,3 +237,8 @@ code {
 .modal-img {
     width: 100%;
 }
+
+.highlight-title
+{
+	letter-spacing: 3px;
+}  

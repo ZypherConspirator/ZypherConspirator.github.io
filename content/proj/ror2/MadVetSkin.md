@@ -1,5 +1,6 @@
 ---
 title: Mad Veteran
+weight: 1
 image: https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000
 gallery:
 - url: https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000

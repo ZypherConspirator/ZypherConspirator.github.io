@@ -3,13 +3,4 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="container py-3">
-        <h2 class="row justify-content-center py-2">Highlights</h2>
-        <div class="row justify-content-center">
-        {{ partial "list-highlightcarousel.html" . }}
-        </div>
-    </section>
-    {{ partial "list-cardsection.html" ($.Site.GetPage "section" "Anim") }}
-
-    {{ partial "list-cardscroll.html" ($.Site.GetPage "section" "proj") }}
 {{ end }}
