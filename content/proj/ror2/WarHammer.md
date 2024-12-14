@@ -43,7 +43,7 @@ chosen warrior from the Black Templars Space Marine Chapter, Selected through vi
 
 Elite leaders, pinnacle of Tau military prowess and tactical expertise, Equipped with advanced battlesuits customized with high-tech weaponry and support systems. Highly experienced, Driven by the Tau philosophy of the Greater Good, aiming to unify or conquer for the betterment of all.
 
-this one has a documented process in-detail which you can see [here](/notes/TauComm)
+this one has a documented process in-detail which you can see [here](/notes/taucomm)
 
 ---
 

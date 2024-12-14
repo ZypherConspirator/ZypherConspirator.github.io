@@ -5,8 +5,6 @@ title = "Aiman Zafry"
   [module.hugoVersion]
     min = "0.134.2"
 
-
-
 [menus]
   [[menu.header]]
     name = "Animations"
@@ -54,6 +52,7 @@ falogo= "fa-brands fa-github"
 key = 2
 name = "Instagram"
 url = "https://www.instagram.com/acelz_artistry/"
+target = "_blank"
 aria = "Instagram"
 falogo= "fa-brands fa-instagram"
 
@@ -61,7 +60,7 @@ falogo= "fa-brands fa-instagram"
 key = 0
 name = "Resume"
 url = "/resume"
-target = ""
+target = "_blank"
 aria = ""
 falogo= "fa-solid fa-address-card"
 
