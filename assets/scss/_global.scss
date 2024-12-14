@@ -122,23 +122,7 @@ code {
   border-color: v.$darkerwhite;
 }
 
-.card:hover {
-	background-color: adjust-hue($color: v.$coloryellow, $degrees: 5);
-	text-shadow: 2px 2px 4px #000000;
-	.list-group-item 
-	{
-		color: v.$white;
-	}
-	img
-	{
-		filter: brightness(50%);
-	}
-	.notecategory
-	{
-		background-color: v.$darkGrey;
-		color:v.$darkerwhite;
-	}
-}
+
 
 .alert-secondary:hover 
 {

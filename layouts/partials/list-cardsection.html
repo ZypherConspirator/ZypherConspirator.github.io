@@ -5,16 +5,19 @@
             {{ range .Pages }}
             <div class="col">
                 {{ $Permalink := .Permalink }}
-                {{ range .Params.tags }} 
-                    {{ if ne . "Coming Soon" }} 
-                    <a class="postListLink" href="{{ $Permalink }}">
-                    {{ else }} 
-                    <a class="postListLink" href="">
+                {{ $disableLink := false }}
+                
+                {{ if .Params.tags }}
+                    {{ range .Params.tags }}
+                        {{ if eq . "Coming Soon" }}
+                            {{ $disableLink = true }}
+                        {{ end }}
                     {{ end }}
                 {{ end }}
-                    <div class="card border rounded overflow-hidden shadow-sm h-100">
+                <a class="postListLink" href="{{ if $disableLink }}#{{ else }}{{ $Permalink }}{{ end }}">
+                    <div class="card border rounded overflow-hidden shadow-sm h-100" style="--background: url('{{ .Params.image }}')">
                         <img class="card-img-top d-none d-lg-block lozad" data-src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" style="object-fit: cover; max-height: 190px;">
-                        <div class="card-body p-2">
+                        <div class="card-body p-2" >
                             <h5 class="card-title">
                                 <b class="text-uppercase">{{ .Title }}</b>
                             </h5>
