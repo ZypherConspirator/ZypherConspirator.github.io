@@ -2,13 +2,15 @@
 
 .card {
   
-  @media (max-width: 576px) 
+  @media (max-width: 990px) 
   {
+    div
+    {
+      backdrop-filter: blur(3px);
+    }
+    
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),var(--background); 
     background-position: center;
-    
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
   }
 
 	&:hover 
