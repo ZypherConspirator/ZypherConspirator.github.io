@@ -4,28 +4,26 @@
 
 {{ define "main" }}
     <section class="container">
-        
-            <div class="alert my-2 p-2" role="alert" style="border: 2px solid #ffff;">
-                <b>{{ .Title }}</b>
-                {{if (compare.Eq (replace .Parent "Page" "") "(/notes)") }}
-                <br>
-                {{ .PublishDate | time.Format ":date_medium" }}
-                {{ end }}
-            </div>
-
-        <div style="text-align: justify;">
-            <!-- Modal for Image Viewing -->
-            <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
-                <div class="modal-dialog modal-dialog-centered"> <!-- Removed modal-lg for responsive sizing -->
-                    <div class="modal-content">
-                        <div class="modal-body text-center"> <!-- Center the image inside modal -->
-                            <img class="position-absolute top-50 start-50 translate-middle" src="" alt="Image" style="object-fit: contain; width: 70vw; max-height: 900px;">
-                        </div>
+        <div class="alert my-2 p-2" role="alert" style="border: 2px solid #ffff;">
+            <b>{{ .Title }}</b>
+            {{if (compare.Eq (replace .Parent "Page" "") "(/notes)") }}
+            <br>
+            {{ .PublishDate | time.Format ":date_medium" }}
+            {{ end }}
+        </div>
+        <!-- Modal for Image Viewing -->
+        <div class="modal fade" id="image-modal" tabindex="-1" role="dialog" style="overflow-x: auto;">
+            <div class="modal-dialog modal-dialog-centered"> <!-- Removed modal-lg for responsive sizing -->
+                <div class="modal-content">
+                    <div class="modal-body text-center"> <!-- Center the image inside modal -->
+                        <img class="position-absolute top-50 start-50 translate-middle" src="" alt="Image" style="object-fit: contain; width: 60vw; max-height: 900px;">
                     </div>
                 </div>
             </div>
         </div>
-        {{ .Content }}
+        <article class="text-justify">
+        {{ .Content  }}
+        </article>
     </section>
     <script>
         $(function() 

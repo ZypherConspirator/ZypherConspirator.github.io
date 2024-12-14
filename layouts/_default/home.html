@@ -6,11 +6,11 @@ Home | {{ .Site.Params.author.name }}
 <div class="container p-0 py-3 pt-5">
     <div class="row justify-content-center d-flex">
         <h1 class="col-12 d-flex d-column justify-content-center">{{ .Site.Params.author.name }}</h1>
-        <h5 class="col-12 d-flex d-column justify-content-center">-- {{ .Site.Params.author.job }} --</h1>
+        <h5 class="col-12 d-flex justify-content-center">-- {{ .Site.Params.author.job }} --</h5>
         {{ if isset .Site.Params "social" }}
         <div class="d-flex justify-content-around g-3">
             {{ range sort .Site.Params.social "key"}}
-                <a href="{{ .url | safeURL }}" type="button" class="col btn btn-secondary nav-item postListLink mx-2" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
+                <a href="{{ .url | safeURL }}" title="{{ .name }}" type="button" class="col btn btn-secondary nav-item postListLink mx-2" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
                     <i class="{{ .falogo }}"></i><small class="d-none d-sm-block"> {{ .name }}</small>
                 </a>
             {{ end }}

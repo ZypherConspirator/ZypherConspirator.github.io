@@ -13,7 +13,7 @@
                     <a href="#" class="thumbnail">
                         <div class="d-flex gal-wrap py-2">
                         {{ if eq $showName "true" }}{{if .name }} <span class="bottom">{{ .name }}</span> {{ end }}{{ end }}
-                        {{if eq $showLike "true" }}{{if .likes }} <span class="corner">♥ {{ .likes }}</span> {{ end }}{{ end }}
+                        {{if eq $showLike "true" }}{{if .likes }} <span class="corner"><i class="fa-solid fa-download"></i> {{ .likes }}</span> {{ end }}{{ end }}
                         <img data-src="{{ .url }}" alt="{{ .name }}" class="lozad" loading="lazy">
                         </div>
                     </a>

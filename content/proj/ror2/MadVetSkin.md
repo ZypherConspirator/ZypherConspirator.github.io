@@ -49,7 +49,8 @@ the Community start calling it the Bungus Strat. i Took that visual and made it 
 
 here are the rest of the ideas for the character;
 
-| Survivor     | Meta Strategies | Theme of the Design | Skin actualization |
+{{< bootstrap-table table_class="table table-dark table-striped table-bordered" >}}
+| Survivor|Meta Strategies|Design Theme|Skin Design|
 |--------------|----------|-------|-------------------|
 |Engineer|B.Fungus AFK | Bungus-Infested |"B.Fungus experiment gone wrong"|
 |Captain| Diablo Nuke |Going Nuclear|"Soldier in the Old War built for Devastation"|
@@ -64,7 +65,7 @@ here are the rest of the ideas for the character;
 |Loader|The Only Melee Exclusive|Runebound Boxer|"Big Arms" + "Big Lady" + "Bunch of Crystals"|
 |(WIP) Merc|Slicing Wind + Expose|Cyborg with a sword|-|
 |(?) Bandit|Purity + Desperado + Ratio-ed|Cleansed|-|
-
+{{< /bootstrap-table >}}
 
 ### How its made?
 

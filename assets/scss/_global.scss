@@ -157,10 +157,23 @@ code {
 	}
 }
 
+.markup-img-wrap
+{
+	a:hover
+	{
+		background: rgba(0, 0, 0, 0);
+	}
+}
+
 .markup-img 
 {
 	width: 100%;
 	object-fit: fill !important; 
+	&:hover
+	{
+		outline: v.$coloryellow solid 4px ;
+		z-index: 500;
+	}
 }
 
 .gal 
@@ -202,7 +215,7 @@ code {
 		box-shadow: inset 4px 4px v.$coloryellow, inset -4px -4px v.$coloryellow;
 		background-color: v.$coloryellow;
 		color: v.$darkGrey;
-		z-index: 1000;
+		z-index: 510;
 	}
 	.gal-wrap
 	{
@@ -213,7 +226,7 @@ code {
 			{
 				transform: scale(1.1);
 				outline: v.$coloryellow solid 4px ;
-				z-index: 900;
+				z-index: 500;
 			}
 			.corner 
 			{
@@ -235,6 +248,7 @@ code {
 
 
 .modal img {
+	z-index: 1000;
 	@media (max-width: 500px) 
 	{
 		width: 100% !important;
@@ -273,3 +287,5 @@ code {
 	}
 	
 }
+
+.text-justify  { text-align: justify !important; }

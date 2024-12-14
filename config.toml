@@ -28,10 +28,7 @@ title = "Aiman Zafry"
   [params.author]
     name = "Aiman Alzafry"  # Website and RSS feed author
     job = "3D Artist"
-    img = "/img/cat/AceTagLogo.png"
     email = "aiman.zafry@outlook.com"  # RSS feed email address
-
-
 
 [[params.highlight]]
 key = 0
