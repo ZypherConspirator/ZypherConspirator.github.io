@@ -13,24 +13,27 @@
         {{ range $index, $highlight := sort .Site.Params.highlight "key" }}
             {{ $post := site.GetPage .page }}
             {{ with $post }}
+
+                {{ $Permalink := .Permalink }}
+                {{ $disableLink := false }}
+                
+                {{ if .Params.tags }}
+                    {{ range .Params.tags }}
+                        {{ if eq . "Coming Soon" }}
+                            {{ $disableLink = true }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            <a class="postListLink" href="{{ if $disableLink }}#{{ else }}{{ $Permalink }}{{ end }}" style="text-shadow: 2px 2px 4px #000000;">
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+                
                 <div class="pickgradient">
                     <div class="carousel-img-blur">
                     <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
                     </div>
                 </div>
                 <span class="py-2 carousel-caption">
-                    {{ $Permalink := .Permalink }}
-                    {{ $disableLink := false }}
-                    
-                    {{ if .Params.tags }}
-                        {{ range .Params.tags }}
-                            {{ if eq . "Coming Soon" }}
-                                {{ $disableLink = true }}
-                            {{ end }}
-                        {{ end }}
-                    {{ end }}
-                    <a class="postListLink" href="{{ if $disableLink }}#{{ else }}{{ $Permalink }}{{ end }}" style="text-shadow: 2px 2px 4px #000000;">
+
                         <small class="pb-1">
                             {{ if .Parent }}
                                 {{ .Parent.Title }}
@@ -42,8 +45,9 @@
                         </small>
                         <h4 class= "highlight-title text-uppercase font-weight-bold" >{{ .Title }}</h4>
                         <small class="d-none d-md-block">{{ .Summary | truncate 100 }}</small>
-                    </a>
+                    
                 </span>
+            </a>
             </div>
             {{ end }}
         {{ end }}

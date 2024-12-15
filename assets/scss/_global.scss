@@ -92,27 +92,41 @@ code {
 	}
 }
 
-.carousel-item 
-{
-	> .pickgradient 
-	{
-		position: relative;
-		background-color: #5d656b;
-		.carousel-img-blur
-		{
-			mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,1) 60%);
-		}
-	}
-	> span > a > p
-	{
-		text-shadow: 2px 2px 4px #000000;
-	}
-}
+
 
 .carousel-inner
 {
-	a:hover {
-		background: none;
+	.carousel-item {
+		.pickgradient {
+			position: relative;
+			background-color: #5d656b;
+			.carousel-img-blur
+			{
+				mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 90%,rgba(0, 0, 0, 0) 100%);
+			}
+		}	
+		> span > a > p
+		{
+			text-shadow: 2px 2px 4px #000000;
+		}
+	}
+	a {
+		filter:grayscale(0.5);
+		&:hover
+		{
+			filter:grayscale(0);
+
+			> .carousel-caption
+			{
+				background: none;
+				small, h4
+				{
+					color: v.$coloryellow;
+				}
+
+				
+			}
+		}
 	}
 	.small
 	{
@@ -120,7 +134,6 @@ code {
 		&:visited, &:hover, &:active, &:focus {
 			text-decoration: none;
 			background: none;
-			color: v.$white;
 		}
 	}
 	img
