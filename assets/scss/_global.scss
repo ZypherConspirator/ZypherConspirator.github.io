@@ -12,12 +12,14 @@ body {
 
 a, span {
   text-decoration: none;
+  text-shadow: 2px 2px 2px #000000;
   @include v.primary-color;
 }
 
 a:hover, a:active {
 	background: v.$coloryellow;
   	color: v.$white;
+	text-shadow: none;
 }
 
 pre code {
@@ -123,8 +125,6 @@ code {
 				{
 					color: v.$coloryellow;
 				}
-
-				
 			}
 		}
 	}
@@ -185,7 +185,7 @@ code {
 		color: black;
 		img
 		{
-			filter: invert(0);
+			filter: invert(0) drop-shadow(0px 0px 0px #222);
 		}
 		a 
 		{
@@ -198,7 +198,7 @@ code {
 	}
 	img
 	{
-		filter: invert(1);
+		filter: invert(1) drop-shadow(2px 2px 2px #222);
 	}
 }
 
@@ -218,6 +218,7 @@ code {
     { 
         width: 100%; 
         object-fit: cover;
+		filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.8));
     }
     .corner 
     {
@@ -255,7 +256,8 @@ code {
 				z-index: 500;
 			}
 			.corner 
-			{
+			{   
+				text-shadow: none;
 				display: inline-block;
 				position: absolute;
 				top: 8px;
@@ -263,6 +265,7 @@ code {
 			}
 			.bottom 
 			{
+				text-shadow: none;
 				display: inline-block;
 				position: absolute;
 				bottom: 8px;
