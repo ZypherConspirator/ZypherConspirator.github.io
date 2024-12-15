@@ -18,8 +18,10 @@
             {{ end }}
             {{ end }}
             {{ range .Sections }}
+            {{ if not .Params.hidden }}
             <h3 class="row justify-content-center">{{ .Title }}</h3>
                 {{ range .Pages }}
+                {{ if not .Params.hidden }}
                     <div class="col-md-4 justify-content-center">
                         <a class="postListLink" href="{{ .Permalink }}">
                         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ .Params.image }}'); background-position: center;background-size: cover;">
@@ -30,7 +32,9 @@
                         </a>
                     </div>
                 {{ end }}
-            {{end}}
+                {{ end }}
+            {{ end }}
+            {{ end }}
         </div>
     </div>
 </section>
