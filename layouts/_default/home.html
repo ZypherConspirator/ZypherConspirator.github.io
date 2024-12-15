@@ -5,7 +5,7 @@ Home | {{ .Site.Params.author.name }}
 {{ define "main" }}
 <div class="container p-0 py-3 pt-5">
     <div class="row justify-content-center d-flex">
-        <h1 class="col-12 d-flex d-column justify-content-center">{{ .Site.Params.author.name }}</h1>
+        <h1 class="col-12 d-flex d-column justify-content-center glitch-title">{{ .Site.Params.author.name }}</h1>
         <h5 class="col-12 d-flex justify-content-center">-- {{ .Site.Params.author.job }} --</h5>
         {{ if isset .Site.Params "social" }}
         <div class="d-flex justify-content-around g-3">
@@ -18,6 +18,33 @@ Home | {{ .Site.Params.author.name }}
         {{ end }}
     </div>
 </div>
+<script> 
+function glitchText(text, maxSwaps) 
+{ 
+    const chars = text.split('');
+    const indices = []; while (indices.length < maxSwaps) 
+    { const randomIndex = Math.floor(Math.random() * chars.length);
+         if (!indices.includes(randomIndex)) 
+         { 
+            indices.push(randomIndex); 
+        } 
+    } 
+    indices.forEach(index => { chars[index] = chars[index] === chars[index].toUpperCase() ? chars[index].toLowerCase() : chars[index].toUpperCase(); });
+    return chars.join(''); 
+} 
+function applyGlitch() 
+{ 
+    const titleElement = document.querySelector('.glitch-title'); 
+    const originalText = titleElement.textContent; const maxSwaps = 3;
+     // Limit the number of characters to swap 
+    titleElement.textContent = glitchText(originalText, maxSwaps); setTimeout(() => 
+    { 
+        titleElement.textContent = originalText;
+        setTimeout(applyGlitch, 10000); // Delay before starting to glitch again 
+    }, 1000); // Return to normal after 5 seconds 
+}
+applyGlitch();
+</script>
 
 <div class="pb-2">
 {{ partial "list-highlightcarousel.html" . }}
