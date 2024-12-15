@@ -1,5 +1,5 @@
 {{ if isset .Site.Params "highlight" }}
-<div id="carouselExampleCaptions" class="carousel slide p-0" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide p-0" data-bs-ride="carousel" style="filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.8));">
     
     <!-- Carousel Indicators -->
     <div class="carousel-indicators">
@@ -29,7 +29,7 @@
                         {{ end }}
                     {{ end }}
                     <a class="postListLink" href="{{ if $disableLink }}#{{ else }}{{ $Permalink }}{{ end }}" style="text-shadow: 2px 2px 4px #000000;">
-                        <small class="font-weight-light pb-1">
+                        <small class="pb-1">
                             {{ if .Parent }}
                                 {{ .Parent.Title }}
                             {{ else }}

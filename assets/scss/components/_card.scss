@@ -1,7 +1,7 @@
 @use "utils/variables" as v;
 
 .card {
-  
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   @media (max-width: 990px) 
   {
     div
@@ -44,6 +44,7 @@
     img
     {
       filter: none;
+      outline: none;
     }
   }
   img

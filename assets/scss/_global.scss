@@ -92,15 +92,41 @@ code {
 	}
 }
 
-.carousel-item > .pickgradient 
+.carousel-item 
 {
-	position: relative;
-	mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,1) 70%);
+	> .pickgradient 
+	{
+		position: relative;
+		mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,1) 70%);
+	}
+	> span > a > p
+	{
+		text-shadow: 2px 2px 4px #000000;
+	}
 }
 
-.carousel-item > span > a > p
+.carousel-inner
 {
-	text-shadow: 2px 2px 4px #000000;
+	a:hover {
+		background: none;
+	}
+	.small
+	{
+		text-shadow: 2px 2px 4px #000000;
+		&:visited, &:hover, &:active, &:focus {
+			text-decoration: none;
+			background: none;
+			color: v.$white;
+		}
+	}
+	img
+	{
+		@media (max-width: 500px) 
+		{
+			max-height: 250px !important;
+		}
+	}
+	
 }
 
 .notecategory {
@@ -132,12 +158,29 @@ code {
 
 .mainpage-item 
 {
-	img
+	filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.8));
+
+	color: #ffffff;
+	&:hover 
 	{
-		filter: invert(0.7);
-		&:visited, &:hover, &:active, &:focus {
+		background-color: adjust-hue($color: v.$coloryellow, $degrees: 5);
+		color: black;
+		img
+		{
 			filter: invert(0);
 		}
+		a 
+		{
+			color: black;
+		}
+	}
+	a 
+	{
+		color: #ffffff;
+	}
+	img
+	{
+		filter: invert(1);
 	}
 }
 
@@ -241,16 +284,7 @@ code {
 	object-fit: cover;
 }
 
-.carousel-inner
-{
-	img
-	{
-		@media (max-width: 500px) 
-		{
-			max-height: 250px !important;
-		}
-	}
-	
-}
+
 
 .text-justify  { text-align: justify !important; }
+

@@ -10,7 +10,7 @@ Home | {{ .Site.Params.author.name }}
         {{ if isset .Site.Params "social" }}
         <div class="d-flex justify-content-around g-3">
             {{ range sort .Site.Params.social "key"}}
-                <a href="{{ .url | safeURL }}" title="{{ .name }}" type="button" class="col btn btn-secondary nav-item postListLink mx-2" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
+                <a href="{{ .url | safeURL }}" title="{{ .name }}" type="button" class="col btn mainpage-item btn-secondary nav-item postListLink mx-2" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
                     <i class="{{ .falogo }}"></i><small class="d-none d-sm-block"> {{ .name }}</small>
                 </a>
             {{ end }}
@@ -19,7 +19,7 @@ Home | {{ .Site.Params.author.name }}
     </div>
 </div>
 
-<div class="pb-3">
+<div class="pb-2">
 {{ partial "list-highlightcarousel.html" . }}
 </div>
 
@@ -27,8 +27,8 @@ Home | {{ .Site.Params.author.name }}
     <div class="row flex-md-row justify-content-center mb-4">
 
         {{ range .Site.Menus.header }}
-        <div class="col-12 col-sm-4 d-flex flex-column py-2">
-            <div class="card mainpage-item">
+        <div class="col-12 col-sm-4 d-flex flex-column py-2 ">
+            <div class="btn mainpage-item btn-secondary mainpage-item">
                 <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
                 <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block py-2" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
                 <div class="pt-1">
