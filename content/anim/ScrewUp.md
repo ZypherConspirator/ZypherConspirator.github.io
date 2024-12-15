@@ -20,9 +20,9 @@ a Short about a Robot Wandering the Wasteland trying to fix its broken arm
 
 ## Summary
 
-released on : 2024
+**Released on:**  2024
 
-made with : Clip Studio Paint, Blender, Capcut
+**Made with:** Clip Studio Paint, Blender, Capcut
 
 ## Production
 
@@ -33,5 +33,3 @@ made with : Clip Studio Paint, Blender, Capcut
 | Firdaus         | Document Manager / 3D Artist (Environment) |
 | Alicia          | Storyboard Artist / Animator |
 {{< /bootstrap-table >}}
-
----

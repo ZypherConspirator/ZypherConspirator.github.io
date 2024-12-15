@@ -1,0 +1,55 @@
+
+
+<div class="card thunder-card markup-img-wrap mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+        {{$inner := .Inner}}
+        {{ $content := $inner | markdownify }}
+        {{ $hasImage := findRE "<img[^>]*>" $content 1 }}
+        {{ $hasH5 := findRE "<h5[^>]*>.*?</h5>" $content 1 }}
+        {{ $hasH6 := findRE "<h6[^>]*>.*?</h6>" $content 1 }}
+        {{ $hasText := replaceRE `#.*\)` "" $inner }}
+        {{ $hasText2 := replaceRE `!.*\)` "" $hasText }}
+
+        {{ $image := "" }}
+        {{ $headerH5 := "" }}
+        {{ $headerH6 := "" }}
+        {{ $textContentFinal := "" }}
+
+        {{ if gt (len $hasImage) 0 }}
+        {{ $image = index $hasImage 0 }}
+        {{ end }}
+
+        {{ if gt (len $hasH5) 0 }}
+        {{ $headerH5 = index $hasH5 0 }}
+        {{ end }}
+
+        {{ if gt (len $hasH6) 0 }}
+        {{ $headerH6 = index $hasH6 0 }}
+        {{ end }}
+
+        {{ if $image }}
+        <div class="col-md-4">
+            <a href="#" target="_blank" class="thumbnail">
+                {{ $image | safeHTML }}
+            </a>
+        </div>
+        {{ end }}
+        
+        <div class="{{ if $image }}col-md-8{{ else }}col-md-12{{ end }}">
+            {{ if $headerH5 }}
+            <div class="card-header">
+                {{ $headerH5 | safeHTML }}
+            </div>
+            {{ end }}
+            {{ if $headerH6 }}
+            <div class="card-header">
+                {{ $headerH6 | safeHTML }}
+            </div>
+            {{ end }}
+            <div class="card-body">
+                <small>{{ $hasText2 }}</small>
+            </div>
+        </div>
+    </div>
+</div>
+

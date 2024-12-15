@@ -2,7 +2,7 @@
 title: Kes Pukau
 ProdTeam : By Haiyaa Productions
 tags : 
-    - 2D
+    - 2D Puppet
     - Uni Project
 image: http://img.youtube.com/vi/kRjExZfpbsc/0.jpg
 weight: 1
@@ -20,9 +20,9 @@ comedic short based on a true ghost story in UNIMAS.
 
 ## Summary
 
-released on : 2024
+**Released on:** 2023
 
-made with : Clip Studio Paint, Adobe Animate,Adobe Premiere Pro
+**Made with:** Clip Studio Paint, Adobe Animate,Adobe Premiere Pro
 
 ## Production
 
@@ -34,5 +34,3 @@ made with : Clip Studio Paint, Adobe Animate,Adobe Premiere Pro
 | Cha        | Editor / Sound Director / Animator |
 | Firdaus    | Storyboard Artist / Asset Artist / Lead Animator |
 {{< /bootstrap-table >}}
-
----

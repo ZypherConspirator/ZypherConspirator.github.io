@@ -1,8 +1,10 @@
 ---
 title: Eidologue
+ProdTeam :
 tags : 
-- Final Year Project
-- Coming Soon
+    - Experimental
+    - Final Year Project
+    - Coming Soon
 image: https://placehold.co/600x400?text=Coming+Soon
 weight: 14
 ---
@@ -21,12 +23,11 @@ this in my Final Year Project in UNIMAS
 
 ## Summary
 
-released on : 2025
+**released on:** 2025
 
-made with : Clip Studio Paint, Blender, Davincii Resolve
+**Made with:** Clip Studio Paint, Blender, Davincii Resolve
 
 ## Production
 
 made by:
 - Me
----

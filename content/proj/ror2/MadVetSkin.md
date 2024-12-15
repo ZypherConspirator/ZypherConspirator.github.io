@@ -1,29 +1,29 @@
 ---
 title: Mad Veteran
 weight: 1
-image: https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000
+image: https://lh3.googleusercontent.com/d/117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg
 gallery:
-- url: https://drive.google.com/thumbnail?id=117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg&sz=w1000
+- url: https://lh3.googleusercontent.com/d/117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg
   name: Half-Life Huntress
-- url: https://drive.google.com/thumbnail?id=17FdqXULptuMYQTDreWq0yczHEcmLNFWy&sz=w1000
+- url: https://lh3.googleusercontent.com/d/17FdqXULptuMYQTDreWq0yczHEcmLNFWy
   name: Runebound Loader
-- url: https://drive.google.com/thumbnail?id=1EhSy2dkfgyz4i646XeiaDj7GJerMmr0M&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1EhSy2dkfgyz4i646XeiaDj7GJerMmr0M
   name: Ice Witch Artificer
-- url: https://drive.google.com/thumbnail?id=1Il1SnG2UIQEKPjz-BiAdSxv2zDnGma18&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1Il1SnG2UIQEKPjz-BiAdSxv2zDnGma18
   name: Super Soldier Commando
-- url: https://drive.google.com/thumbnail?id=1bkkLhFAznSIOPmitAJ0Hb09Fwj0sjsy8&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1bkkLhFAznSIOPmitAJ0Hb09Fwj0sjsy8
   name: Cultist Void Fiend
-- url: https://drive.google.com/thumbnail?id=1lOf9tqWefHwJDLSLOpBtFNpX-OUS7pTe&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1lOf9tqWefHwJDLSLOpBtFNpX-OUS7pTe
   name: Plague Rat Acrid
-- url: https://drive.google.com/thumbnail?id=1pA-sLun1ku8BtCE-ZPcF6VK-pRAu3u3y&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1pA-sLun1ku8BtCE-ZPcF6VK-pRAu3u3y
   name: Fungus Controlled Engineer
-- url: https://drive.google.com/thumbnail?id=1qezgo9VYRLMdbgomwYoCJHrRWga1jCOw&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1qezgo9VYRLMdbgomwYoCJHrRWga1jCOw
   name: USAF Railgunner
-- url: https://drive.google.com/thumbnail?id=1sIhK8yBbn43qZI_6n5Vr1Q7eaAmdIPlY&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1sIhK8yBbn43qZI_6n5Vr1Q7eaAmdIPlY
   name: Plant Bowl Rex
-- url: https://drive.google.com/thumbnail?id=1wql-ceGQCXbRFDsz0k7B8zQPLoTZI_jS&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1wql-ceGQCXbRFDsz0k7B8zQPLoTZI_jS
   name: Retro Tank Mul-T
-- url: https://drive.google.com/thumbnail?id=1xYtYX1n43TK079TjJd5QOM7OH1I0ECZb&sz=w1000
+- url: https://lh3.googleusercontent.com/d/1xYtYX1n43TK079TjJd5QOM7OH1I0ECZb
   name: Nuke Lieutenant Captain
 
 ---
