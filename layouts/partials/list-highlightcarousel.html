@@ -15,7 +15,9 @@
             {{ with $post }}
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                 <div class="pickgradient">
+                    <div class="carousel-img-blur">
                     <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
+                    </div>
                 </div>
                 <span class="py-2 carousel-caption">
                     {{ $Permalink := .Permalink }}

@@ -97,7 +97,11 @@ code {
 	> .pickgradient 
 	{
 		position: relative;
-		mask-image: linear-gradient(to top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,1) 70%);
+		background-color: #5d656b;
+		.carousel-img-blur
+		{
+			mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,1) 60%);
+		}
 	}
 	> span > a > p
 	{
@@ -121,6 +125,7 @@ code {
 	}
 	img
 	{
+		
 		@media (max-width: 500px) 
 		{
 			max-height: 250px !important;
