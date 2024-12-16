@@ -9,17 +9,17 @@ title = "Aiman Zafry"
   [[menu.header]]
     name = "Animations"
     weight = 1
-    params = { Img = "/img/cat/reel.png" }
+    params = { Img = "/img/cat/reel.svg" }
     url = "anim"
   [[menu.header]]
     name = "Projects"
     weight = 5
-    params = { Img = "/img/cat/apple.png" }
+    params = { Img = "/img/cat/apple.svg" }
     url = "proj"
   [[menu.header]]
     name = "Notes"
     weight = 10
-    params = { Img = "/img/cat/book.png" }
+    params = { Img = "/img/cat/book.svg" }
     url = "notes"
 
 [params]
