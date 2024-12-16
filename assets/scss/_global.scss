@@ -98,10 +98,12 @@ code {
 
 .carousel-inner
 {
+	transition: color .15s ease-in-out, background-color .15s ease-in-out;
 	.carousel-item {
 		.pickgradient {
 			position: relative;
 			background-color: #5d656b;
+
 			.carousel-img-blur
 			{
 				mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 90%,rgba(0, 0, 0, 0) 100%);
@@ -117,6 +119,11 @@ code {
 		&:hover
 		{
 			filter:grayscale(0);
+
+			.pickgradient
+			{
+				background-color: #3d4246;
+			}
 
 			> .carousel-caption
 			{
@@ -147,12 +154,11 @@ code {
 	
 }
 
-.notecategory {
+.notecategory 
+{
 	display: inline-block !important;
 	margin: 0 !important;
-	font-size: 80%;
-	line-height: 80%;
-	top: -1px;
+	font-size: 70%;
 	padding: 4px 8px;
 	background-color: v.$coloryellow;
 	color: v.$backgroundDark;
@@ -170,7 +176,7 @@ code {
 
 .alert-secondary:hover 
 {
-	background: adjust-hue($color: v.$coloryellow, $degrees: 5);
+	background: v.$coloryellow;
 	color:v.$darkGrey;
 }
 
@@ -181,7 +187,7 @@ code {
 	color: #ffffff;
 	&:hover 
 	{
-		background-color: adjust-hue($color: v.$coloryellow, $degrees: 5);
+		background-color: v.$coloryellow;
 		color: black;
 		img
 		{
@@ -310,4 +316,3 @@ code {
 
 
 .text-justify  { text-align: justify !important; }
-

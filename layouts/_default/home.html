@@ -24,8 +24,8 @@ function glitchText(text, maxSwaps)
     const chars = text.split('');
     const indices = []; while (indices.length < maxSwaps) 
     { const randomIndex = Math.floor(Math.random() * chars.length);
-         if (!indices.includes(randomIndex)) 
-         { 
+        if (!indices.includes(randomIndex)) 
+        { 
             indices.push(randomIndex); 
         } 
     } 
@@ -52,17 +52,16 @@ applyGlitch();
 
 <div class="fluid-container">
     <div class="row flex-md-row justify-content-center mb-4">
-
         {{ range .Site.Menus.header }}
-        <div class="col-12 col-sm-4 d-flex flex-column py-2 ">
-            <div class="btn mainpage-item btn-secondary mainpage-item">
-                <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
-                <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block py-2" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
-                <div class="pt-1">
-                    <h5 class="card-title text-center">{{ .Name }}</h5>
+        <div class="col-12 col-sm-4 py-2 ">
+            <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
+                <div class="btn btn-secondary mainpage-item d-flex flex-column">
+                    <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block py-2" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
+                    <div class="pt-1">
+                        <h5 class="card-title text-center">{{ .Name }}</h5>
+                    </div>
                 </div>
-                </a>
-            </div>
+            </a>
         </div>
         {{ end }}
         
