@@ -1,10 +1,92 @@
 <footer class="footer py-3">
-            {{ with .Site.Params.footerHtml }}
-                <span>{{ . | safeHTML }}</span>
-            {{ else }}
-                <span>
-                    © {{ now.Format "2006" }} {{ .Site.Params.author.name }}, {{ i18n "powered_by" }}
-                    <a href="https://gohugo.io" class="footerLink">Hugo</a>
-                </span>
-            {{ end }}
+        <span id="footer-quote">Made using Hugo</span><span> © {{ now.Format "2006" }} {{ .Site.Params.author.name }}</span>
 </footer>
+
+<script>
+    // Array of quotes
+    const quotes = [
+        "pixel art is simple; know what's important",
+        "Just tellin' tale by the campfire",
+        "Modding games is fun",
+        "Japanese Curry Rice is cool",
+        "just tryin' something new",
+        "Tryin to look inwards",
+        "Dont stress too much"
+    ];
+
+    // Keep track of the last displayed quote
+    let lastQuoteIndex = -1;
+
+    // Random character generator
+    function getRandomChar() {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+        return chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    // Function to get a new random quote index
+    function getNewQuoteIndex() {
+        let newIndex;
+        do {
+        newIndex = Math.floor(Math.random() * quotes.length);
+        } while (newIndex === lastQuoteIndex); // Ensure it's not the same as the last one
+        return newIndex;
+    }
+
+    // Glitch effect function
+    function glitchEffect(element, newQuote, duration = 1000, glitchRate = 100) {
+        const maxLength = newQuote.length;
+        let currentText = element.textContent.padEnd(maxLength, " ");
+
+        // Function to update the text with random characters
+        function updateGlitch() {
+        currentText = Array.from({ length: maxLength }, (_, i) => {
+            if (Math.random() > 0.5) {
+            return getRandomChar();
+            }
+            return i < currentText.length ? currentText[i] : "";
+        }).join("");
+
+        element.textContent = currentText;
+        }
+
+        // Gradually replace with new quote
+        function settleText() {
+        let step = 0;
+        const settleInterval = setInterval(() => {
+            currentText = Array.from(currentText).map((char, i) => {
+            if (step >= i && i < newQuote.length) {
+                return newQuote[i];
+            }
+            return getRandomChar();
+            }).join("");
+
+            element.textContent = currentText;
+            step++;
+
+            if (step > maxLength) {
+            clearInterval(settleInterval);
+            element.textContent = newQuote;
+            }
+        }, glitchRate / 2);
+        }
+
+        // Run glitch effect for a short duration, then settle the text
+        const glitchInterval = setInterval(updateGlitch, glitchRate);
+        setTimeout(() => {
+        clearInterval(glitchInterval);
+        settleText();
+        }, duration);
+    }
+
+    // Function to update footer with glitch effect
+    function updateFooterWithGlitch() {
+        const footerQuote = document.getElementById("footer-quote");
+        const newQuoteIndex = getNewQuoteIndex();
+        lastQuoteIndex = newQuoteIndex; // Update the last displayed quote index
+        const randomQuote = quotes[newQuoteIndex];
+        glitchEffect(footerQuote, randomQuote);
+    }
+
+    // Update the footer quote every 10 seconds with glitch effect
+    setInterval(updateFooterWithGlitch, 20000);
+</script>

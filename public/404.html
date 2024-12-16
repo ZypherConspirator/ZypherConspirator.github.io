@@ -108,13 +108,97 @@ referrerpolicy="no-referrer"
 <p>You just hit a route that doesn&#39;t exist...</p>
 
     <footer class="footer py-3">
-            
-                <span>
-                    © 2024 Aiman Alzafry, Built with
-                    <a href="https://gohugo.io" class="footerLink">Hugo</a>
-                </span>
-            
+        <span id="footer-quote">Made using Hugo</span><span> © 2024 Aiman Alzafry</span>
 </footer>
+
+<script>
+    
+    const quotes = [
+        "pixel art is simple; know what's important",
+        "Just tellin' tale by the campfire",
+        "Modding games is fun",
+        "Japanese Curry Rice is cool",
+        "just tryin' something new",
+        "Tryin to look inwards",
+        "Dont stress too much"
+    ];
+
+    
+    let lastQuoteIndex = -1;
+
+    
+    function getRandomChar() {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
+        return chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+
+    
+    function getNewQuoteIndex() {
+        let newIndex;
+        do {
+        newIndex = Math.floor(Math.random() * quotes.length);
+        } while (newIndex === lastQuoteIndex); 
+        return newIndex;
+    }
+
+    
+    function glitchEffect(element, newQuote, duration = 1000, glitchRate = 100) {
+        const maxLength = newQuote.length;
+        let currentText = element.textContent.padEnd(maxLength, " ");
+
+        
+        function updateGlitch() {
+        currentText = Array.from({ length: maxLength }, (_, i) => {
+            if (Math.random() > 0.5) {
+            return getRandomChar();
+            }
+            return i < currentText.length ? currentText[i] : "";
+        }).join("");
+
+        element.textContent = currentText;
+        }
+
+        
+        function settleText() {
+        let step = 0;
+        const settleInterval = setInterval(() => {
+            currentText = Array.from(currentText).map((char, i) => {
+            if (step >= i && i < newQuote.length) {
+                return newQuote[i];
+            }
+            return getRandomChar();
+            }).join("");
+
+            element.textContent = currentText;
+            step++;
+
+            if (step > maxLength) {
+            clearInterval(settleInterval);
+            element.textContent = newQuote;
+            }
+        }, glitchRate / 2);
+        }
+
+        
+        const glitchInterval = setInterval(updateGlitch, glitchRate);
+        setTimeout(() => {
+        clearInterval(glitchInterval);
+        settleText();
+        }, duration);
+    }
+
+    
+    function updateFooterWithGlitch() {
+        const footerQuote = document.getElementById("footer-quote");
+        const newQuoteIndex = getNewQuoteIndex();
+        lastQuoteIndex = newQuoteIndex; 
+        const randomQuote = quotes[newQuoteIndex];
+        glitchEffect(footerQuote, randomQuote);
+    }
+
+    
+    setInterval(updateFooterWithGlitch, 20000);
+</script>
     </div>
         
         <script
