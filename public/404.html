@@ -23,8 +23,6 @@ crossorigin="anonymous"
 referrerpolicy="no-referrer"
 />
 
-<link href='/css/style.css' rel="stylesheet">
-
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -33,7 +31,7 @@ referrerpolicy="no-referrer"
 
 
 
-<link href="/css/style.min.f9fe9a8f01a4c33983203b0f39118910243abb118702a258728894f6ee6128ff.css" rel="stylesheet">
+<link href="/css/style.min.2179f1aebbc8a3f0b31cf822f1f3e91d898614ee113f4004fa07b00ad1bce262.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/f823b6ad03.js" crossorigin="anonymous"></script>
 
 
@@ -215,8 +213,44 @@ referrerpolicy="no-referrer"
         <script>
             $(document).ready(function() 
             {
-                $("img").attr("onerror", 'this.onerror = null; this.src="https://placehold.co/160x90/a64646/ebc5c5?text=Womp+Womp"');
+                $("img").attr("onerror", 'this.onerror = null; this.src="/img/error.svg"');
             });
+        </script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const canvases = document.querySelectorAll(".watermarkedCanvas");
+            const img = new Image();
+            img.src = "/img/cat/AceTagLogo.png";
+            canvases.forEach(canvas => {
+            const ctx = canvas.getContext("2d");
+            const image = new Image();
+            const src = canvas.getAttribute("data-src");
+
+            image.src = src;
+            image.onload = () => {
+                
+                canvas.width = image.width;
+                canvas.height = image.height;
+
+                
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                ctx.globalAlpha = 0.5;
+                const watermarkWidth = img.width / 4; 
+                const watermarkHeight = img.height / 4; 
+
+                
+                const x = (canvas.width - watermarkWidth) / 2;
+                const y = canvas.height - watermarkHeight - 60; 
+
+                
+                ctx.drawImage(img, x, y, watermarkWidth, watermarkHeight);
+            };
+            
+            const watermarkedDataURL = canvas.toDataURL("image/png");
+            canvas.setAttribute('data-watermarked', watermarkedDataURL); 
+            });
+        });
         </script>
     </body>
 </html>

@@ -16,7 +16,7 @@
             <div class="modal-dialog modal-dialog-centered"> <!-- Removed modal-lg for responsive sizing -->
                 <div class="modal-content">
                     <div class="modal-body text-center"> <!-- Center the image inside modal -->
-                        <img class="position-absolute top-50 start-50 translate-middle" src="" alt="Image" style="object-fit: contain; width: 60vw; max-height: 900px;">
+                        <img class="position-absolute top-50 start-50 translate-middle" src="" image.crossOrigin = "anonymous" alt="Image" style="object-fit: contain; width: 60vw; max-height: 900px;">
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
             $('.thumbnail').click(function(e) 
             {
                 e.preventDefault();
-                $('#image-modal .modal-body img').attr('src', $(this).find('img').attr('src'));
+                $('#image-modal .modal-body img').attr('src', $(this).find('canvas').attr('data-watermarked'));
                 $("#image-modal").modal('show');
             });
         
@@ -39,7 +39,9 @@
             {
                 $("#image-modal").modal('hide')
             });
-        
         });
-        </script>
+        
+    </script>
+    
+    
 {{ end }}

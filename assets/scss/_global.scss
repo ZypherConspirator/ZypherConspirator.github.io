@@ -143,7 +143,7 @@ code {
 			background: none;
 		}
 	}
-	img
+	img , canvas
 	{
 		
 		@media (max-width: 500px) 
@@ -189,7 +189,7 @@ code {
 	{
 		background-color: v.$coloryellow;
 		color: black;
-		img
+		img , canvas
 		{
 			filter: invert(0) drop-shadow(0px 0px 0px #222);
 		}
@@ -202,7 +202,7 @@ code {
 	{
 		color: #ffffff;
 	}
-	img
+	img , canvas
 	{
 		filter: invert(1) drop-shadow(2px 2px 2px #222);
 	}
@@ -221,7 +221,7 @@ code {
         -moz-column-count: 1;
         column-count: 1;
     }
-	img 
+	img , canvas
     { 
 		transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, transform .05s ease-in-out;
         width: 100%; 
@@ -257,7 +257,7 @@ code {
 		position: relative;
 		&:hover 
 		{
-			img
+			img , canvas
 			{
 				transform: scale(1.1);
 				outline: v.$coloryellow solid 4px ;

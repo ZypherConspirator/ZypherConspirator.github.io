@@ -1,6 +1,6 @@
 {{ $imageURL := .Destination }}
 <div class="markup-img-wrap row">
     <a href="#" target="_blank" class="thumbnail">
-        <img data-src="{{ $imageURL }}" class="img-fluid markup-img lozad" loading="lazy">
+        <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas img-fluid markup-img lozad" image.crossOrigin = "anonymous" loading="lazy"></canvas>
     </a>
 </div>

@@ -75,8 +75,44 @@
         <script>
             $(document).ready(function() 
             {
-                $("img").attr("onerror", 'this.onerror = null; this.src="https://placehold.co/160x90/a64646/ebc5c5?text=Womp+Womp"');
+                $("img").attr("onerror", 'this.onerror = null; this.src="/img/error.svg"');
             });
+        </script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const canvases = document.querySelectorAll(".watermarkedCanvas");
+            const img = new Image();
+            img.src = "/img/cat/AceTagLogo.png";
+            canvases.forEach(canvas => {
+            const ctx = canvas.getContext("2d");
+            const image = new Image();
+            const src = canvas.getAttribute("data-src");
+
+            image.src = src;
+            image.onload = () => {
+                // Set the canvas size to match the image
+                canvas.width = image.width;
+                canvas.height = image.height;
+
+                // Draw the image
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                ctx.globalAlpha = 0.5;
+                const watermarkWidth = img.width / 4; // Scale watermark width (optional)
+                const watermarkHeight = img.height / 4; // Scale watermark height (optional)
+
+                // Position the watermark near the bottom center
+                const x = (canvas.width - watermarkWidth) / 2;
+                const y = canvas.height - watermarkHeight - 60; // 20px padding from the bottom
+
+                // Draw the watermark
+                ctx.drawImage(img, x, y, watermarkWidth, watermarkHeight);
+            };
+            // Store the watermarked image as a data URL for the modal
+            const watermarkedDataURL = canvas.toDataURL("image/png");
+            canvas.setAttribute('data-watermarked', watermarkedDataURL); // Save to parent element
+            });
+        });
         </script>
     </body>
 </html>
