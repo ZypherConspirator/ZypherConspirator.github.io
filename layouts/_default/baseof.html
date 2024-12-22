@@ -78,41 +78,74 @@
                 $("img").attr("onerror", 'this.onerror = null; this.src="/img/error.svg"');
             });
         </script>
-
+        <!-- canvas Watermarking & Modal -->
         <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const canvases = document.querySelectorAll(".watermarkedCanvas");
-            const img = new Image();
-            img.src = "/img/cat/AceTagLogo.png";
-            canvases.forEach(canvas => {
-            const ctx = canvas.getContext("2d");
-            const image = new Image();
-            const src = canvas.getAttribute("data-src");
+            document.addEventListener("DOMContentLoaded", () => {
+                const canvases = document.querySelectorAll(".watermarkedCanvas");
+                const watermark = new Image();
+                watermark.src = "/img/cat/AceTagLogo.png";
 
-            image.src = src;
-            image.onload = () => {
-                // Set the canvas size to match the image
-                canvas.width = image.width;
-                canvas.height = image.height;
+                // Add watermark to each canvas
+                canvases.forEach(canvas => {
+                    const ctx = canvas.getContext("2d");
+                    const image = new Image();
+                    const src = canvas.getAttribute("data-src");
 
-                // Draw the image
-                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-                ctx.globalAlpha = 0.5;
-                const watermarkWidth = img.width / 4; // Scale watermark width (optional)
-                const watermarkHeight = img.height / 4; // Scale watermark height (optional)
+                    image.src = src;
+                    image.crossOrigin = "anonymous";
+                    image.onload = () => {
+                        canvas.width = image.width;
+                        canvas.height = image.height;
 
-                // Position the watermark near the bottom center
-                const x = (canvas.width - watermarkWidth) / 2;
-                const y = canvas.height - watermarkHeight - 60; // 20px padding from the bottom
+                        // Draw the image
+                        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-                // Draw the watermark
-                ctx.drawImage(img, x, y, watermarkWidth, watermarkHeight);
-            };
-            // Store the watermarked image as a data URL for the modal
-            const watermarkedDataURL = canvas.toDataURL("image/png");
-            canvas.setAttribute('data-watermarked', watermarkedDataURL); // Save to parent element
+                        // Add watermark
+                        ctx.globalAlpha = 0.5;
+                        const watermarkWidth = canvas.width / 5; // Scale watermark
+                        const watermarkHeight = (watermark.height / watermark.width) * watermarkWidth;
+                        const x = (canvas.width - watermarkWidth) / 2;
+                        const y = canvas.height - watermarkHeight - 20; // Padding from the bottom
+                        ctx.drawImage(watermark, x, y, watermarkWidth, watermarkHeight);
+                    };
+                    canvas.removeAttribute("data-src");
+                });
+
+                // Handle modal logic
+                const modal = document.getElementById("image-modal");
+                const modalBody = modal.querySelector(".modal-body");
+                let originalParent = null; // To store the original parent of the element (canvas/img)
+
+                document.querySelectorAll(".thumbnail").forEach(thumbnail => {
+                    thumbnail.addEventListener("click", e => {
+                        e.preventDefault();
+
+                        const canvas = thumbnail.querySelector("canvas");
+                        const img = thumbnail.querySelector("img");
+                        const elementToMove = canvas || img; // Choose the first available element (canvas or img)
+
+                        if (!elementToMove) return;
+
+                        originalParent = elementToMove.parentElement; // Store original parent
+                        modalBody.appendChild(elementToMove); // Move element to modal
+                        modal.style.display = "block"; // Show modal
+                        $("#image-modal").modal("show");
+                    });
+                });
+
+                // Close modal and revert element
+                modal.addEventListener("click", () => {
+                    const elementInModal = modalBody.querySelector("canvas") || modalBody.querySelector("img");
+                    if (originalParent && elementInModal) {
+                        originalParent.appendChild(elementInModal); // Move element back to original parent
+                        originalParent = null; // Reset original parent
+                    }
+                    modal.style.display = "none"; // Hide modal
+                    $("#image-modal").modal("hide");
+                });
             });
-        });
         </script>
+
+
     </body>
 </html>

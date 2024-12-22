@@ -284,8 +284,12 @@ code {
 }
 
 
-.modal img {
+.modal img,canvas {
 	z-index: 1000;
+	max-width: none;
+	object-fit: contain !important; 
+	width: 60vw !important; 
+	max-height: 90vh;
 	@media (max-width: 500px) 
 	{
 		width: 100% !important;

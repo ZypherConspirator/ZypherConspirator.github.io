@@ -15,8 +15,8 @@
         <div class="modal fade" id="image-modal" tabindex="-1" role="dialog" style="overflow-x: auto;">
             <div class="modal-dialog modal-dialog-centered"> <!-- Removed modal-lg for responsive sizing -->
                 <div class="modal-content">
-                    <div class="modal-body text-center"> <!-- Center the image inside modal -->
-                        <img class="position-absolute top-50 start-50 translate-middle" src="" image.crossOrigin = "anonymous" alt="Image" style="object-fit: contain; width: 60vw; max-height: 900px;">
+                    <div class="modal-body text-center position-absolute top-50 start-50 translate-middle"> <!-- Center the image inside modal -->
+                        
                     </div>
                 </div>
             </div>
@@ -25,23 +25,4 @@
         {{ .Content  }}
         </article>
     </section>
-    <script>
-        $(function() 
-        {     
-            $('.thumbnail').click(function(e) 
-            {
-                e.preventDefault();
-                $('#image-modal .modal-body img').attr('src', $(this).find('canvas').attr('data-watermarked'));
-                $("#image-modal").modal('show');
-            });
-        
-            $('#image-modal .modal-body img').on('click', function() 
-            {
-                $("#image-modal").modal('hide')
-            });
-        });
-        
-    </script>
-    
-    
 {{ end }}

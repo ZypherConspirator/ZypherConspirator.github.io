@@ -31,7 +31,7 @@ referrerpolicy="no-referrer"
 
 
 
-<link href="/css/style.min.2179f1aebbc8a3f0b31cf822f1f3e91d898614ee113f4004fa07b00ad1bce262.css" rel="stylesheet">
+<link href="/css/style.min.6becea2df35c5d361e8b5a123fff546dbccbe55c0e94e586bbeb14986b364266.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/f823b6ad03.js" crossorigin="anonymous"></script>
 
 
@@ -216,41 +216,74 @@ referrerpolicy="no-referrer"
                 $("img").attr("onerror", 'this.onerror = null; this.src="/img/error.svg"');
             });
         </script>
-
+        
         <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const canvases = document.querySelectorAll(".watermarkedCanvas");
-            const img = new Image();
-            img.src = "/img/cat/AceTagLogo.png";
-            canvases.forEach(canvas => {
-            const ctx = canvas.getContext("2d");
-            const image = new Image();
-            const src = canvas.getAttribute("data-src");
-
-            image.src = src;
-            image.onload = () => {
-                
-                canvas.width = image.width;
-                canvas.height = image.height;
+            document.addEventListener("DOMContentLoaded", () => {
+                const canvases = document.querySelectorAll(".watermarkedCanvas");
+                const watermark = new Image();
+                watermark.src = "/img/cat/AceTagLogo.png";
 
                 
-                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-                ctx.globalAlpha = 0.5;
-                const watermarkWidth = img.width / 4; 
-                const watermarkHeight = img.height / 4; 
+                canvases.forEach(canvas => {
+                    const ctx = canvas.getContext("2d");
+                    const image = new Image();
+                    const src = canvas.getAttribute("data-src");
+
+                    image.src = src;
+                    image.crossOrigin = "anonymous";
+                    image.onload = () => {
+                        canvas.width = image.width;
+                        canvas.height = image.height;
+
+                        
+                        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+                        
+                        ctx.globalAlpha = 0.5;
+                        const watermarkWidth = canvas.width / 5; 
+                        const watermarkHeight = (watermark.height / watermark.width) * watermarkWidth;
+                        const x = (canvas.width - watermarkWidth) / 2;
+                        const y = canvas.height - watermarkHeight - 20; 
+                        ctx.drawImage(watermark, x, y, watermarkWidth, watermarkHeight);
+                    };
+                    canvas.removeAttribute("data-src");
+                });
 
                 
-                const x = (canvas.width - watermarkWidth) / 2;
-                const y = canvas.height - watermarkHeight - 60; 
+                const modal = document.getElementById("image-modal");
+                const modalBody = modal.querySelector(".modal-body");
+                let originalParent = null; 
+
+                document.querySelectorAll(".thumbnail").forEach(thumbnail => {
+                    thumbnail.addEventListener("click", e => {
+                        e.preventDefault();
+
+                        const canvas = thumbnail.querySelector("canvas");
+                        const img = thumbnail.querySelector("img");
+                        const elementToMove = canvas || img; 
+
+                        if (!elementToMove) return;
+
+                        originalParent = elementToMove.parentElement; 
+                        modalBody.appendChild(elementToMove); 
+                        modal.style.display = "block"; 
+                        $("#image-modal").modal("show");
+                    });
+                });
 
                 
-                ctx.drawImage(img, x, y, watermarkWidth, watermarkHeight);
-            };
-            
-            const watermarkedDataURL = canvas.toDataURL("image/png");
-            canvas.setAttribute('data-watermarked', watermarkedDataURL); 
+                modal.addEventListener("click", () => {
+                    const elementInModal = modalBody.querySelector("canvas") || modalBody.querySelector("img");
+                    if (originalParent && elementInModal) {
+                        originalParent.appendChild(elementInModal); 
+                        originalParent = null; 
+                    }
+                    modal.style.display = "none"; 
+                    $("#image-modal").modal("hide");
+                });
             });
-        });
         </script>
+
+
     </body>
 </html>
