@@ -31,7 +31,7 @@ referrerpolicy="no-referrer"
 
 
 
-<link href="/css/style.min.6becea2df35c5d361e8b5a123fff546dbccbe55c0e94e586bbeb14986b364266.css" rel="stylesheet">
+<link href="/css/style.min.5e694f26b183c5004a6a2858f3986e5dd537c22053c177f118338a6a940828ef.css" rel="stylesheet">
 <script src="https://kit.fontawesome.com/f823b6ad03.js" crossorigin="anonymous"></script>
 
 
@@ -112,13 +112,15 @@ referrerpolicy="no-referrer"
 <script>
     
     const quotes = [
-        "pixel art is simple; know what's important",
-        "Just tellin' tale by the campfire",
+        "every pixel matters",
+        "Just tellin' campfire stories",
         "Modding games is fun",
         "Japanese Curry Rice is cool",
+        "Could go for some Nasi Dagang rn",
         "just tryin' something new",
-        "Tryin to look inwards",
-        "Dont stress too much"
+        "Tryin to look Elsewards",
+        "Dont stress too much",
+        "ඞ Suspicious ain't it?"
     ];
 
     
@@ -266,7 +268,10 @@ referrerpolicy="no-referrer"
 
                         originalParent = elementToMove.parentElement; 
                         modalBody.appendChild(elementToMove); 
-                        modal.style.display = "block"; 
+                        elementToMove.classList.add("position-absolute");
+                        elementToMove.classList.add("top-50");
+                        elementToMove.classList.add("start-50");
+                        elementToMove.classList.add("translate-middle");
                         $("#image-modal").modal("show");
                     });
                 });
@@ -277,8 +282,11 @@ referrerpolicy="no-referrer"
                     if (originalParent && elementInModal) {
                         originalParent.appendChild(elementInModal); 
                         originalParent = null; 
+                        elementInModal.classList.remove("position-absolute");
+                        elementInModal.classList.remove("top-50");
+                        elementInModal.classList.remove("start-50");
+                        elementInModal.classList.remove("translate-middle");
                     }
-                    modal.style.display = "none"; 
                     $("#image-modal").modal("hide");
                 });
             });

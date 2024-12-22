@@ -128,7 +128,10 @@
 
                         originalParent = elementToMove.parentElement; // Store original parent
                         modalBody.appendChild(elementToMove); // Move element to modal
-                        modal.style.display = "block"; // Show modal
+                        elementToMove.classList.add("position-absolute");
+                        elementToMove.classList.add("top-50");
+                        elementToMove.classList.add("start-50");
+                        elementToMove.classList.add("translate-middle");
                         $("#image-modal").modal("show");
                     });
                 });
@@ -139,8 +142,11 @@
                     if (originalParent && elementInModal) {
                         originalParent.appendChild(elementInModal); // Move element back to original parent
                         originalParent = null; // Reset original parent
+                        elementInModal.classList.remove("position-absolute");
+                        elementInModal.classList.remove("top-50");
+                        elementInModal.classList.remove("start-50");
+                        elementInModal.classList.remove("translate-middle");
                     }
-                    modal.style.display = "none"; // Hide modal
                     $("#image-modal").modal("hide");
                 });
             });
