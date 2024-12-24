@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
         image.crossOrigin = "anonymous";
         image.onload = () => {
             ctx.globalCompositeOperation = 'normal';
-            canvas.width = image.width;
-            canvas.height = image.height;
+            canvas.width = image.width * 2;
+            canvas.height = image.height * 2;
 
             // Draw the image
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
