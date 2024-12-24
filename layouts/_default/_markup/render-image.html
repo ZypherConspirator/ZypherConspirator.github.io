@@ -10,7 +10,7 @@
     {{ else }}
         <!-- Default: Render <canvas> -->
         <a href="#" class="thumbnail img-fluid markup-img">
-            <canvas data-src="{{ $imageURL }}" aria-label="{{ $altText }}"></canvas>
+            <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas lozad" aria-label="{{ $altText }}"> </canvas>
         </a>
     {{ end }}
 </div>
