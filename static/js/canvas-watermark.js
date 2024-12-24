@@ -16,14 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
             canvas.width = image.width * 2;
             canvas.height = image.height * 2;
 
-            // Step 1: Draw the image
-            ctx.globalCompositeOperation = "source-over";
-            ctx.globalAlpha = 1;
-            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
-
             // Step 2: Generate and overlay noise
-            ctx.globalCompositeOperation = "overlay"; // Blend noise
-            ctx.globalAlpha = 0.1; // Set noise opacity
+            ctx.globalCompositeOperation = "source-over"; // Blend noise
+            ctx.globalAlpha = 1; // Set noise opacity
 
             const noiseImageData = ctx.createImageData(canvas.width, canvas.height);
             const data = noiseImageData.data;
@@ -38,7 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 data[i + 3] = 10; // Alpha
             }
 
-            ctx.drawImage(noiseImageData, 0, 0);
+            ctx.putImageData(noiseImageData, 0, 0);
+            
+            // Step 1: Draw the image
+            ctx.globalCompositeOperation = "overlay";
+            ctx.globalAlpha = 0.9;
+            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+
 
             // Step 3: Add watermark
             ctx.globalCompositeOperation = "difference";
