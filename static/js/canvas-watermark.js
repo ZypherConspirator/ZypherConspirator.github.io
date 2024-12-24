@@ -13,41 +13,35 @@ document.addEventListener("DOMContentLoaded", () => {
         image.src = src;
         image.crossOrigin = "anonymous";
         image.onload = () => {
-            ctx.globalCompositeOperation = 'normal';
             canvas.width = image.width * 2;
             canvas.height = image.height * 2;
 
-            // Draw the image
+            // Step 1: Draw the image
+            ctx.globalCompositeOperation = "source-over";
+            ctx.globalAlpha = 1;
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-            ctx.globalCompositeOperation = 'overlay';
-            ctx.globalAlpha = 0.1;
+            // Step 2: Generate and overlay noise
+            ctx.globalCompositeOperation = "overlay"; // Blend noise
+            ctx.globalAlpha = 0.1; // Set noise opacity
 
-            function generateNoise(ctx) {
-                const imageData = ctx.createImageData(canvas.width, canvas.height);
-                const data = imageData.data;
-          
-                for (let i = 0; i < data.length; i += 3) {
-                  const color = Math.random() * 255; // Generate random intensity for R, G, B
-                  data[i] = Math.random() * 255; // Red
-                  data[i + 1] = Math.random() * 255; // Green
-                  data[i + 2] = Math.random() * 255; // Blue
-                }
-          
-                ctx.drawImage(imageData, 0, 0);
-              }
-          
-              // Generate static noise once
-              generateNoise(ctx);
+            const noiseImageData = ctx.createImageData(canvas.width, canvas.height);
+            const data = noiseImageData.data;
 
-            // Add watermark
-            /* globalCompositeOperation :
-            normal | multiply | screen | overlay | 
-            darken | lighten | color-dodge | color-burn | hard-light | 
-            soft-light | difference | exclusion | hue | saturation | 
-            color | luminosity
-            */
-            ctx.globalCompositeOperation = 'difference';
+            for (let i = 0; i < data.length; i += 4) {
+                const r = Math.random() * 255; // Red
+                const g = Math.random() * 255; // Green
+                const b = Math.random() * 255; // Blue
+                data[i] = r;
+                data[i + 1] = g;
+                data[i + 2] = b;
+                data[i + 3] = 255; // Alpha
+            }
+
+            ctx.putImageData(noiseImageData, 0, 0);
+
+            // Step 3: Add watermark
+            ctx.globalCompositeOperation = "difference";
             ctx.globalAlpha = 0.4;
             const watermarkWidth = canvas.width / 5; // Scale watermark
             const watermarkHeight = (watermark.height / watermark.width) * watermarkWidth;
@@ -55,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const y = canvas.height - watermarkHeight - 20; // Padding from the bottom
             ctx.drawImage(watermark, x, y, watermarkWidth, watermarkHeight);
         };
+
         image.onerror = () => {
             // Use fallback SVG if the main image fails to load
             image.src = fallbackSVG;
@@ -62,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         canvas.removeAttribute("data-src");
     });
 
-    // Handle modal logic
+    // Modal logic (unchanged)
     const modal = document.getElementById("image-modal");
     const modalBody = modal.querySelector(".modal-body");
     let originalParent = null; // To store the original parent of the element (canvas/img)
@@ -87,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Close modal and revert element
     modal.addEventListener("click", () => {
         const elementInModal = modalBody.querySelector("canvas") || modalBody.querySelector("img");
         if (originalParent && elementInModal) {
