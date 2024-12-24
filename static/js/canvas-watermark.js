@@ -27,12 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 const imageData = ctx.createImageData(canvas.width, canvas.height);
                 const data = imageData.data;
           
-                for (let i = 0; i < data.length; i += 4) {
+                for (let i = 0; i < data.length; i += 3) {
                   const color = Math.random() * 255; // Generate random intensity for R, G, B
                   data[i] = Math.random() * 255; // Red
                   data[i + 1] = Math.random() * 255; // Green
                   data[i + 2] = Math.random() * 255; // Blue
-                  data[i + 3] = 255; // Alpha
                 }
           
                 ctx.putImageData(imageData, 0, 0);
