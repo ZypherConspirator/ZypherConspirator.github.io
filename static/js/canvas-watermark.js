@@ -20,16 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
             // Draw the image
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-            ctx.globalCompositeOperation = 'multiply';
+            ctx.globalCompositeOperation = 'overlay';
             ctx.globalAlpha = 0.1;
-            for (var zi=0; zi<100; zi++) {
-                var zzx = Math.random()*canvas.width-50,
-                    zzy = Math.random()*canvas.height-50;
-                var zzw = Math.random()*50+50,
-                    zzh = Math.random()*50+50;
-                ctx.fillStyle = "hsl("+(~~(Math.random()*360))+", 60%, 50%)";
-                ctx.fillRect(zzx, zzy, zzw, zzh);
-            }
+
+            function generateNoise() {
+                const imageData = ctx.createImageData(canvas.width, canvas.height);
+                const data = imageData.data;
+          
+                for (let i = 0; i < data.length; i += 4) {
+                  const color = Math.random() * 255; // Generate random intensity for R, G, B
+                  data[i] = Math.random() * 255; // Red
+                  data[i + 1] = Math.random() * 255; // Green
+                  data[i + 2] = Math.random() * 255; // Blue
+                  data[i + 3] = 255; // Alpha
+                }
+          
+                ctx.putImageData(imageData, 0, 0);
+              }
+          
+              // Generate static noise once
+              generateNoise();
+
             // Add watermark
             /* globalCompositeOperation :
             normal | multiply | screen | overlay | 
