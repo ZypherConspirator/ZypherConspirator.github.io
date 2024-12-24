@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ctx.globalCompositeOperation = 'overlay';
             ctx.globalAlpha = 0.1;
 
-            function generateNoise() {
+            function generateNoise(ctx) {
                 const imageData = ctx.createImageData(canvas.width, canvas.height);
                 const data = imageData.data;
           
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
           
               // Generate static noise once
-              generateNoise();
+              generateNoise(ctx);
 
             // Add watermark
             /* globalCompositeOperation :
