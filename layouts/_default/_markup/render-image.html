@@ -4,13 +4,13 @@
 <div class="markup-img-wrap row">
     {{ if in $title "useCanvas=false" }}
         <!-- Render <img> if useCanvas=false is found -->
-        <a href="#" class="thumbnail img-fluid markup-img">
-            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="lozad" loading="lazy">
+        <a href="#" class="thumbnail">
+            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="img-fluid markup-img lozad" loading="lazy">
         </a>
     {{ else }}
         <!-- Default: Render <canvas> -->
-        <a href="#" class="thumbnail img-fluid markup-img">
-            <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas lozad" aria-label="{{ $altText }}"> </canvas>
+        <a href="#" class="thumbnail">
+            <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas img-fluid markup-img lozad" aria-label="{{ $altText }}"> </canvas>
         </a>
     {{ end }}
 </div>

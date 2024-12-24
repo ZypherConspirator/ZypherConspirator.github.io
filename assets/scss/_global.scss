@@ -331,16 +331,15 @@ code {
 	{
 		background: rgba(0, 0, 0, 0);
 	}
-}
-
-.markup-img 
-{
-	width: 100%;
-	object-fit: fill; 
-	&:hover
+	.markup-img
 	{
-		outline: v.$coloryellow solid 4px ;
-		z-index: 500;
+		width: 100%;
+		object-fit: fill; 
+		&:hover
+		{
+			outline: v.$coloryellow solid 4px ;
+			z-index: 500;
+		}
 	}
 }
 
