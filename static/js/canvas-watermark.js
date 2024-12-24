@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 data[i] = r;
                 data[i + 1] = g;
                 data[i + 2] = b;
-                data[i + 3] = 255; // Alpha
+                data[i + 3] = 10; // Alpha
             }
 
             ctx.putImageData(noiseImageData, 0, 0);
