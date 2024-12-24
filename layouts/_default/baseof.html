@@ -102,6 +102,16 @@
                         // Draw the image
                         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
+                        ctx.globalCompositeOperation = 'multiply';
+                        ctx.globalAlpha = 0.1;
+                        for (var i=0; i<100; i++) {
+                            var x = Math.random()*canvas.width-50,
+                                y = Math.random()*canvas.height-50;
+                            var w = Math.random()*50+50,
+                                h = Math.random()*50+50;
+                            ctx.fillStyle = "hsl("+(~~(Math.random()*360))+", 60%, 50%)";
+                            ctx.fillRect(x, y, w, h);
+                        }
                         // Add watermark
                         /* globalCompositeOperation :
                         normal | multiply | screen | overlay | 
@@ -110,13 +120,12 @@
                         color | luminosity
                         */
                         ctx.globalCompositeOperation = 'difference';
-                        ctx.globalAlpha = 1;
+                        ctx.globalAlpha = 0.6;
                         const watermarkWidth = canvas.width / 5; // Scale watermark
                         const watermarkHeight = (watermark.height / watermark.width) * watermarkWidth;
                         const x = (canvas.width - watermarkWidth) / 2;
                         const y = canvas.height - watermarkHeight - 20; // Padding from the bottom
                         ctx.drawImage(watermark, x, y, watermarkWidth, watermarkHeight);
-                        ctx.globalCompositeOperation = 'normal';
                     };
                     image.onerror = () => {
                         // Use fallback SVG if the main image fails to load
