@@ -4,7 +4,7 @@
     <div class="row g-0">
         {{$inner := .Inner}}
         {{ $content := $inner | markdownify }}
-        {{ $hasImage := findRE "<img[^>]*>" $content 1 }}
+        {{ $hasImage := findRE "<img[^>]*>" $content 1 or findRE "<canvas[^>]*>.*?</canvas>" $content 1  }}
         {{ $hasH5 := findRE "<h5[^>]*>.*?</h5>" $content 1 }}
         {{ $hasH6 := findRE "<h6[^>]*>.*?</h6>" $content 1 }}
         {{ $hasText := replaceRE `#.*\)` "" $inner }}

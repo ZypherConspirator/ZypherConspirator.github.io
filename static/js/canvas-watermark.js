@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 data[i + 3] = 10; // Alpha
             }
 
-            ctx.putImageData(noiseImageData, 0, 0);
+            ctx.drawImage(noiseImageData, 0, 0);
 
             // Step 3: Add watermark
             ctx.globalCompositeOperation = "difference";
