@@ -224,6 +224,7 @@ referrerpolicy="no-referrer"
                 const canvases = document.querySelectorAll(".watermarkedCanvas");
                 const watermark = new Image();
                 watermark.src = "/img/cat/AceTagLogo.png";
+                const fallbackSVG = "/img/error.svg"; 
 
                 
                 canvases.forEach(canvas => {
@@ -234,6 +235,7 @@ referrerpolicy="no-referrer"
                     image.src = src;
                     image.crossOrigin = "anonymous";
                     image.onload = () => {
+                        ctx.globalCompositeOperation = 'normal';
                         canvas.width = image.width;
                         canvas.height = image.height;
 
@@ -241,12 +243,20 @@ referrerpolicy="no-referrer"
                         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
                         
-                        ctx.globalAlpha = 0.5;
+                        
+
+                        ctx.globalCompositeOperation = 'difference';
+                        ctx.globalAlpha = 1;
                         const watermarkWidth = canvas.width / 5; 
                         const watermarkHeight = (watermark.height / watermark.width) * watermarkWidth;
                         const x = (canvas.width - watermarkWidth) / 2;
                         const y = canvas.height - watermarkHeight - 20; 
                         ctx.drawImage(watermark, x, y, watermarkWidth, watermarkHeight);
+                        ctx.globalCompositeOperation = 'normal';
+                    };
+                    image.onerror = () => {
+                        
+                        image.src = fallbackSVG;
                     };
                     canvas.removeAttribute("data-src");
                 });

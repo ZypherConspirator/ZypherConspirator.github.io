@@ -84,6 +84,7 @@
                 const canvases = document.querySelectorAll(".watermarkedCanvas");
                 const watermark = new Image();
                 watermark.src = "/img/cat/AceTagLogo.png";
+                const fallbackSVG = "/img/error.svg"; // Path to your fallback SVG
 
                 // Add watermark to each canvas
                 canvases.forEach(canvas => {
@@ -94,6 +95,7 @@
                     image.src = src;
                     image.crossOrigin = "anonymous";
                     image.onload = () => {
+                        ctx.globalCompositeOperation = 'normal';
                         canvas.width = image.width;
                         canvas.height = image.height;
 
@@ -101,12 +103,24 @@
                         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
                         // Add watermark
-                        ctx.globalAlpha = 0.5;
+                        /* globalCompositeOperation :
+                        normal | multiply | screen | overlay | 
+                        darken | lighten | color-dodge | color-burn | hard-light | 
+                        soft-light | difference | exclusion | hue | saturation | 
+                        color | luminosity
+                        */
+                        ctx.globalCompositeOperation = 'difference';
+                        ctx.globalAlpha = 1;
                         const watermarkWidth = canvas.width / 5; // Scale watermark
                         const watermarkHeight = (watermark.height / watermark.width) * watermarkWidth;
                         const x = (canvas.width - watermarkWidth) / 2;
                         const y = canvas.height - watermarkHeight - 20; // Padding from the bottom
                         ctx.drawImage(watermark, x, y, watermarkWidth, watermarkHeight);
+                        ctx.globalCompositeOperation = 'normal';
+                    };
+                    image.onerror = () => {
+                        // Use fallback SVG if the main image fails to load
+                        image.src = fallbackSVG;
                     };
                     canvas.removeAttribute("data-src");
                 });
