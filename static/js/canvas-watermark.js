@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   data[i + 2] = Math.random() * 255; // Blue
                 }
           
-                ctx.putImageData(imageData, 0, 0);
+                ctx.drawImage(imageData, 0, 0);
               }
           
               // Generate static noise once

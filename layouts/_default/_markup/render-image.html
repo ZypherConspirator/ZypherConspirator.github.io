@@ -1,6 +1,16 @@
 {{ $imageURL := .Destination }}
+{{ $title := .Title }}
+{{ $altText := .Text }}
 <div class="markup-img-wrap row">
-    <a href="#" class="thumbnail">
-        <img data-src="{{ $imageURL }}" class="img-fluid markup-img lozad" image.crossOrigin = "anonymous" loading="lazy">
-    </a>
+    {{ if in $title "useCanvas=false" }}
+        <!-- Render <img> if useCanvas=false is found -->
+        <a href="#" class="thumbnail img-fluid markup-img">
+            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="lozad" loading="lazy">
+        </a>
+    {{ else }}
+        <!-- Default: Render <canvas> -->
+        <a href="#" class="thumbnail img-fluid markup-img">
+            <canvas data-src="{{ $imageURL }}" aria-label="{{ $altText }}"></canvas>
+        </a>
+    {{ end }}
 </div>

@@ -49,4 +49,4 @@ this one has a documented process in-detail which you can see [here](/notes/tauc
 
 here's a bit the community made these skins.
 
-![a](https://lh3.googleusercontent.com/d/1GDpgBsS62c8pZGnaz0IrEj4uEUq333Cr)
+![a](https://lh3.googleusercontent.com/d/1GDpgBsS62c8pZGnaz0IrEj4uEUq333Cr "useCanvas=false")
