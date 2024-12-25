@@ -45,16 +45,19 @@
   {
     outline: v.$coloryellow solid 4px ;
 		background-color: inherit;
-    img
+    img, canvas
     {
       filter: none;
       outline: none;
     }
   }
-  img
+  img, canvas
   {
     height: 100%;
-    object-fit: cover; 
+    max-width: auto;
+    width: auto;
+    object-fit: cover !important;
+    overflow: hidden;
   }
 }
 
