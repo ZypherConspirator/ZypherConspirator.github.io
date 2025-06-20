@@ -71,6 +71,7 @@
         }
 
         &:not(.collapsed)::after {
+            background-image: none;
             transform: rotate(0deg);
         }
 

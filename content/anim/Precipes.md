@@ -4,7 +4,6 @@ ProdTeam :
 tags : 
     - Experimental
     - Final Year Project
-    - Coming Soon
 image: https://placehold.co/600x400?text=Coming+Soon
 weight: 14
 ---
@@ -14,20 +13,15 @@ Experimental Short on approaches of Life
 {{< rawhtml >}}
 <div class="py-2">
 {{< /rawhtml >}}
-{{< youtube i7h0MklKHiU >}}
+{{< youtube V2xoi2u1fBA >}}
 {{< rawhtml >}}
 </div>
 {{< /rawhtml >}}
-
-this in my Final Year Project in UNIMAS
 
 ## Summary
 
 **released on:** 2025
 
-**Made with:** Clip Studio Paint, Blender, Davincii Resolve
+**Made with:** Clip Studio Paint, Blender, Adobe Premiere Pro, Adobe 
 
 ## Production
-
-made by:
-- Me
