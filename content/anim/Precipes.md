@@ -22,7 +22,7 @@ Experimental Minimalist 3D Short on Memory & Introspection
 
 **released on:** 2025
 
-**Made with:** Clip Studio Paint, Blender, Adobe Premiere Pro, Adobe 
+**Made with:** Clip Studio Paint, Blender, Adobe Premiere Pro, Adobe After Effect, Trebly, FSpy
 
 ## Production
 

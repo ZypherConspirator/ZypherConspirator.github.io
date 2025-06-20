@@ -30,6 +30,6 @@ a Short about a Robot Wandering the Wasteland trying to fix its broken arm
  |Crew            | Roles    |
 |-----------------|-----------------------------------------------------------------------|
 | Aiman           | Director / Scriptwriter / 3D Artist (Character, Environment ,Texture ) |
-| Firdaus         | Document Manager / 3D Artist (Environment) |
-| Alicia          | Storyboard Artist / Animator |
+| Alicia          | Document Manager / 3D Artist (Environment) |
+| Firdaus         | Storyboard Artist / Animator |
 {{< /bootstrap-table >}}
