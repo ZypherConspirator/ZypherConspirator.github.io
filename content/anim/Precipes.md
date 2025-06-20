@@ -34,5 +34,4 @@ Experimental Minimalist 3D Short on Memory & Introspection
     src="https://www.canva.com/design/DAGpfR3RT6g/_wnc4DP_pR3AfAyl_OQLtw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
   </iframe>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGpfR3RT6g&#x2F;_wnc4DP_pR3AfAyl_OQLtw&#x2F;view?utm_content=DAGpfR3RT6g&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Eidologue Production booklet_finalized</a>
 {{< /rawhtml >}}
