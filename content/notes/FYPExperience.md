@@ -10,6 +10,8 @@ Initially, I was hesitant to pursue my own project and instead planned to suppor
 
 I contributed by drafting three different story outlines and developing sculptural design tests for the Bujang character, which he could later use as animation references.
 
+---
+
 ### The Tail End
 However, as the final year approached, I realized that my skill set wasn’t aligned with Firdaus’s 2D-focused pipeline. Eventually, I made the decision to pursue an independent project. This wasn’t a difficult pivot, as I was already comfortable with conceptualizing and developing ideas, though I anticipated challenges on the research and academic documentation side.
 
@@ -17,12 +19,16 @@ Since this was now a personal project, I wanted it to distinguish itself from th
 
 This decision led to the creation of Project: Precipes—later renamed Eidologue—an experimental short animated entirely using still shots & featuring no characters. It explored themes of self-discovery and philosophical introspection, making it well-suited for a minimalist, contemplative approach.
 
+---
+
 ### Expansion Possibilities? (2024-11-11)
 While navigating the production and all the required documentation, I started thinking about the long-term potential of this project. Could Eidologue be expanded into a personal animated series?
 
 Since the core of Eidologue was about introspection and growth, it seemed like a fitting foundation for an anthology of short narratives exploring related themes—like the struggle of writing about the self, the corruptive simplicity of greed, or the threshold between life and death.
 
 I considered calling the series Prismatic—each entry offering a new hue of human experience and reflection. Eidologue would serve as the first episode and represent the "white" of the spectrum—containing all the other ideas in potential.
+
+---
 
 ### Completion & Conclusion (2025-06-15)
 After countless hours, days, and months fueled by minimal sleep, snacks, and constant philosophical deep-dives, the project was completed ahead of schedule.
@@ -36,6 +42,9 @@ In the end, I took away two main outcomes:
 - Eidologue fell short in terms of commercial viability. Its experimental nature made it less appealing to recruiters, who often dismissed it as either white noise or just a stylized demo reel—something that may negatively impact my internship prospects.
 
 Still, I have no regrets. This was the kind of project I’ve always wanted to create. I don’t believe the idea was flawed—just mistimed. To quote the project’s production booklet:
+
 “Why not? At best, it will change the status quo. At worst, it would be funny to see what happens. Either way, it’s going to be something cool to see.”
 
 Side note: Eidologue was nominated as one of the top 3 best animations during the Faculty’s CIPTA 2025 event.
+
+---
