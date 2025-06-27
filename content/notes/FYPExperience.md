@@ -1,6 +1,6 @@
 ---
 title: "The Final Year Trails & Tribulations"
-Date: 2025-15-06
+Date: 2025-06-15
 ---
 
 ### The Incoming Presence (2023-10-07)
