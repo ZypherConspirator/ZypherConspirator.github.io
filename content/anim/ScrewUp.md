@@ -28,8 +28,8 @@ a Short about a Robot Wandering the Wasteland trying to fix its broken arm
 
 {{< bootstrap-table table_class="table table-dark table-striped table-bordered" >}}
  |Crew            | Roles    |
-|-----------------|-----------------------------------------------------------------------|
-| Aiman           | Director / Scriptwriter / 3D Artist (Character, Environment ,Texture ) |
+|-----------------|------------------------------------------------------------------------|
+| Aiman           | Director / Scriptwriter / 3D Artist (Character, Environment , Texture) |
 | Alicia          | Document Manager / 3D Artist (Environment) |
 | Firdaus         | Storyboard Artist / Animator |
 {{< /bootstrap-table >}}
