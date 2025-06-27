@@ -1,6 +1,6 @@
 ---
 title: Eidologue
-ProdTeam : OddKindOf Production
+ProdTeam : By OddKindOf Production
 tags : 
     - Experimental
     - Final Year Project
@@ -28,8 +28,11 @@ Experimental Minimalist 3D Short on Memory & Introspection
 ## Production
 
 This Project was directed, written, produced by me.
+
 All Models were made by me.
+
 Some Textures were retrieved from PolyHaven.
+
 Some Audio were retrieved from Pixabay.
 
 {{< rawhtml >}}

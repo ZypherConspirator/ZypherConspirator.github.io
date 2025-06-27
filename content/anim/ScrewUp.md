@@ -1,6 +1,6 @@
 ---
 title: Screw Up
-ProdTeam : by Aduh Studios
+ProdTeam : By Aduh Studios
 tags : 
     - 3D
     - Uni Project

@@ -1,6 +1,6 @@
 ---
 title: Malaysian Abstraction
-ProdTeam : by Haiyaa Productions
+ProdTeam : By Haiyaa Productions
 tags : 
     - Experimental
     - Motion Design
