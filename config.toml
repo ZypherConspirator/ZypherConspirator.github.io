@@ -1,5 +1,5 @@
 baseurl = "http://localhost:1313"
-title = "Aiman Zafry"
+title = "Aiman Alzafry"
 
 [module]
   [module.hugoVersion]
