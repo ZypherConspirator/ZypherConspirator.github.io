@@ -6,7 +6,7 @@ tags :
     - Final Year Project
     - Uni Project
 image: http://img.youtube.com/vi/Z2zNZvFf9MA/0.jpg
-weight: 14
+weight: 12
 ---
 Experimental Minimalist 3D Short on Memory & Introspection
 <!--more-->

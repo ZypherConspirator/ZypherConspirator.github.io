@@ -6,7 +6,7 @@ tags :
     - Motion Design
     - Uni Project
 image: http://img.youtube.com/vi/i7h0MklKHiU/0.jpg
-weight: 11
+weight: 15
 ---
 Abstract short on the patterns and identities that makes up Malaysia
 <!--more-->
