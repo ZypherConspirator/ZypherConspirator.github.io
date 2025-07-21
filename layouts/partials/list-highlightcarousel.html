@@ -2,7 +2,7 @@
 <div id="carouselExampleCaptions" class="carousel slide p-0" data-bs-ride="carousel" style="filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.8));">
     
     <!-- Carousel Indicators -->
-    <div class="carousel-indicators">
+    <div class="carousel-indicators" style="margin-bottom:0;">
         {{ range $index, $highlight := sort .Site.Params.highlight "key" }}
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ $index }}" {{ if eq $index 0 }}class="active"{{ end }} aria-label="Slide {{ add $index 1 }}"></button>
         {{ end }}
@@ -28,11 +28,9 @@
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                 
                 <div class="pickgradient">
-                    <div class="carousel-img-blur">
-                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:400px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
-                    </div>
+                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:130px;" width="600px" height="400px" class="d-block w-100 " alt="{{ .Title }}">
                 </div>
-                <span class="py-2 carousel-caption">
+                <span class="py-1 carousel-caption">
 
                         <small class="pb-1">
                             {{ if .Parent }}

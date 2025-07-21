@@ -98,16 +98,12 @@ code {
 
 .carousel-inner
 {
-	transition: color .15s ease-in-out, background-color .15s ease-in-out;
+	transition: color .15s ease-in-out, background-color .15s ease-in-out, filter 1s ease-in-out;
 	.carousel-item {
 		.pickgradient {
 			position: relative;
 			background-color: #5d656b;
-
-			.carousel-img-blur
-			{
-				mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 90%,rgba(0, 0, 0, 0) 100%);
-			}
+			filter:brightness(80%) grayscale(1) blur(10px);
 		}	
 		> span > a > p
 		{
@@ -115,13 +111,14 @@ code {
 		}
 	}
 	a {
-		filter:grayscale(0.5);
+		
 		&:hover
 		{
-			filter:grayscale(0);
+			
 
 			.pickgradient
 			{
+				filter:grayscale(0.1) blur(5px);
 				background-color: #3d4246;
 			}
 

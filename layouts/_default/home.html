@@ -3,21 +3,13 @@ Home | {{ .Site.Params.author.name }}
 {{ end }}
 
 {{ define "main" }}
-<div class="container p-0 py-3 pt-5">
+<div class="container p-0 py-2 pt-5">
     <div class="row justify-content-center d-flex">
         <h1 class="col-12 d-flex d-column justify-content-center glitch-title">{{ .Site.Params.author.name }}</h1>
         <h5 class="col-12 d-flex justify-content-center">-- {{ .Site.Params.author.job }} --</h5>
-        {{ if isset .Site.Params "social" }}
-        <div class="d-flex justify-content-around g-3">
-            {{ range sort .Site.Params.social "key"}}
-                <a href="{{ .url | safeURL }}" title="{{ .name }}" type="button" class="col btn mainpage-item btn-secondary nav-item postListLink mx-2" {{ if .target }} target="{{ .target }}" {{ if .aria }} aria-label="{{ .aria }}" {{ else }} aria-hidden="true" {{ end }} {{ end }} {{ if .rel }} rel="{{ .rel }}"{{ end }}>
-                    <i class="{{ .falogo }}"></i><small class="d-none d-sm-block"> {{ .name }}</small>
-                </a>
-            {{ end }}
-        </div>
-        {{ end }}
     </div>
 </div>
+
 <script> 
 function glitchText(text, maxSwaps) 
 { 
@@ -46,17 +38,40 @@ function applyGlitch()
 applyGlitch();
 </script>
 
-<div class="pb-2">
+<div class="py-2">
+    <a href="/resume" title="{{ .Name }}" >
+        <div class="card">
+            <div class="btn btn-secondary active">
+                <strong>Open for hire!</strong> i'm always looking to work on cool stuff alongside other cool people.
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<div class="py-2">
+<iframe width="100%" height="400" 
+src="https://www.youtube.com/embed/V6Mboe9_BHA?si=Jhrc2frr2SkHmIH3&autoplay=1&mute=1&loop=1" 
+title="A.Alz 3D Artist Showreel" frameborder="0" 
+allow="autoplay;" 
+referrerpolicy="strict-origin-when-cross-origin" 
+allowfullscreen>
+</iframe>
+</div>
+
+
+
+<div class="py-2">
 {{ partial "list-highlightcarousel.html" . }}
 </div>
 
 <div class="fluid-container">
-    <div class="row flex-md-row justify-content-center mb-4">
+    <div class="row flex-row justify-content-center my-1">
         {{ range .Site.Menus.header }}
-        <div class="col-12 col-sm-4 py-2 ">
+        <div class="col-12 col-sm-4 py-1">
             <a href="{{ .URL | absURL }}" title="{{ .Name }}" >
                 <div class="btn btn-secondary mainpage-item d-flex flex-column">
-                    <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block py-2" alt="{{ .Name }}" style="object-fit:contain; max-height:150px; ">
+                    <img src="{{ .Params.Img }}" class="card-img-top d-none d-sm-block py-2" alt="{{ .Name }}" style="object-fit:contain; max-height:100px; ">
                     <div class="pt-1">
                         <h5 class="card-title text-center">{{ .Name }}</h5>
                     </div>
@@ -64,7 +79,9 @@ applyGlitch();
             </a>
         </div>
         {{ end }}
-        
     </div>
 </div>
+
+
 {{ end }}
+

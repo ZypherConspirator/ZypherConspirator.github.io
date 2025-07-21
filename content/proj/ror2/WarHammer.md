@@ -3,9 +3,10 @@ title: Warhammer 40K
 weight: 2
 image: https://lh3.googleusercontent.com/d/1RKxFvLyBpsCUJgP4H01pHSo_FmBkxjuI
 ---
-series of character skins is based on the famous Grim-Dark Fantasy tabletop game, Warhammer 40K. 
+series of character skins based on the miniature tabletop wargame.
 <!--more-->
 ---
+
 Started as commission work but it extended into gaining a personally interest in expanding this collection.
 these projects specifically made me care more about the background and detailing when working on projects like this. stuff like the armor design, color choice, the decals and even the type of helmet they are using, define the Character/Group they are apart of.
 

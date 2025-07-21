@@ -4,4 +4,11 @@
   padding: 15px;
   text-align: center;
   border-top: 2px solid v.$white;
+  a
+  {
+    &:hover, &:active
+    {
+      background: none;
+    }
+  }
 }

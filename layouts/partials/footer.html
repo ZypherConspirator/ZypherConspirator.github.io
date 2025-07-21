@@ -1,5 +1,11 @@
-<footer class="footer py-3">
-        <span id="footer-quote">Made using Hugo</span><span> © {{ now.Format "2006" }} {{ .Site.Params.author.name }}</span>
+<footer class="footer mt-3 py-3">
+        <p class="m-1">
+        {{ range sort .Site.Params.social "key"}}
+            <span class="mx-1 h2"><a href="{{ .url | safeURL }}"><i class="{{ .falogo }}"></i></a></span>
+        {{ end }}
+        </p>
+        <p class="m-1"><small id="footer-quote">Made using Hugo</small></p>
+        <p class="m-0">{{ .Site.Params.author.email }}</p>
 </footer>
 
 <script>
@@ -7,11 +13,11 @@
     const quotes = [
         "every pixel matters",
         "Just tellin' campfire stories",
-        "Modding games is fun",
+        "Modding games are fun",
         "Japanese Curry Rice is cool",
         "Could go for some Nasi Dagang rn",
-        "just tryin' something new",
-        "Tryin to look Elsewards",
+        "just tryin' something cool",
+        "Tryin to look nowhere",
         "Dont stress too much",
         "ඞ Suspicious ain't it?"
     ];

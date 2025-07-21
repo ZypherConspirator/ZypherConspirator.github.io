@@ -51,18 +51,10 @@ falogo= "fa-brands fa-github"
 [[params.social]]
 key = 2
 name = "Instagram"
-url = "https://www.instagram.com/acelz_artistry/"
+url = "https://www.instagram.com/lazy.sketchy/"
 target = "_blank"
 aria = "Instagram"
 falogo= "fa-brands fa-instagram"
-
-[[params.social]]
-key = 0
-name = "Resume"
-url = "/resume"
-target = "_blank"
-aria = ""
-falogo= "fa-solid fa-address-card"
 
 [[params.social]]
 key = 2
