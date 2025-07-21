@@ -6,8 +6,10 @@
   border-top: 2px solid v.$white;
   a
   {
+    color: v.$darkerwhite;
     &:hover, &:active
     {
+      color:v.$coloryellow;
       background: none;
     }
   }

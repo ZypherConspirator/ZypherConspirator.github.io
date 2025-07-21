@@ -1,11 +1,15 @@
-<footer class="footer mt-3 py-3">
+<footer class="footer row mt-3 py-1">
+    <div class="d-flex col justify-content-end">
         <p class="m-1">
         {{ range sort .Site.Params.social "key"}}
-            <span class="mx-1 h2"><a href="{{ .url | safeURL }}"><i class="{{ .falogo }}"></i></a></span>
+            <span class="mx-1 h1"><a href="{{ .url | safeURL }}"><i class="{{ .falogo }}"></i></a></span>
         {{ end }}
         </p>
-        <p class="m-1"><small id="footer-quote">Made using Hugo</small></p>
-        <p class="m-0">{{ .Site.Params.author.email }}</p>
+    </div>
+    <div  class="d-flex row col" style="text-align: left">
+        <p class="m-1 col-12"><small id="footer-quote">Made using Hugo</small></p>
+        <p class="m-0 col-12"><small> {{ .Site.Params.author.email }}</small></p>
+    </div>
 </footer>
 
 <script>
