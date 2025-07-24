@@ -148,7 +148,10 @@ code {
 			max-height: 250px !important;
 		}
 	}
-	
+	.carousel-control-next:hover, .carousel-control-prev:hover
+	{
+		color: v.$coloryellow;
+	}
 }
 
 .notecategory 
