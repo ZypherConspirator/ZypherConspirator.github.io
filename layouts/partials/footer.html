@@ -2,7 +2,7 @@
     <div class="d-flex col justify-content-end">
         <p class="align-middle m-1">
         {{ range sort .Site.Params.social "key"}}
-            <span class="mx-1 h1"><a href="{{ .url | safeURL }}"><i class="{{ .falogo }}"></i></a></span>
+            <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
         {{ end }}
         </p>
     </div>
