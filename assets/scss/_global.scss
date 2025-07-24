@@ -99,8 +99,10 @@ code {
 .carousel-inner
 {
 	transition: color .15s ease-in-out, background-color .15s ease-in-out, filter 1s ease-in-out;
-	.carousel-item {
-		.pickgradient {
+	.carousel-item 
+	{
+		.pickgradient
+		{
 			position: relative;
 			background-color: #5d656b;
 			filter:brightness(80%) grayscale(1) blur(10px);
@@ -110,12 +112,10 @@ code {
 			text-shadow: 2px 2px 4px #000000;
 		}
 	}
-	a {
-		
+	a 
+	{
 		&:hover
 		{
-			
-
 			.pickgradient
 			{
 				filter:grayscale(0.1) blur(5px);
@@ -135,23 +135,24 @@ code {
 	.small
 	{
 		text-shadow: 2px 2px 4px #000000;
-		&:visited, &:hover, &:active, &:focus {
+		&:visited, &:hover, &:active, &:focus 
+		{
 			text-decoration: none;
 			background: none;
 		}
 	}
 	img , canvas
 	{
-		
 		@media (max-width: 500px) 
 		{
 			max-height: 250px !important;
 		}
 	}
-	.carousel-control-next:hover, .carousel-control-prev:hover
-	{
-		color: v.$coloryellow;
-	}
+}
+
+.carousel-control-next:focus, .carousel-control-next:hover, .carousel-control-prev:focus, .carousel-control-prev:hover
+{
+	color: v.$coloryellow;
 }
 
 .notecategory 
