@@ -1,6 +1,6 @@
 <footer class="footer mt-3 py-1">
     <div class="row py-2 pb-4">
-        <div class="mx-4 d-flex col justify-content-end">
+        <div class="mx-4 d-flex align-items-center col justify-content-end">
             <p class="align-baseline m-1">
             {{ range sort .Site.Params.social "key"}}
                 <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
