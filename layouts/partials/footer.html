@@ -1,14 +1,16 @@
-<footer class="footer row mt-3 py-1">
-    <div class="d-flex col justify-content-end">
-        <p class="align-middle m-1">
-        {{ range sort .Site.Params.social "key"}}
-            <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
-        {{ end }}
-        </p>
-    </div>
-    <div  class="d-flex row col" style="text-align: left">
-        <p class="m-1 col-12"><small id="footer-quote">Made using Hugo</small></p>
-        <p class="m-0 col-12"><small> {{ .Site.Params.author.email }}</small></p>
+<footer class="footer mt-3 py-1">
+    <div class="row py-2 pb-4">
+        <div class="d-flex col justify-content-end">
+            <p class="align-middle m-1">
+            {{ range sort .Site.Params.social "key"}}
+                <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
+            {{ end }}
+            </p>
+        </div>
+        <div  class="d-flex row col" style="text-align: left">
+            <p class="m-1 col-12"><small id="footer-quote">Made using Hugo</small></p>
+            <p class="m-0 col-12"><small> {{ .Site.Params.author.email }}</small></p>
+        </div>
     </div>
 </footer>
 
