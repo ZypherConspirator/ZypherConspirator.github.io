@@ -28,11 +28,11 @@
             <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
                 
                 <div class="pickgradient">
-                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:120px;" width="600px" height="120px" class="d-block w-100 " alt="{{ .Title }}">
+                    <img src="{{ .Params.image }}" style="object-fit: cover; object-position: center; max-height:130px;" width="600px" height="130px" class="d-block w-100 " alt="{{ .Title }}">
                 </div>
                 <span class="py-1 carousel-caption">
 
-                        <small class="pb-2">
+                        <small class="pb-1">
                             {{ if .Parent }}
                                 {{ .Parent.Title }}
                             {{ else }}
