@@ -39,7 +39,13 @@ url = "mailto:aiman.zafry@outlook.com"
 aria = "My e-Mail Address"
 falogo= "fa-regular fa-envelope"
 
-
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets'
 
 [markup]
   [markup.tableOfContents]
