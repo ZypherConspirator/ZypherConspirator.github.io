@@ -1,0 +1,23 @@
+
+
+{{ $isAbout := or (eq .Section "about") (eq .Path "/about") }}
+{{ $isAnimations := or (eq .Section "animations") (eq .Path "animations") }}
+{{ $isProjects := or (eq .Section "projects") (eq .Path "projects") }}
+{{ $isNotes := or (eq .Section "notes") (eq .Path "notes") }}
+<nav id="globalNav" class="navbar navbar-expand navbar-dark position-absolute w-100 opacity-0">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav align-items-center gap-sm-0 gap-3">
+                <li class="nav-item nav-btn px-2 {{ if $isAbout }}active{{ end }}"><a class="nav-link fw-bold" href="/about">ABOUT</a></li>
+                <li class="nav-item nav-btn px-2 {{ if $isAnimations }}active{{ end }}"><a class="nav-link fw-bold" href="/animations">ANIMATIONS</a></li>
+                <li class="nav-item px-2">
+                    <a href="/" class="navbar-brand m-0">
+                        <span class="AceLogo align-self-center"></span>
+                    </a>
+                </li>
+                <li class="nav-item nav-btn px-2 {{ if $isProjects }}active{{ end }}"><a class="nav-link fw-bold " href="/projects">PROJECTS</a></li>
+                <li class="nav-item nav-btn px-2 {{ if $isNotes }}active{{ end }}"><a class="nav-link fw-bold " href="/notes">NOTES</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

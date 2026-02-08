@@ -1,0 +1,51 @@
+baseURL = ''
+languageCode = 'en-us'
+title = 'A.Alzafry Porfolio'
+
+[[params.openforhire]]
+
+[[params.highlight]]
+key = 0
+page = "ScrewUp"
+
+[[params.highlight]]
+key = 1
+page = "WarHammer"
+
+[[params.highlight]]
+key = 2
+page = "Precipes"
+
+[[params.social]]
+key = 0
+name = "Github"
+url = "https://github.com/azulconspirator"
+target = "_blank"
+aria = "GitHub Profile"
+falogo= "fa-brands fa-github"
+
+[[params.social]]
+key = 2
+name = "Instagram"
+url = "https://www.instagram.com/lazy.sketchy/"
+target = "_blank"
+aria = "Instagram"
+falogo= "fa-brands fa-instagram"
+
+[[params.social]]
+key = 2
+name = "Email"
+url = "mailto:aiman.zafry@outlook.com"
+aria = "My e-Mail Address"
+falogo= "fa-regular fa-envelope"
+
+
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 2
+
+[markup.goldmark.parser.attribute]
+block = true

@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- FontAwesome Icons -->
+<script src="https://kit.fontawesome.com/f823b6ad03.js" crossorigin="anonymous"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Custom CSS -->
+{{ $options := dict "targetPath" "css/style.css" "transpiler" "dartsass"}}
+{{ $style := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
+<link href="{{ $style.RelPermalink }}" rel="stylesheet">
+<!-- Custom module -->
+{{ $script := resources.Get "js/HomeVid.js" }}
+<script type="module">
+    import { video_play, video_exit } from "{{ $script.RelPermalink }}";
+    window.video_play = video_play;
+    window.video_exit = video_exit;
+    document.addEventListener('click', (e) => {
+      console.log("Event Clicked");
+      var playBtn = e.target.closest('#playReelBtn');
+      var closeBtn = e.target.closest('#closeVid');
+
+      if (playBtn) {
+          console.log("Play Button Clicked");
+          e.preventDefault();
+          window.video_play();
+      }
+      if (closeBtn) {
+          console.log("Exit Button Clicked");
+          e.preventDefault();
+          window.video_exit();
+      }
+    });
+</script>

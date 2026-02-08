@@ -1,0 +1,30 @@
+@mixin font-base($family, $weight, $style: normal) {
+  font-family: $family, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+.font-raleway-light{
+  @include font-base("Raleway", 300);
+}
+.font-raleway {
+  @include font-base("Raleway", 400);
+}
+.font-raleway-bold {
+  @include font-base("Raleway", 700);
+}
+
+.font-tourney-extralight {
+  @include font-base("Tourney", 200);
+}
+.font-tourney-light {
+  @include font-base("Tourney", 300);
+}
+.font-tourney {
+  @include font-base("Tourney", 400);
+}
+.font-tourney-bold {
+  @include font-base("Tourney", 700);
+}
+

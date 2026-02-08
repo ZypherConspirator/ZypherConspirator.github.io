@@ -1,0 +1,26 @@
+{{ $galleryName := .Get "name" }}
+{{ $showName := .Get "showName" }}
+{{ $showLike := .Get "showLike" }}
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <!-- Gallery Section -->
+            <div id="image" class="gal">
+                {{ $gallery := index $.Page.Params $galleryName }}
+                {{ if $gallery }}
+                    {{ range $gallery }}
+                        <div class="d-flex gal-wrap py-2 thumbnail position-relative">
+                        <div class="spinner-border position-absolute"  role="status" style=" z-index: 30;"></div>
+                        {{ if eq $showName "true" }}{{if .name }} <span class="bottom">{{ .name }}</span> {{ end }}{{ end }}
+                        {{if eq $showLike "true" }}{{if .likes }} <span class="corner"><i class="fa-solid fa-download"></i> {{ .likes }}</span> {{ end }}{{ end }}
+                        <canvas data-src="{{ .url }}" alt="{{ .name }}" class="watermarkedCanvas lozad" image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                        </div>
+                    {{ end }}
+                {{ else }}
+                    <p>No images available in the gallery.</p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>

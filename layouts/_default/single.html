@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg h-70" style="z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
+    <div id="jumbotronContent" class="w-100 h-100 position-relative">
+        <div class="details-wrapper w-100 h-100 position-relative">
+            <div class="text-center p-2 w-100 h-100 d-flex flex-column position-absolute top-0 start-0" style="z-index: 4; transition: opacity 0.5s ease-in-out; overflow:auto; scrollbar-width: none;"> 
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

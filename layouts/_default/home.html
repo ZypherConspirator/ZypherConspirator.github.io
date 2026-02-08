@@ -1,0 +1,85 @@
+{{ define "main" }}
+<div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg h-70" style="z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
+    <div id="jumbotronContent" class="w-100 h-100 position-relative tab-content">
+        <div class="details-wrapper w-100 h-100 position-relative">
+
+            <ul class="nav nav-pills d-none" id="homeToggle" role="tablist">
+                <li class="nav-item"><button class="nav-link active" id="show-hero-link" data-bs-toggle="pill" data-bs-target="#home-hero"></button></li>
+                <li class="nav-item"><button class="nav-link" id="show-video-link" data-bs-toggle="pill" data-bs-target="#home-video"></button></li>
+            </ul>
+
+            <div class="tab-pane fade show active w-100 h-100 position-relative" id="home-hero" role="tabpanel">
+                <img id="midgroundImg" src="./img/Background/baseforeground.png" class="position-absolute top-50 start-50 translate-middle d-none d-lg-block" style="z-index: 3; filter: drop-shadow(0 0 30px rgba(0,0,0,0.8)); transition: opacity 0.5s ease-in-out; pointer-events: none; max-height: 90vh;">
+                
+                <div class="text-center p-sm-2 p-md-5 w-100 h-100 d-flex flex-column justify-content-center position-absolute top-0 start-0" style="z-index: 4;"> 
+                    {{if .Site.Params.openforhire }}
+                    <a href="/about/resume">
+                        <div class="justify-content-center d-flex align-items-center">
+                            <h1 class="fs-3 text-light text-uppercase"><span class="badge rounded-pill px-5 bg-black bg-opacity-10 fw-light" style="backdrop-filter: blur(15px);"> #OpenForHire </span></h1>
+                        </div>
+                    </a>
+                    {{ end }}
+                    <div class="justify-content-center d-flex align-items-center rounded-pill my-2 bg-black bg-opacity-10" style="backdrop-filter: blur(15px);">
+                        <h1 class="display-1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">AIMAN</h1>
+                        <span class="d-sm-inline d-md-none align-self-center mx-3"><!-- Spacer --></span>
+                        <span class="d-sm-none d-md-inline AceLogo align-self-center"></span>
+                        <h1 class="display-1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">ALZAFRY</h1>
+                    </div>
+                    <div class="justify-content-center d-flex align-items-center">
+                        <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-10" style="backdrop-filter: blur(15px); filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));"> 3D GENERALIST </span></h1>
+                    </div>
+                    <div class="mx-4 d-flex justify-content-center mb-4 mt-2">
+                        {{ range sort .Site.Params.social "key"}}
+                            <span class="mx-2 h1 rounded-circle"><a href="{{ .url | safeURL }}" class="text-white"><i class="{{ .falogo }}"></i></a></span>
+                        {{ end }}
+                    </div>
+
+                    <div class="row my-2 align-items-center"> 
+                        <div class="col-5"><div class="border-top border-light opacity-25"></div></div>
+                        <div class="col-2">
+                            <button id="playReelBtn" onclick="document.getElementById('show-video-link').click(); videoplay();" class="btn text-light btn-lg rounded-circle border-0 py-2">
+                                <span><i class="fa-solid fa-circle-play fa-2xl"></i></span>
+                            </button>
+                        </div>
+                        <div class="col-5"><div class="border-top border-light opacity-25"></div></div>
+                    </div>
+
+                <!--- Navigation Buttons -->
+                <div class="home-nav row justify-content-center gap-3 m-4 ">
+                    <a href="/about" class="col rounded-pill" >
+                    <div  class="btn border-0 px-4">
+                        <span  class="fs-5 fw-bold text-decoration-none text-white">ABOUT</span>
+                    </div>
+                    </a>
+                    <a href="/animations" class="col rounded-pill">
+                    <div class="btn border-0 px-4">
+                        <span class="fs-5 fw-bold text-decoration-none text-white">ANIMATIONS</span>
+                    </div>
+                    </a>
+                    <a href="/projects" class="col rounded-pill">
+                    <div class="btn border-0 px-4">
+                        <span class="fs-5 fw-bold text-decoration-none text-white">PROJECTS</span>
+                    </div>
+                    </a>
+                    <a href="/notes" class="col rounded-pill">
+                    <div class="btn border-0 px-4">
+                        <span class="fs-5 fw-bold text-decoration-none text-white">NOTES</span>
+                    </div>
+                    </a>
+                </div>
+                <!--- Navigation End -->
+                </div>
+            </div>
+            <div class="tab-pane fade w-100 h-100 bg-black position-absolute top-0 start-0" id="home-video" role="tabpanel">
+                <button onclick="document.getElementById('show-hero-link').click(); videoexit();" class="btn btn-lg  bg-black bg-opacity-50 rounded-start-pill position-absolute top-50 end-0" style="z-index: 10;">
+                    <i class=" text-light fa-solid fa-right-from-bracket fa-flip-horizontal"></i>
+                </button>
+                <iframe id="reelVideo" class="w-100 h-100" src="https://www.youtube.com/embed/V6Mboe9_BHA?si=Jhrc2frr2SkHmIH3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg" style="height: 70vh; z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
+    <div id="jumbotronContent" class="w-100 h-100 position-relative">
+        <div class="details-wrapper w-100 h-100 position-relative">
+            <div class="text-center p-5 w-100 h-100 d-flex flex-column position-absolute top-0 start-0" style="z-index: 4; transition: opacity 0.5s ease-in-out; overflow:auto; scrollbar-width: none;"> 
+                <h1>{{ i18n "not_found" }}</h1>
+                <p>{{ i18n "not_found_desc" }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

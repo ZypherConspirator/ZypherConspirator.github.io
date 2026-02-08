@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ .Lang }}"> 
+    <head>
+        <link rel="canonical" href="{{ .Permalink }}">
+        <title>{{ .Site.Title }}</title>
+        {{ partial "head.html" . }}
+    </head>
+    <body class="{{ if .IsHome }}home{{ end }}">
+        <main>
+        <!--- Background IMG -->
+        {{ partial "backdrop.html" . }}
+        <!--- Background IMG End -->
+        <!-- IMG Modal -->
+        {{ partial "ImgModal.html" .}}
+        <!-- IMG Modal End -->
+        <!--- Content -->
+        <div class="vh-100 w-100 position-relative overflow-hidden bg-black d-flex align-items-center justify-content-center">
+            {{ partial "header_nav.html" . }}
+            {{ block "main" . }}{{ end }}
+        </div>
+        <!--- Content End -->
+        {{ partial "addon_scripts.html" . }}
+        </main>
+    </body>
+</html>

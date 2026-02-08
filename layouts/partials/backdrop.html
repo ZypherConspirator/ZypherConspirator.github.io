@@ -1,0 +1,6 @@
+{{ $backdrop := .Params.background | default "https://live.staticflickr.com/2744/4302326159_5d35f780ac_m.jpg" }}
+
+<div class="bg-container">
+    <img src="" class="bg-back position-absolute w-100 h-100 object-fit-cover" style="filter : brightness(0.5); pointer-events: none;"> 
+    <img src="{{ $backdrop }}" class="bg-front position-absolute w-100 h-100 object-fit-cover " style="filter : brightness(0.5); pointer-events: none;">
+</div>

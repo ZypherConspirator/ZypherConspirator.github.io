@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg" 
+     style="height: 70vh; z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
+    
+    <div id="jumbotronContent" class="w-100 h-100 position-relative">
+        <div class="details-wrapper w-100 h-100 d-flex flex-column p-3 position-relative">
+            
+            <div class="mb-3 p-2 flex-shrink-0" style="border: 2px solid #ffff;">
+                <b class="text-light text-center d-block w-100">{{ .Title }}</b>
+            </div>
+
+            <ul class="nav nav-pills d-none" id="layoutTab" role="tablist">
+                <li class="nav-item"><button class="nav-link active" id="cinema-link" data-bs-toggle="pill" data-bs-target="#view-cinema"></button></li>
+                <li class="nav-item"><button class="nav-link" id="details-link" data-bs-toggle="pill" data-bs-target="#view-details"></button></li>
+            </ul>
+
+            <div class="tab-content flex-grow-1 overflow-hidden h-100" id="layoutTabContent">
+                
+                <div class="tab-pane fade show active h-100" id="view-cinema" role="tabpanel">
+                    <div class="row g-2 h-100">
+                        <div class="col-11 h-100">
+                            <div class="h-100 bg-black bg-opacity-20 rounded-4 overflow-hidden border border-white border-opacity-10">
+                                <iframe class="w-100 h-100 border-0" src="{{ .Params.video }}"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-1 h-100" onclick="document.getElementById('details-link').click()" role="button" style="cursor: pointer;">
+                            <div class="h-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10">
+                                <div style="writing-mode: vertical-rl; letter-spacing: 3px; font-size: 0.7rem;">
+                                    DETAILS <i class="bi bi-arrow-right ms-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade h-100" id="view-details" role="tabpanel">
+                    <div class="row g-2 h-100">
+                        <div class="col-1 h-100" onclick="document.getElementById('cinema-link').click()" role="button" style="cursor: pointer;">
+                            <div class="h-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10">
+                                <div style="writing-mode: vertical-rl; letter-spacing: 3px; font-size: 0.7rem;">
+                                    CINEMA <i class="bi bi-arrow-left ms-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-11 h-100">
+                            <div class="h-100 bg-white bg-opacity-10 rounded-4 p-4 overflow-auto text-light border border-white border-opacity-10">
+                                {{ $ContentParts := split .Content "||||||||||" }}
+                                {{ index $ContentParts 1 | safeHTML }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+</div>
+{{ end }}

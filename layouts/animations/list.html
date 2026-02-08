@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg h-70" style=" z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
+    <div id="jumbotronContent" class="w-100 h-100 position-relative">
+        <div class="details-wrapper w-100 h-100 position-relative">
+            <div class="text-center p-4 w-100 h-100 d-flex flex-column position-absolute top-0 start-0  overflow-scroll" style=" scrollbar-width: none; z-index: 4; transition: opacity 0.5s ease-in-out;"> 
+                <div class="row row-cols-1 row-cols-md-3 py-1 g-2">
+                {{ range .Pages }}
+                <div class="col">
+                    {{ $Permalink := .Permalink }}
+                    {{ $disableLink := false }}
+                    
+                    {{ if .Params.tags }}
+                        {{ range .Params.tags }}
+                            {{ if eq . "Coming Soon" }}
+                                {{ $disableLink = true }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                    <a class="" href="{{ if $disableLink }}#{{ else }}{{ $Permalink }}{{ end }}">
+                        <div class="anim-card flex-row border-light-subtle rounded-4 m-1 overflow-hidden shadow h-100 text-light " style="--background: url('{{ .Params.background }}')">
+                            <div class="d-flex flex-column h-100 anim-card-content">
+                                <div class="col-12 py-2 flex-fill" >
+                                    <h5><b class="text-uppercase font-raleway fw-bold">{{ .Title }}</b></h5>
+                                    <h6 class="fw-lighter">by {{ if .Params.ProdTeam}}{{.Params.ProdTeam}}{{ end }}&nbsp;</h6>
+                                </div>
+                                <div class="flex-fill p-2 fw-light text-white bg-white bg-opacity-10 align-top" style="height:90px">
+                                    {{ .Summary | truncate 100 }}
+                                </div>
+                                <div class="flex-fill col-12 d-flex flex-row-reverse p-2">
+                                    {{ range .Params.tags }}
+                                    <span class="badge m-0 rounded-4 text-dark bg-opacity-50 bg-white fw-bold h6 align-self-center">{{ . }}</span>&nbsp;
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
