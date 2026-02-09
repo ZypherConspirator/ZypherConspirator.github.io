@@ -1,36 +1,46 @@
 {{ define "main" }}
 <div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg h-70" style="z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
     <div id="jumbotronContent" class="w-100 h-100 position-relative">
-        <div class="details-wrapper w-100 h-100 position-relative">
-            <div class="row m-4 h-100 justify-content-center gap-md-0 gap-sm-3"> 
-                <div class="flex-column flex-fill col-12 col-lg-2 rounded-5 m-0">
-                    <div class="col-12 rounded-5 mb-3 p-4 text-center" style="background: rgba(255, 255, 255, 0.2);">
-                        <img src="\img\Background\Self.png" class="d-sm-none d-md-inline-block rounded-5 mb-4" style="height: auto; max-height: 30vh; object-fit: cover; object-position: top;">
-                        <h4 class="fw-bold"> Aiman Alzafry </h4>
-                        <h5 class=" fw-light">He/Him <span class="align-items-end">June 2001</span></h5>
+        <div class="details-wrapper w-100 h-100 p-3 p-md-4">
+            <div class="row h-100 justify-content-center g-3"> 
+                
+                <div class="col-12 col-lg-3 d-flex flex-column h-100">
+                    <div class="rounded-5 mb-3 p-3 text-center flex-grow-1" style="background: rgba(255, 255, 255, 0.2); flex: 0 1 auto;">
+                        <img src="\img\Background\Self.png" class="d-sm-none d-md-inline-block rounded-5 mb-3 img-fluid" style="max-height: 260px; object-fit: cover; object-position: top;">
+                        <h4 class="fw-bold mb-1"> Aiman Alzafry </h4>
+                        <h5 class="fw-light small">He/Him • June 2001</h5>
                     </div>
-                    <div class="row col-12 rounded-5 m-0 mb-3 p-2" style="background: rgba(255, 255, 255, 0.2);">
-                        <p class="align-baseline m-1 justify-content-evenly d-flex">
-                        {{ range sort .Site.Params.social "key"}}
-                            <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
-                        {{ end }}
+
+                    <div class="rounded-5 mb-3 p-2" style="background: rgba(255, 255, 255, 0.2);">
+                        <h4 class="text-center"> Software i've used </h4>
+                        <p class="m-1 align-middle justify-content-evenly d-flex">
+                            <span class="mx-1 icon-Adobe-AE"></span>
+                            <span class="mx-1 icon-Adobe-PR"></span>
+                            <span class="mx-1 icon-Adobe-AI"></span>
+                            <span class="mx-1 icon-Adobe-SP"></span>
+                            <br>
+                            <span class="mx-1 icon-Aseprite"></span>
+                            <span class="mx-1 icon-Blender"></span>
+                            <span class="mx-1 icon-CSP"></span>
+                            <span class="mx-1 icon-Unity"></span>
                         </p>
                     </div>
-                    <div class="row col-12 rounded-5 m-0 p-2" style="background: rgba(255, 255, 255, 0.2);">
-                        <p class="align-baseline m-1 justify-content-evenly d-flex">
+
+                    <div class="rounded-5 p-2 mt-auto" style="background: rgba(255, 255, 255, 0.2);">
+                        <p class="m-1 justify-content-evenly d-flex">
                         {{ range sort .Site.Params.social "key"}}
                             <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
                         {{ end }}
                         </p>
                     </div>
                 </div>
+
                 <div class="col-12 col-lg-9 d-flex flex-column h-100" style="min-height: 0;">
                     
-                    <div class="rounded-5 mb-3 p-3 text-light font-raleway flex-grow-1" style="background: rgba(255, 255, 255, 0.2); overflow-y: auto; scrollbar-width: thin;">
+                    <div class="rounded-5 mb-3 p-4 text-light font-raleway flex-grow-1 shadow-sm" style="background: rgba(255, 255, 255, 0.2); overflow-y: auto; scrollbar-width: thin;">
                         {{ .Content }}
                     </div>
-
-                    <div class="rounded-5 p-2" style="background: rgba(255, 255, 255, 0.2); height: 120px;">
+                    <div class="rounded-5 p-2" style="background: rgba(255, 255, 255, 0.2); height: 220px; flex-shrink: 0;">
                         <div id="projectCarousel" class="carousel slide h-100" data-bs-ride="carousel">
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active h-100">
@@ -45,15 +55,15 @@
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" style="transform: scale(0.7);"></span>
+                                <span class="carousel-control-prev-icon" style="transform: scale(0.6);"></span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" style="transform: scale(0.7);"></span>
+                                <span class="carousel-control-next-icon" style="transform: scale(0.6);"></span>
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> 
+            </div> 
         </div>
     </div>
 </div>

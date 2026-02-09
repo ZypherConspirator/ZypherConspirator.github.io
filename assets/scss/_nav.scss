@@ -9,15 +9,16 @@
     pointer-events: none;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .nav-link 
+{
     font-size: 0.75rem;
     letter-spacing: 3px;
     color: rgba(255,255,255,0.5);
     transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
+    &:hover 
+    {
     color: #fff !important;
+    }
 }
 
 .nav-item.nav-btn {
@@ -25,11 +26,10 @@
     border-radius: var(--bs-border-radius-pill) !important;
     backdrop-filter :blur(0px);
     transition: backdrop-filter 0.8s ease, border 0.8s ease;
-}
-
-.nav-item.nav-btn.active {
+    &.active {
     border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
     backdrop-filter : blur(15px);
+    }
 }
 
 .home-nav > *

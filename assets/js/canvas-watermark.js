@@ -1,7 +1,7 @@
 function initializeWatermarkedCanvases() {
     const canvases = document.querySelectorAll(".watermarkedCanvas");
-    const fallbackSVG = "/img/error.svg"; // Path to your fallback SVG
-    const watermarkSrc = "/img/watermark.svg"; // Watermark path
+    const fallbackSVG = "/svg/error.svg"; // Path to your fallback SVG
+    const watermarkSrc = "/svg/watermark.svg"; // Watermark path
 
     async function loadImage(src) {
         try {

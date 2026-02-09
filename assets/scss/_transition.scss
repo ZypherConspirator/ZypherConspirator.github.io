@@ -61,14 +61,14 @@
     transform: translateY(20px);
     display: flex;
     flex-direction: column;
-}
-.details-wrapper.active {
+    &.active {
     opacity: 1;
     transform: translateY(0);
-}
-.details-wrapper.exit {
-    opacity: 0;
-    transform: translateY(40px);
+    }
+    &.exit {
+        opacity: 0;
+        transform: translateY(40px);
+    }
 }
 
 /* Jumbotron Squeeze (Only for First Entry) */
@@ -76,21 +76,19 @@
     transform: scaleY(0);
     opacity: 0;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
-}
+    &.h-70 {
+    height: 70vh;
+    }
 
-#jumbotronBase.visible {
+    &.h-75 {
+        height: 75vh;
+    }
+
+    &.h-80 {
+        height: 80vh;
+    }
+    &.visible {
     transform: scaleY(1);
     opacity: 1;
-}
-
-#jumbotronBase.h-70 {
-    height: 70vh;
-}
-
-#jumbotronBase.h-75 {
-    height: 75vh;
-}
-
-#jumbotronBase.h-80 {
-    height: 80vh;
+    }
 }

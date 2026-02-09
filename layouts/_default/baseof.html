@@ -7,9 +7,9 @@
     </head>
     <body class="{{ if .IsHome }}home{{ end }}">
         <main>
-        <!--- Background IMG -->
+        <!--- Background -->
         {{ partial "backdrop.html" . }}
-        <!--- Background IMG End -->
+        <!--- Background End -->
         <!-- IMG Modal -->
         {{ partial "ImgModal.html" .}}
         <!-- IMG Modal End -->
@@ -19,7 +19,9 @@
             {{ block "main" . }}{{ end }}
         </div>
         <!--- Content End -->
+        <!--- Addon Script -->
         {{ partial "addon_scripts.html" . }}
+        <!--- Addon Script End -->
         </main>
     </body>
 </html>

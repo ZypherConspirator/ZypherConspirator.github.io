@@ -3,41 +3,16 @@ html
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 
-.hr-line {
-width: 100%;
-position: relative;
-margin: 15px;
-border-bottom: 1px solid;
-}
-
-.AceLogo {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url(/img/Personal/Logo.png);
-    display: inline-block; // or inline-block to preserve spans behaviour
-    width: 110px;
-    height: 110px;
-    filter: brightness(0) invert(1) drop-shadow(0px 0px 0px #ffffff);
-    transition: filter 0.3s ease;
-	
-	&:hover {
-    filter: brightness(1) invert(1) drop-shadow(0px 0px 4px #ffffff);
-	}
-}
-
-#playReelBtn {
-    filter: drop-shadow(0px 0px 0px #ffffff);
-    transition: filter 0.3s ease;
-	&:hover{
-    filter: drop-shadow(0px 0px 4px #ffffff);
-	}
-}
-
 a {
 	text-decoration: none;
 	i{
     color: #ffffff;
 	}
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #TableOfContents   
@@ -51,6 +26,22 @@ a {
     }
 }
 
+.hr-line {
+width: 100%;
+position: relative;
+margin: 15px;
+border-bottom: 1px solid;
+}
+
+
+
+#playReelBtn {
+    filter: drop-shadow(0px 0px 0px #ffffff);
+    transition: filter 0.3s ease;
+	&:hover{
+    filter: drop-shadow(0px 0px 4px #ffffff);
+	}
+}
 
 .anim-card {
     transition: transform .15s ease-in-out ,background-size .6s ease-in-out;
@@ -68,13 +59,6 @@ a {
         transform: scale(1.1);
 	}
 }
-
-.text-justify {
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-
 
 .modal-content 
 {
