@@ -42,3 +42,12 @@
         border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
     }
 }
+
+.ForHire
+{
+    border: var(--bs-border-width) var(--bs-border-style) transparent !important;
+    transition: border 0.2s ease;
+    &:hover{
+        border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
+}

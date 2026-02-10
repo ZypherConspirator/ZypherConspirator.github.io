@@ -5,13 +5,13 @@
     {{ if in $title "useCanvas=false" }}
         <!-- Render <img> if useCanvas=false is found -->
         <a href="#" class="thumbnail position-relative">
-            <div class="spinner-border position-absolute"  role="status" style=" z-index: 30;"></div>
-            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="img-fluid markup-img lozad" loading="lazy">
+            <div class="spinner-border text-light"  role="status"></div>
+            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="processedImg img-fluid markup-img lozad" loading="lazy">
         </a>
     {{ else }}
         <!-- Default: Render <canvas> -->
         <a href="#" class="thumbnail position-relative">
-            <div class="spinner-border position-absolute"  role="status" style=" z-index: 30;"></div>
+            <div class="spinner-border text-light"  role="status"></div>
             <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas img-fluid markup-img lozad" aria-label="{{ $altText }}"> </canvas>
         </a>
     {{ end }}

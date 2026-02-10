@@ -5,10 +5,6 @@
             <div class="text-center p-2 w-100 h-100 d-flex flex-column position-absolute top-0 start-0" style="z-index: 4; transition: opacity 0.5s ease-in-out; "> 
                 <div class="my-2 p-2" style="border: 2px solid #ffff;">
                     <b class="text-light">{{ .Title }}</b>
-                    {{if (compare.Eq (replace .Parent "Page" "") "(/notes)") }}
-                    <br>
-                    {{ .PublishDate | time.Format ":date_medium" }}
-                    {{ end }}
                 </div>
                 <div class="my-2 p-4 text-start text-light h-100" style="background-color: rgba(0, 0, 0, 0.5); overflow:auto;">
                     <div class="row g-0 h-100">

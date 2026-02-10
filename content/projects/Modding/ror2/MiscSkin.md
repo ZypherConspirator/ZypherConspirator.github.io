@@ -7,7 +7,7 @@ galleryMastery:
 - url: https://lh3.googleusercontent.com/d/1K0iN_3zRYEOJRFZz5bBVlr7aN1fXNz0h
   name: Pathfinder HeadHunter
 - url: https://lh3.googleusercontent.com/d/1MTDKkwOdF6iHCqfd6tbUgyDMxxpE4O0C
-  name: TeslaTrooper Spetsnaz 
+  name: TeslaTrooper Spetsnaz
 - url: https://lh3.googleusercontent.com/d/1ylhZh7PiPkuDXlPiGZnm6I4UV_puDOrL
   name: Desolator Desolation
 
@@ -36,7 +36,7 @@ galleryEtc:
   name: Kamen Rider Zero-One Merc
   likes: 5695
 - url: https://lh3.googleusercontent.com/d/1aOa3mqMnNpu7B-9oMF7vZrECsntbxsbI
-  name: Streamer CebelaYT Deku 
+  name: CebelaYT Deku 
   likes: 5322
 - url: https://lh3.googleusercontent.com/d/1XJP_1tynuUKi9wT7SJG2zSOgluVfANd_
   name: Tiefling Trixie Loader
@@ -45,19 +45,18 @@ galleryEtc:
   name: Konoichi Artificer
   likes: 5440
 - url: https://lh3.googleusercontent.com/d/1W7LJPekw-wnIuM4WbHZ317DoogCBu-hV
-  name: Streamer KunoroSilver Bandit
+  name: KunoroSilver Bandit
   likes:  5324
 
 ---
-here is few of the skins that ive made so far in my Skin Modding Journey. the rest can be found on my thunderstore page [here](https://thunderstore.io/package/KrononConspirator/) and [here](https://thunderstore.io/package/Kronon_Conspirator/).
+
+#### HGFacelift
+noticed the player based would ignore modded playable characters that doesnt fit the aesthetics of RoR2, started an initiative to give them these character a facelift with a skin that suits them while still keeping true its original concept and gameplay.
+{{< gal-carousel name="GalleryHGFacelift" showName="true" showLike="true" >}}
 
 #### Mastery
 implemented directly in the based mod, meant to celebrate an aspect of the character. designed to be an achievement for the player clearing the game in its hardest difficulty using these characters.
-{{< gallery name="galleryMastery" showName="true" showLike="false">}}
-
-#### HGFacelift
-noticed the player based would ignore modded playable characters that doesnt fit the aesthetics of RoR2, an initiative started by me to give them a facelift with a skin that suits their character while still keeping its original concept.
-{{< gallery name="GalleryHGFacelift" showName="true" showLike="true">}}
+{{< gal-carousel name="galleryMastery" showName="true" showLike="false" >}}
 
 #### Miscellaneous  
-{{< gallery name="galleryEtc" showName="true" showLike="true">}}
+{{< gal-carousel name="galleryEtc" showName="true" showLike="true" >}}

@@ -11,10 +11,19 @@
                 {{ if $gallery }}
                     {{ range $gallery }}
                         <div class="d-flex gal-wrap py-2 thumbnail position-relative">
-                        <div class="spinner-border position-absolute"  role="status" style=" z-index: 30;"></div>
-                        {{ if eq $showName "true" }}{{if .name }} <span class="bottom">{{ .name }}</span> {{ end }}{{ end }}
-                        {{if eq $showLike "true" }}{{if .likes }} <span class="corner"><i class="fa-solid fa-download"></i> {{ .likes }}</span> {{ end }}{{ end }}
-                        <canvas data-src="{{ .url }}" alt="{{ .name }}" class="watermarkedCanvas lozad" image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                            <div class="spinner-border text-light"  role="status"></div>
+
+                            <!-- Image Data -->
+                            {{ if eq $showName "true" }}{{if .name }} <span class="bottom">{{ .name }}</span>{{ end }}{{ end }}
+                            {{if eq $showLike "true" }}{{if .likes }} <span class="corner"><i class="fa-solid fa-download"></i> {{ .likes }}</span>{{ end }}{{ end }}
+                            <!-- end -->
+                            <!-- Image itself -->
+                            <canvas data-src="{{ .url }}" alt="{{ .name }}" class="watermarkedCanvas lozad" image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                            <!-- Description Data -->
+                            {{ if .name }} <p class="gal-title d-none" {{ with .name_link }}href="{{ . }}"{{ end }}>{{ .name }}</p>{{ end }}
+                            {{ if .sub }}<p class="gal-sub-title d-none" {{ with .sub_link }}href="{{ . }}"{{ end }}>{{ .sub }}</p>{{ end }}
+                            {{ if .description }}<p class="gal-desc d-none">{{ .description }}</p>{{ end }}
+                            <!-- end -->
                         </div>
                     {{ end }}
                 {{ else }}

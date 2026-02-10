@@ -1,5 +1,6 @@
 function initializeWatermarkedCanvases() {
     const canvases = document.querySelectorAll(".watermarkedCanvas");
+    const images = document.querySelectorAll(".processedImg");
     const fallbackSVG = "/svg/error.svg"; // Path to your fallback SVG
     const watermarkSrc = "/svg/watermark.svg"; // Watermark path
 
@@ -21,6 +22,22 @@ function initializeWatermarkedCanvases() {
         }
     }
 
+    images.forEach(async (images) => {
+        const imageSrc = images.getAttribute("src");
+        const spinner = images.parentElement.querySelector('.spinner-border');
+        // Fetch and load images
+        const [mainImage] = await Promise.all([loadImage(imageSrc)]);
+
+        if (!mainImage) {
+            spinner.classList.add('d-none');
+            console.warn("Using fallback SVG due to image load failure.");
+        }
+        else
+        {
+            spinner.classList.add('d-none');
+        }
+    });
+
     canvases.forEach(async (canvas) => {
         const ctx = canvas.getContext("2d");
         const imageSrc = canvas.getAttribute("data-src");
@@ -40,6 +57,7 @@ function initializeWatermarkedCanvases() {
                 canvas.height = fallbackImg.height * 2;
                 ctx.drawImage(fallbackImg, 0, 0, canvas.width, canvas.height);
             }
+            
             return;
         }
         if (mainImage)

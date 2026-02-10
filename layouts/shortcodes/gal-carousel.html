@@ -1,0 +1,65 @@
+{{ $name := .Get "name" }}
+{{ $showName := .Get "showName" | default "false" }}
+{{ $showLike := .Get "showLike" | default "false" }}
+{{ $items := index $.Page.Params $name }}
+
+{{ $carouselID := printf "gal-carousel-%d" now.UnixNano }}
+
+<div id="{{ $carouselID }}" class="carousel slide gal-carousel px-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {{ if $items }}
+            {{/* Chunk into groups of 3 */}}
+            {{ range seq 0 3 (sub (len $items) 1) }}
+                {{ $currentIdx := . }}
+                <div class="carousel-item {{ if eq $currentIdx 0 }}active{{ end }}">
+                    <div class="container-fluid">
+                        <div class="row">
+                            {{ range seq 0 2 }}
+                                {{ $itemIdx := add $currentIdx . }}
+                                {{ if lt $itemIdx (len $items) }}
+                                    {{ $item := index $items $itemIdx }}
+                                    <div class="col-md-4 px-2">
+                                        <div class="gal-carousel-wrap thumbnail">
+                                            <div class="spinner-border text-light" role="status"></div>
+                                            
+                                            {{ if and (eq $showName "true") $item.name }}
+                                                <span class="gal-label-bottom">{{ $item.name }}</span>
+                                            {{ end }}
+                                            
+                                            {{ if and (eq $showLike "true") $item.likes }}
+                                                <span class="gal-label-corner">
+                                                    <i class="fa-solid fa-download"></i> {{ $item.likes }}
+                                                </span>
+                                            {{ end }}
+                                            
+                                            <canvas data-src="{{ $item.url }}" 
+                                                    alt="{{ $item.name }}" 
+                                                    class="watermarkedCanvas lozad" 
+                                                    image.crossOrigin="anonymous" 
+                                                    loading="lazy"></canvas>
+                                            
+                                            {{ if $item.name }}<p class="gal-title d-none">{{ $item.name }}</p>{{ end }}
+                                            {{ if $item.sub }}<p class="gal-sub-title d-none">{{ $item.sub }}</p>{{ end }}
+                                            {{ if $item.description }}<p class="gal-desc d-none">{{ $item.description }}</p>{{ end }}
+                                        </div>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        {{ else }}
+            <p class="text-center">No images available in {{ $name }}.</p>
+        {{ end }}
+    </div>
+
+    <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#{{ $carouselID }}" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#{{ $carouselID }}" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

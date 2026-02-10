@@ -1,5 +1,6 @@
 ---
-title: Mad Veteran
+title: Mad Veteran Skin pack
+link: https://thunderstore.io/package/KrononConspirator/MadVeteran_Skinpack/
 weight: 1
 background : https://lh3.googleusercontent.com/d/117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg
 gallery:
@@ -27,25 +28,19 @@ gallery:
   name: Nuke Lieutenant Captain
 
 ---
-<!--more-->
----
+This series of character skins represents my attempt to add a personal interpretation to the modding community.
 
-[Link to Project](https://thunderstore.io/package/KrononConspirator/MadVeteran_Skinpack/)
+In the early days of the community, skins were often used as a way for new modders to experiment, ranging from simple color variations of existing characters to highly personalized designs made primarily for individual use.
 
-## whats this?
+This project was among the earlier efforts to approach skins with a clear conceptual direction, encouraging further experimentation and more creative exploration within the community.
 
-this series of character skins made by me attempting to put a personal spin on the modding community. 
-during the early conception of the modding community, skins were just essentially a testing ground for new upcoming modders to test the waters, as before they were just simple colour swaps of the playable characters or a highly personalized skin that is meant for personal use only.
+### Concept
 
-this was one of the first to put an actual concept behind the skins that sparked the community to experiment with more intresting ideas.
+This piece plays on community inside jokes about character-specific strategies, using them as the basis for the design.
 
-## Concept
-the idea behind this one is to joke around about the inside jokes of the stategies employed for playing each characters and using that as a base to build a design out of.
+For example, Engineer’s kit encourages passive play through deployable turrets. Combined with Risk of Rain 2’s item-stacking system and the Bustling Fungus—which heals while standing still—players discovered that Engineer could theoretically survive late-game encounters without input. This became known as the “Bungus Strat.”
 
-for example;
-The Engineer has ability loadout that encourages the place to just play in a more passive manner, letting his portable turrets do the heavy lifting. Risk of rain 2 is mainly gameplay is running away and trying to survive. There is this Item, Bustling Fungus, that heals if stood still. Since Risk of Rain 2's gameplay encourages stacking multiple items to increase its power, Engineer was one of the few that can leverage it's application to the point of being able to survive the end of the game without touching the keyboard. it required an absurd amount B.Fungus but still possible.
-
-the Community start calling it the Bungus Strat. i Took that visual and made it into reality.
+The design visualizes that joke by turning the strategy into a literal form.
 
 here are the rest of the ideas for the character;
 
@@ -72,6 +67,4 @@ its made by utilizing a skinbuilder made by @kingenderbrine & @runefox on the Ri
 
 i did do some bit of modification to the code but nothing substantial.
 
-{{< gallery name="gallery" showName="true" showLike="false">}}
-
----
+{{< gal-carousel name="gallery" showName="true" >}}

@@ -72,3 +72,69 @@
 		}
 	}
 }
+
+.gal-carousel {
+    position: relative;
+    padding: 1rem 0;
+
+    .carousel-inner {
+        overflow: visible; // Allows the hover scale effect to pop out of the slide
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1); // Makes icons visible on light backgrounds
+    }
+
+    .gal-carousel-wrap {
+        position: relative;
+        margin-bottom: 1rem;
+        transition: z-index 0.3s;
+
+        canvas, img {
+		width: 100%;
+        display: block;
+        aspect-ratio: 1 / 1; 
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out, outline 0.1s ease-in-out;
+        filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.4));
+        object-position: center;
+        }
+
+        // Shared Label Styles
+        .gal-label-corner, 
+        .gal-label-bottom {
+            display: none;
+            user-select: none;
+            font-size: 12px;
+            padding: 2px 8px;
+            background-color: white;
+            color: darkgrey;
+            box-shadow: inset 2px 2px white, inset -2px -2px white;
+            z-index: 1000;
+            position: absolute;
+        }
+
+        &:hover {
+            z-index: 500;
+
+            canvas, img {
+                transform: scale(1.08); // Slightly smaller than 1.1 to prevent edge clipping
+                outline: white solid 4px;
+            }
+
+            .gal-label-corner {
+                display: inline-block;
+                top: 8px;
+                left: -4px; // Slight offset for visual pop
+            }
+
+            .gal-label-bottom {
+                display: inline-block;
+                bottom: 8px;
+                right: -4px;
+                font-size: 14px;
+            }
+        }
+    }
+}
