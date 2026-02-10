@@ -29,12 +29,12 @@ function initializeWatermarkedCanvases() {
         const [mainImage] = await Promise.all([loadImage(imageSrc)]);
 
         if (!mainImage) {
-            spinner.classList.add('d-none');
+            if(spinner) spinner.classList.add('d-none');
             console.warn("Using fallback SVG due to image load failure.");
         }
         else
         {
-            spinner.classList.add('d-none');
+            if(spinner) spinner.classList.add('d-none');
         }
     });
 
@@ -57,12 +57,12 @@ function initializeWatermarkedCanvases() {
                 canvas.height = fallbackImg.height * 2;
                 ctx.drawImage(fallbackImg, 0, 0, canvas.width, canvas.height);
             }
-            
+            if(spinner) spinner.classList.add('d-none');
             return;
         }
         if (mainImage)
         {
-            spinner.classList.add('d-none');
+            if(spinner) spinner.classList.add('d-none');
         }
         // Set canvas dimensions while maintaining the aspect ratio
         const minWidth = 700; // Minimum width
@@ -139,10 +139,10 @@ function initializeWatermarkedCanvases() {
         ctx.drawImage(noiseCanvas, 0, 0, canvas.width, canvas.height);
     });
 
-    // Modal logic (unchanged)
+    // Modal logic
     const modal = document.getElementById("image-modal");
     const modalBody = modal.querySelector(".Modal-Highlight");
-    let originalParent = null; // To store the original parent of the element (canvas/img)
+    let placeholder = null; // To track the temporary div
 
     document.querySelectorAll(".thumbnail").forEach(thumbnail => {
         thumbnail.addEventListener("click", e => {
@@ -150,30 +150,57 @@ function initializeWatermarkedCanvases() {
 
             const canvas = thumbnail.querySelector("canvas");
             const img = thumbnail.querySelector("img");
-            const elementToMove = canvas || img; // Choose the first available element (canvas or img)
+            const elementToMove = canvas || img;
 
             if (!elementToMove) return;
 
-            originalParent = elementToMove.parentElement; // Store original parent
-            modalBody.appendChild(elementToMove); // Move element to modal
-            //elementToMove.classList.add("position-absolute");
-            //elementToMove.classList.add("top-50");
-            //elementToMove.classList.add("start-50");
-            //elementToMove.classList.add("translate-middle");
+            // 1. Create the dummy placeholder
+            placeholder = document.createElement("div");
+            placeholder.style.width = `${elementToMove.offsetWidth}px`;
+            placeholder.style.height = `${elementToMove.offsetHeight}px`;
+            placeholder.style.display = "inline-block"; // or 'block' depending on your layout
+            placeholder.className = "modal-placeholder"; 
+
+            // 2. Insert placeholder before the element, then move element to modal
+            elementToMove.parentNode.insertBefore(placeholder, elementToMove);
+            modalBody.appendChild(elementToMove);
+
+            const title = thumbnail.querySelector(".gal-title").innerText || "Image Preview";
+            const titlelink = thumbnail.querySelector(".gal-title").getAttribute("href") || "";
+            const subtitle = thumbnail.querySelector(".gal-sub-title");
+            const desc = thumbnail.querySelector(".gal-desc");
+
+            const sub = null;
+            const sublink = null;
+            const descOut = null;
+            if (subtitle) 
+            {
+                sub = subtitle.innerText || "";
+                sublink = subtitle.getAttribute("href") || "";
+            }
+            if (desc) 
+            {
+                descOut = desc.innerText || "No description available.";
+            }
+        
+            document.getElementById("modal-title-text").innerText = title;
+            document.getElementById("desc-content").innerText = descOut;
+
             $("#image-modal").modal("show");
         });
     });
 
     modal.addEventListener("click", () => {
         const elementInModal = modalBody.querySelector("canvas") || modalBody.querySelector("img");
-        if (originalParent && elementInModal) {
-            originalParent.appendChild(elementInModal); // Move element back to original parent
-            originalParent = null; // Reset original parent
-            //elementInModal.classList.remove("position-absolute");
-            //elementInModal.classList.remove("top-50");
-            //elementInModal.classList.remove("start-50");
-            //elementInModal.classList.remove("translate-middle");
+        
+        if (placeholder && elementInModal) {
+            // 3. Put the element back where the placeholder is
+            placeholder.parentNode.replaceChild(elementInModal, placeholder);
+            
+            // 4. Cleanup
+            placeholder = null;
         }
+        
         $("#image-modal").modal("hide");
     });
 }

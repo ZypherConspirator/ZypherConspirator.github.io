@@ -1,6 +1,6 @@
 ---
 title: Create; Creature Contraption
 weight: 1
-image: 
+draft: true
 ---
 https://modrinth.com/mod/create-contraption-creatures

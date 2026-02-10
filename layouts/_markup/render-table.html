@@ -1,0 +1,42 @@
+{{- $alignMap := dict "left" "text-start" "center" "text-center" "right" "text-end" -}}
+<div class="py-2">
+<table
+    class="table table-dark{{ with .Attributes.class }} {{ . }}{{ end }}"
+    {{- range $k, $v := .Attributes }}
+        {{- if and $v (ne $k "class") }}
+        {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+        {{- end }}
+    {{- end }}>
+
+    <thead class="h7">
+        {{- range .THead }}
+        <tr>
+            {{- range . }}
+            <th class="{{ with .Alignment }}{{ index $alignMap . }}{{ end }}">
+                {{- .Text -}}
+            </th>
+            {{- end }}
+        </tr>
+        {{- end }}
+    </thead>
+
+    <tbody class="table-group-divider">
+        {{- range .TBody }}
+        <tr>
+            {{- range . }}
+            <td class="h8 fw-lighter {{ with .Alignment }}{{ index $alignMap . }}{{ end }}">
+                {{- .Text -}}
+            </td>
+            {{- end }}
+        </tr>
+        {{- end }}
+    </tbody>
+</table>
+</div>
+
+<style>
+    .table
+    {
+        --bs-table-bg : transparent ;
+    }
+</style>

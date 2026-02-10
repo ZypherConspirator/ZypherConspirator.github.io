@@ -10,6 +10,21 @@ a {
 	}
 }
 
+a.cas-title
+{
+	color:#ffffff;
+	&:hover
+	{
+		font-weight: bold;
+	}
+	&::after
+	{
+		content: "\f08e"; font-family: FontAwesome;
+		margin-left: 20px;
+	}
+}
+
+
 .text-justify {
     text-align: justify;
     text-justify: inter-word;
@@ -60,6 +75,38 @@ border-bottom: 1px solid;
 	}
 }
 
+.Modal-Highlight {
+    background-color: #111; /* Dark background for the image area */
+    overflow: hidden;
+	 
+	img , canvas	
+	{
+		z-index: 1000;
+		max-width: none;
+		object-fit: contain; 
+		width: 60vw; 
+		max-height: 90vh;
+		@media (max-width: 500px) 
+		{
+			width: 90vw !important;
+		}
+	}
+}
+
+/* Anchor overlay to the bottom of the modal body */
+.description-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); /* Fade for readability */
+    z-index: 10;
+}
+
+/* Ensure the canvas/img doesn't get hidden behind the header */
+.Modal-Highlight
+
 .modal-content 
 {
 	background-color: transparent;
@@ -106,4 +153,40 @@ border-bottom: 1px solid;
 	margin-top: -1rem;
 	margin-left: -1rem;
 	z-index: 30;
+}
+
+.h7 { font-size: 0.85rem; }
+.h8 { font-size: 0.75rem; }
+.h9 { font-size: 0.65rem; }
+.h10 { font-size: 0.5rem; }
+
+/* Custom Accordion Arrow */
+.accordion-button {
+    // Remove the default background-image that is failing to load
+	font-size: inherit;
+    &::after {
+        background-image: none !important;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.2s ease-in-out;
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    // Rotate arrow when open
+    &:not(.collapsed)::after {
+        transform: rotate(-135deg);
+        margin-bottom: -5px; // Minor adjustment for visual centering
+    }
+
+	// Optional: Ensure the button doesn't turn blue/shaded when active
+	&:not(.collapsed) {
+    background-color: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+	}
 }

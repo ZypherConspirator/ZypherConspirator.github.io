@@ -1,9 +1,26 @@
 <div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content text-white border-0">
-            <div class="modal-body p-0">
-                <div class="d-flex flex-column flex-lg-row">
-                    <div class="Modal-Highlight">
+        <div class="modal-content bg-dark text-white border-0">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title" id="modal-title-text">Image Preview</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-0 position-relative">
+                <div class="Modal-Highlight d-flex justify-content-center align-items-center" style="min-height: 400px;">
+                    </div>
+
+                <div id="description-section" class="description-overlay">
+                    <button class="btn btn-sm btn-light mb-2" type="button" onclick="toggleDescription()">
+                        Toggle Info
+                    </button>
+                    <div class="collapse show" id="description-collapse">
+                        <div class="card card-body bg-dark border-secondary text-white">
+                            <h6 id="desc-title">Artwork Description</h6>
+                            <p id="desc-content" class="small mb-0">
+                                This is where your image description goes. It stays anchored to the bottom.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -2,42 +2,51 @@
 {{ $showName := .Get "showName" | default "false" }}
 {{ $showLike := .Get "showLike" | default "false" }}
 {{ $items := index $.Page.Params $name }}
+{{ $total := len $items }}
+
+{{/* LOGIC: Calculate balanced chunk size */}}
+{{ $chunk := 3 }}
+{{ if le $total 3 }}
+    {{ $chunk = $total }}
+{{ else if eq (mod $total 3) 0 }}
+    {{ $chunk = 3 }}
+{{ else if eq (mod $total 2) 0 }}
+    {{ $chunk = 2 }}
+{{ end }}
+
+{{/* Determine Column Width: col-12 for mobile, dynamic for desktop */}}
+{{ $cols := 4 }} 
+{{ if eq $chunk 1 }} {{ $cols = 12 }} {{ end }}
+
+{{/* Only show controls if there are more items than the chunk size */}}
+{{ $showControls := gt $total $chunk }}
 
 {{ $carouselID := printf "gal-carousel-%d" now.UnixNano }}
 
-<div id="{{ $carouselID }}" class="carousel slide gal-carousel px-4" data-bs-ride="carousel">
-    <div class="carousel-inner">
+<div id="{{ $carouselID }}" class="carousel slide gal-carousel px-md-2 py-2" data-bs-ride="carousel">
+    <div class="carousel-inner px-5">
         {{ if $items }}
-            {{/* Chunk into groups of 3 */}}
-            {{ range seq 0 3 (sub (len $items) 1) }}
+            {{ range seq 0 $chunk (sub $total 1) }}
                 {{ $currentIdx := . }}
                 <div class="carousel-item {{ if eq $currentIdx 0 }}active{{ end }}">
                     <div class="container-fluid">
-                        <div class="row">
-                            {{ range seq 0 2 }}
+                        <div class="row justify-content-center g-3">
+                            {{/* 1. Render Actual Items */}}
+                            {{ range seq 0 (sub $chunk 1) }}
                                 {{ $itemIdx := add $currentIdx . }}
-                                {{ if lt $itemIdx (len $items) }}
+                                {{ if lt $itemIdx $total }}
                                     {{ $item := index $items $itemIdx }}
-                                    <div class="col-md-4 px-2">
+                                    <div class="col-12 col-md-{{ $cols }}">
                                         <div class="gal-carousel-wrap thumbnail">
                                             <div class="spinner-border text-light" role="status"></div>
-                                            
                                             {{ if and (eq $showName "true") $item.name }}
                                                 <span class="gal-label-bottom">{{ $item.name }}</span>
                                             {{ end }}
-                                            
                                             {{ if and (eq $showLike "true") $item.likes }}
-                                                <span class="gal-label-corner">
-                                                    <i class="fa-solid fa-download"></i> {{ $item.likes }}
-                                                </span>
+                                                <span class="gal-label-corner"><i class="fa-solid fa-download"></i> {{ $item.likes }}</span>
                                             {{ end }}
-                                            
-                                            <canvas data-src="{{ $item.url }}" 
-                                                    alt="{{ $item.name }}" 
-                                                    class="watermarkedCanvas lozad" 
-                                                    image.crossOrigin="anonymous" 
-                                                    loading="lazy"></canvas>
-                                            
+                                            <canvas data-src="{{ $item.url }}" alt="{{ $item.name }}" class="watermarkedCanvas lozad" image.crossOrigin="anonymous" loading="lazy"></canvas>
+                                            {{/* Hidden Metadata */}}
                                             {{ if $item.name }}<p class="gal-title d-none">{{ $item.name }}</p>{{ end }}
                                             {{ if $item.sub }}<p class="gal-sub-title d-none">{{ $item.sub }}</p>{{ end }}
                                             {{ if $item.description }}<p class="gal-desc d-none">{{ $item.description }}</p>{{ end }}
@@ -45,6 +54,19 @@
                                     </div>
                                 {{ end }}
                             {{ end }}
+
+                            {{/* 2. Dummy Fill Logic: Fills remaining space in the chunk */}}
+                            {{ $itemsOnThisPage := sub $total $currentIdx }}
+                            {{ if lt $itemsOnThisPage $chunk }}
+                                {{ $fillerCount := sub $chunk $itemsOnThisPage }}
+                                {{ range seq 1 $fillerCount }}
+                                    <div class="col-md-{{ $cols }} d-none d-md-block">
+                                        <div class="gal-carousel-dummy bg-black bg-opacity-25" >
+                                            </div>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+
                         </div>
                     </div>
                 </div>
@@ -53,13 +75,14 @@
             <p class="text-center">No images available in {{ $name }}.</p>
         {{ end }}
     </div>
-
-    <button class="carousel-control-prev justify-content-start" type="button" data-bs-target="#{{ $carouselID }}" data-bs-slide="prev">
+    {{ if $showControls }}
+    <button class="carousel-control-prev justify-content-start bg-white bg-opacity-25 m-2 rounded-3" type="button" data-bs-target="#{{ $carouselID }}" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next justify-content-end" type="button" data-bs-target="#{{ $carouselID }}" data-bs-slide="next">
+    <button class="carousel-control-next justify-content-end bg-white bg-opacity-25 m-2 rounded-3" type="button" data-bs-target="#{{ $carouselID }}" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
     </button>
+    {{ end }}
 </div>

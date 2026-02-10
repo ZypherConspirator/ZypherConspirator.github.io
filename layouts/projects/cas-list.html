@@ -2,13 +2,16 @@
 <div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg h-70" style=" z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
     <div id="jumbotronContent" class="w-100 h-100 position-relative">
         <div class="details-wrapper w-100 h-100 position-relative">
-            
-            <div class="text-center py-2 w-100 h-100 d-flex flex-column position-absolute top-0 start-0 overflow-y-scroll" style="z-index: 4; transition: opacity 0.5s ease-in-out; overflow-x: hidden;"> 
+
+            <div class="text-center py-2 w-100 h-100 d-flex flex-column position-absolute top-0 start-0 overflow-y-scroll text-light" style="z-index: 4; transition: opacity 0.5s ease-in-out; overflow-x: hidden;"> 
+                <div class="my-2 p-2 mx-4" style="border: 2px solid #ffff;">
+                    <b class="text-light">{{ .Title }}</b>
+                </div>
                 {{.Content}}
                 {{ range .Pages }}
                     <div class="my-2 p-0" >
-                        <div class="m-0 bg-light bg-opacity-25 text-white-50 border-opacity-10" style="backdrop-filter: blur(10px);">
-                            <div class="p-2 text-middle">{{ if .Params.link }}<a href=" {{ .Params.link }}">{{ end }}{{ .Title }}</a></div>
+                        <div class="m-0 bg-light bg-opacity-25 text-white-50 border-opacity-10  my-4" style="backdrop-filter: blur(10px);">
+                            <div class="p-2 text-middle">{{ if .Params.link }}<a class="cas-title" href=" {{ .Params.link }}">{{ end }}{{ .Title }}</a></div>
                         </div>
                         <div class="row m-0 pt-1 justify-content-center text-justify font-raleway text-white">
                             {{.Content}}

@@ -1,0 +1,20 @@
+{{- $isCollapse := .Attributes.class | findRE "head-accordion" -}}
+
+{{- if $isCollapse -}}
+
+  {{- $id := printf "collapse-%s" .Anchor -}}
+  <div class="accordion-item border-0 py-1">
+    <h{{ .Level }} class="accordion-header pb-3" id="heading-{{ .Anchor }}">
+      <button class="accordion-button collapsed px-0 bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $id }}" aria-expanded="false" aria-controls="{{ $id }}">
+        {{ .Text | safeHTML }}
+      </button>
+    </h{{ .Level }}>
+    <div id="{{ $id }}" class="accordion-collapse collapse" aria-labelledby="heading-{{ .Anchor }}">
+      <div class="accordion-body px-0">
+
+{{- else -}}
+
+  <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
+    {{- .Text | safeHTML -}}
+  </h{{ .Level }}>
+{{- end -}}{{- $isCollapse := .Attributes.class | findRE "collapse" -}}

@@ -74,34 +74,34 @@
 }
 
 .gal-carousel {
-    position: relative;
-    padding: 1rem 0;
-
     .carousel-inner {
-        overflow: visible; // Allows the hover scale effect to pop out of the slide
+        overflow: visible; 
     }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(1); // Makes icons visible on light backgrounds
-    }
+    .gal-carousel-dummy {
+    aspect-ratio: 1 / 1; // Match the aspect ratio of your real items
+    pointer-events: none; // Ensure users can't click/hover "nothing"
+}
 
     .gal-carousel-wrap {
         position: relative;
-        margin-bottom: 1rem;
-        transition: z-index 0.3s;
 
         canvas, img {
-		width: 100%;
-        display: block;
-        aspect-ratio: 1 / 1; 
-        object-fit: cover;
-        transition: transform 0.2s ease-in-out, outline 0.1s ease-in-out;
-        filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.4));
-        object-position: center;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            
+            // Desktop: Square
+            aspect-ratio: 1 / 1; 
+            
+            // Mobile: Wider rectangle so the stack doesn't get too long
+            @media (max-width: 768px) {
+                aspect-ratio: 16 / 9;
+            }
+            
+            transition: transform 0.2s ease-in-out, outline 0.1s ease-in-out;
+            filter: drop-shadow(0 2mm 3mm rgba(0, 0, 0, 0.3));
         }
-
-        // Shared Label Styles
+                // Shared Label Styles
         .gal-label-corner, 
         .gal-label-bottom {
             display: none;
@@ -117,12 +117,12 @@
 
         &:hover {
             z-index: 500;
-
-            canvas, img {
-                transform: scale(1.08); // Slightly smaller than 1.1 to prevent edge clipping
-                outline: white solid 4px;
+            @media (min-width: 769px) { // Only scale on desktop
+                canvas, img {
+                    transform: scale(1.05);
+                    outline: white solid 4px;
+                }
             }
-
             .gal-label-corner {
                 display: inline-block;
                 top: 8px;
@@ -135,6 +135,16 @@
                 right: -4px;
                 font-size: 14px;
             }
+        }
+    }
+    // Adjust arrow visibility/styling
+    .carousel-control-prev, .carousel-control-next {
+        width: 40px;
+        opacity: 0.8;
+         z-index: 2000;
+        &:hover { opacity: 1; }
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(1);
         }
     }
 }
