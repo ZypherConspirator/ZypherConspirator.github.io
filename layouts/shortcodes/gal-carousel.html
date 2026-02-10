@@ -21,7 +21,7 @@
 {{/* Only show controls if there are more items than the chunk size */}}
 {{ $showControls := gt $total $chunk }}
 
-{{ $carouselID := printf "gal-carousel-%d" now.UnixNano }}
+{{ $carouselID := printf "gal-%s-%d" (.Get "name" | urlize) now.UnixNano }}
 
 <div id="{{ $carouselID }}" class="carousel slide gal-carousel px-md-2 py-2" data-bs-ride="carousel">
     <div class="carousel-inner px-5">
@@ -60,9 +60,9 @@
                             {{ if lt $itemsOnThisPage $chunk }}
                                 {{ $fillerCount := sub $chunk $itemsOnThisPage }}
                                 {{ range seq 1 $fillerCount }}
-                                    <div class="col-md-{{ $cols }} d-none d-md-block">
+                                    <div class="col-12 col-md-{{ $cols }}">
                                         <div class="gal-carousel-dummy bg-black bg-opacity-25" >
-                                            </div>
+                                        </div>
                                     </div>
                                 {{ end }}
                             {{ end }}
