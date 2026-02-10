@@ -15,7 +15,7 @@ hugo_stats.json
 hugo.exe
 hugo.darwin
 hugo.linux
-
+checklist.md
 # Temporary lock file while building
 /.hugo_build.lock
 

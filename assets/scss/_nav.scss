@@ -1,8 +1,19 @@
 #globalNav {
-    top: 2%; 
+    top: 1%;
     left: 0; 
     transition: opacity 0.5s ease-in-out; 
     z-index: 10;
+    @media (min-width: 576px) {
+    & {
+        top: 1.5%;
+    }
+}
+    @media (min-width: 768px) {
+    & {
+        top: 2%;
+    }
+}
+
 }
 .nav-hidden {
     opacity: 0 !important;
