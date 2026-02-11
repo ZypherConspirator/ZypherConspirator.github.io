@@ -7,7 +7,7 @@ Date: 2024-11-03
 
 aasdasd
 
-### Wops a table {.head-accordion }
+### Wops a table { .head-accordion }
 
 | Survivor|Meta Strategies|Design Theme|Skin Design|
 |--------------|----------|-------|-------------------|

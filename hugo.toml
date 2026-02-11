@@ -47,3 +47,6 @@ falogo= "fa-regular fa-envelope"
 
 [markup.goldmark.parser.attribute]
 block = true
+
+[markup.goldmark.renderer]
+unsafe = true 
