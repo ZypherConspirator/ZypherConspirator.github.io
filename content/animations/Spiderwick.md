@@ -6,7 +6,7 @@ tags :
     - Title Sequence
     - Motion Design
     - Uni Project
-background: http://img.youtube.com/vi/kEvsAwlxjQE/maxresdefault.jpg
+background: http://img.youtube.com/vi/kEvsAwlxjQE/hqdefault.jpg
 video : https://www.youtube.com/embed/kEvsAwlxjQE
 weight: 14
 type: animations

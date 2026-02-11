@@ -6,7 +6,7 @@ tags :
     - Experimental
     - Motion Design
     - Uni Project
-background: http://img.youtube.com/vi/i7h0MklKHiU/maxresdefault.jpg
+background: http://img.youtube.com/vi/i7h0MklKHiU/hqdefault.jpg
 video : https://www.youtube.com/embed/i7h0MklKHiU
 weight: 15
 ---

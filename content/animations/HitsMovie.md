@@ -5,7 +5,7 @@ Released : 2024
 tags : 
     - 3D
     - Uni Project
-background: http://img.youtube.com/vi/O_HC2OsMC1s/maxresdefault.jpg
+background: http://img.youtube.com/vi/O_HC2OsMC1s/hqdefault.jpg
 video : https://www.youtube.com/embed/O_HC2OsMC1s
 weight: 19
 ---
