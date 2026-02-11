@@ -20,17 +20,17 @@
                     </a>
                     {{ end }}
                     <div class="justify-content-center d-flex align-items-center rounded-pill my-1 my-md-2 bg-black bg-opacity-10" style="backdrop-filter: blur(15px);">
-                        <h1 class="fs-2 fs-md-h1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">AIMAN</h1>
+                        <h1 class="fs-2 fs-md-h1 text-light text-uppercase font-tourney-light align-self-center filter-drop-shadow" style="z-index: 2;">AIMAN</h1>
                         <span class="d-inline d-md-none align-self-center mx-3"><!-- Spacer --></span>
                         <span class="d-none d-md-inline AceLogo align-self-center"></span>
-                        <h1 class="fs-2 fs-md-h1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">ALZAFRY</h1>
+                        <h1 class="fs-2 fs-md-h1 text-light text-uppercase font-tourney-light align-self-center filter-drop-shadow" style="z-index: 2;">ALZAFRY</h1>
                     </div>
                     <div class="justify-content-center d-flex align-items-center">
-                        <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-10" style="backdrop-filter: blur(15px); filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));"> 3D GENERALIST </span></h1>
+                        <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-10 filter-drop-shadow" style="backdrop-filter: blur(15px);"> 3D GENERALIST </span></h1>
                     </div>
                     <div class="mx-4 d-flex justify-content-center mb-4 mt-2">
                         {{ range sort .Site.Params.social "key"}}
-                            <span class="mx-2 h1 rounded-circle"><a href="{{ .url | safeURL }}" class="text-white"><i class="{{ .falogo }}"></i></a></span>
+                            <span class="mx-2 h1 rounded-circle filter-drop-shadow"><a href="{{ .url | safeURL }}" class="text-white"><i class="{{ .falogo }}"></i></a></span>
                         {{ end }}
                     </div>
 

@@ -1,16 +1,23 @@
 .AceLogo {
     background-repeat: no-repeat;
     background-size: 100%;
+    width: 100px;
+    height: 100px;
     background-image: url(/img/Personal/Logo.png);
     display: inline-block; // or inline-block to preserve spans behaviour
-    width: 110px;
-    height: 110px;
     filter: brightness(0) invert(1) drop-shadow(0px 0px 0px #ffffff);
     transition: filter 0.3s ease;
 	
 	&:hover {
     filter: brightness(1) invert(1) drop-shadow(0px 0px 4px #ffffff);
 	}
+    
+    @media (min-width: 768px) {
+        & {
+            width: 110px;
+            height: 110px;
+        }
+    }
 }
 
 .icon

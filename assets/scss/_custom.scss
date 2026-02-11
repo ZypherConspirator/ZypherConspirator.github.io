@@ -61,3 +61,11 @@ border-bottom: 1px solid;
         transform: scale(1.1);
 	}
 }
+
+.filter-
+{
+	&drop-shadow
+	{
+		filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));
+	}
+}
