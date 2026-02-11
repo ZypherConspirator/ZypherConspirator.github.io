@@ -170,9 +170,9 @@ function initializeWatermarkedCanvases() {
             const subtitle = thumbnail.querySelector(".gal-sub-title");
             const desc = thumbnail.querySelector(".gal-desc");
 
-            const sub = null;
-            const sublink = null;
-            const descOut = null;
+            var sub = null;
+            var sublink = null;
+            var descOut = null;
             if (subtitle) 
             {
                 sub = subtitle.innerText || "";
@@ -184,13 +184,24 @@ function initializeWatermarkedCanvases() {
             }
         
             document.getElementById("modal-title-text").innerText = title;
+            document.getElementById("modal-title-text").setAttribute("href",titlelink);
+            const subTmodal = document.getElementById("modal-sub-title-text");
+            if (subtitle) 
+            {
+                subTmodal.innerText = sub;
+                subTmodal.setAttribute("href",sublink);
+            }
+            else
+            {
+                subTmodal.innerText = "";
+            }
             document.getElementById("desc-content").innerText = descOut;
 
             $("#image-modal").modal("show");
         });
     });
 
-    modal.addEventListener("click", () => {
+    modal.addEventListener("hidden.bs.modal", () => {
         const elementInModal = modalBody.querySelector("canvas") || modalBody.querySelector("img");
         
         if (placeholder && elementInModal) {
@@ -204,6 +215,14 @@ function initializeWatermarkedCanvases() {
         $("#image-modal").modal("hide");
     });
 }
+
+function toggleDescription() {
+    const content = document.getElementById("description-collapse");
+    // Bootstrap 5 way to toggle
+    const bsCollapse = bootstrap.Collapse.getOrCreateInstance(content);
+    bsCollapse.toggle();
+}
+
 
 function getAverageColor(ctx, img, width, height) {
     // Draw the image onto the canvas
