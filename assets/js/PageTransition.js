@@ -48,36 +48,41 @@ document.addEventListener('DOMContentLoaded', () => {
     runEntryAnimation();
 
     // --- 2. INTERCEPT CLICKS & POPSTATE ---
-document.addEventListener('click', e => {
-    const link = e.target.closest('a');
-    
-    // 1. Basic Guard
-    if (!link || link.hostname !== window.location.hostname) return;
-
-    // 2. Handle TOC / Hash Links on the SAME page
-    if (link.hash && link.pathname === window.location.pathname) {
-        const targetId = decodeURIComponent(link.hash.substring(1));
-        const targetElement = document.getElementById(targetId);
+    document.addEventListener('click', e => {
+        const link = e.target.closest('a');
         
-        if (targetElement) {
-            e.preventDefault();
-            // This replicates the "# behavior" but works inside your scrolling div
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 1. Basic Guard
+        if (!link || link.hostname !== window.location.hostname) return;
+
+        // 2. Handle TOC / Hash Links on the SAME page
+        if (link.hash && link.pathname === window.location.pathname) {
+            const targetId = decodeURIComponent(link.hash.substring(1));
+            const targetElement = document.getElementById(targetId);
             
-            // Optional: Update URL hash without triggering a jump
-            history.pushState(null, '', link.hash);
+            if (targetElement) {
+                e.preventDefault();
+                // This replicates the "# behavior" but works inside your scrolling div
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Optional: Update URL hash without triggering a jump
+                history.pushState(null, '', link.hash);
+            }
+            return; // Stop here, don't run handleTransition
         }
-        return; // Stop here, don't run handleTransition
-    }
 
-    // 3. Guard for hashes on OTHER pages (let browser handle standard navigation)
-    if (link.hash) return;
+        // 3. Guard for hashes on OTHER pages (let browser handle standard navigation)
+        if (link.hash) return;
 
-    // 4. Handle AJAX Transitions for standard links
-    e.preventDefault();
-    if (isAnimating) return;
-    handleTransition(link.href, true);
-});
+        // 4. Handle AJAX Transitions for standard links
+        e.preventDefault();
+        if (isAnimating) return;
+        handleTransition(link.href, true);
+    });
+    window.addEventListener('popstate', () => {
+        if (isAnimating) return;
+        handleTransition(window.location.href, false);
+    });
+
     // --- Update Active Nav Links ---
     const updateActiveNav = (newUrl) => {
         const currentPath = new URL(newUrl).pathname;
