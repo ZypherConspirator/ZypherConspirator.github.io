@@ -164,15 +164,21 @@ function initializeWatermarkedCanvases() {
             // 2. Insert placeholder before the element, then move element to modal
             elementToMove.parentNode.insertBefore(placeholder, elementToMove);
             modalBody.appendChild(elementToMove);
-
-            const title = thumbnail.querySelector(".gal-title").innerText || "Image Preview";
-            const titlelink = thumbnail.querySelector(".gal-title").getAttribute("href") || "";
+            // getting details
+            const maintitle = thumbnail.querySelector(".gal-title");;
             const subtitle = thumbnail.querySelector(".gal-sub-title");
             const desc = thumbnail.querySelector(".gal-desc");
-
+            var title = null;
+            var titlelink = null;
             var sub = null;
             var sublink = null;
             var descOut = null;
+
+            if (maintitle) 
+            {
+                title = maintitle.innerText || "Image Preview";
+                titlelink = maintitle.getAttribute("href") || "";
+            }
             if (subtitle) 
             {
                 sub = subtitle.innerText || "";
@@ -180,9 +186,9 @@ function initializeWatermarkedCanvases() {
             }
             if (desc) 
             {
-                descOut = desc.innerText || "No description available.";
+                descOut = desc.innerText || "";
             }
-        
+            // Apply details to modal
             document.getElementById("modal-title-text").innerText = title;
             document.getElementById("modal-title-text").setAttribute("href",titlelink);
             const subTmodal = document.getElementById("modal-sub-title-text");
@@ -195,8 +201,15 @@ function initializeWatermarkedCanvases() {
             {
                 subTmodal.innerText = "";
             }
-            document.getElementById("desc-content").innerText = descOut;
-
+            if (descOut)
+            {
+                document.getElementById("description-section").classList.remove('d-none');
+                document.getElementById("desc-content").innerText = descOut;
+            }
+            else
+            {
+                document.getElementById("description-section").classList.add('d-none');
+            }
             $("#image-modal").modal("show");
         });
     });
