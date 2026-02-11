@@ -1,0 +1,36 @@
+html
+{
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+a {
+	text-decoration: none;
+	i{
+    color: #ffffff;
+	}
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#TableOfContents   
+{
+    & a {
+    color: inherit;
+    &:hover
+        {
+            font-weight: 700;
+        }
+    }
+}
+
+.spinner-border {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -1rem;
+	margin-left: -1rem;
+	z-index: 30;
+}

@@ -5,7 +5,7 @@ Released : 2023
 tags : 
     - 2D Puppet
     - Uni Project
-background: http://img.youtube.com/vi/kRjExZfpbsc/0.jpg
+background: http://img.youtube.com/vi/kRjExZfpbsc/maxresdefault.jpg
 video : https://www.youtube.com/embed/kRjExZfpbsc
 weight: 1
 type: animations

@@ -7,6 +7,7 @@
             
             <div class="mb-3 p-2 flex-shrink-0" style="border: 2px solid #ffff;">
                 <b class="text-light text-center d-block w-100">{{ .Title }}</b>
+
             </div>
 
             <ul class="nav nav-pills d-none" id="layoutTab" role="tablist">
@@ -18,14 +19,14 @@
                 
                 <div class="tab-pane fade show active h-100" id="view-cinema" role="tabpanel">
                     <div class="row g-2 h-100">
-                        <div class="col-11 h-100">
+                        <div class="col-12 col-md-11 h-auto">
                             <div class="h-100 bg-black bg-opacity-20 rounded-4 overflow-hidden border border-white border-opacity-10">
                                 <iframe class="w-100 h-100 border-0" src="{{ .Params.video }}"></iframe>
                             </div>
                         </div>
-                        <div class="col-1 h-100" onclick="document.getElementById('details-link').click()" role="button" style="cursor: pointer;">
+                        <div class="col-12 col-md-1 h-15 h-md-100" onclick="document.getElementById('details-link').click()" role="button" style="cursor: pointer;">
                             <div class="h-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10">
-                                <div style="writing-mode: vertical-rl; letter-spacing: 3px; font-size: 0.7rem;">
+                                <div class="wm-horizontal wm-md-vertical-rl" style="letter-spacing: 3px; font-size: 0.7rem;">
                                     DETAILS <i class="bi bi-arrow-right ms-2"></i>
                                 </div>
                             </div>
@@ -35,14 +36,14 @@
 
                 <div class="tab-pane fade h-100" id="view-details" role="tabpanel">
                     <div class="row g-2 h-100">
-                        <div class="col-1 h-100" onclick="document.getElementById('cinema-link').click()" role="button" style="cursor: pointer;">
+                        <div class="col-12 col-md-1 h-15 h-md-100" onclick="document.getElementById('cinema-link').click()" role="button" style="cursor: pointer;">
                             <div class="h-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10">
-                                <div style="writing-mode: vertical-rl; letter-spacing: 3px; font-size: 0.7rem;">
+                                <div class="wm-horizontal wm-md-vertical-rl" style="letter-spacing: 3px; font-size: 0.7rem;">
                                     CINEMA <i class="bi bi-arrow-left ms-2"></i>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-11 h-100">
+                        <div class="col-12 col-md-11 h-auto">
                             <div class="h-100 bg-white bg-opacity-10 rounded-4 p-4 overflow-auto text-light border border-white border-opacity-10">
                                 {{ $ContentParts := split .Content "||||||||||" }}
                                 {{ index $ContentParts 1 | safeHTML }}

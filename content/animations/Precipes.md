@@ -6,7 +6,7 @@ tags :
     - Experimental
     - Final Year Project
     - Uni Project
-background: http://img.youtube.com/vi/Z2zNZvFf9MA/0.jpg
+background: http://img.youtube.com/vi/Z2zNZvFf9MA/maxresdefault.jpg
 video : https://www.youtube.com/embed/Z2zNZvFf9MA
 weight: 12
 type: animations

@@ -1,0 +1,30 @@
+/* Custom Accordion Arrow */
+.accordion-button {
+    // Remove the default background-image that is failing to load
+	font-size: inherit;
+    &::after {
+        background-image: none !important;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.2s ease-in-out;
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    // Rotate arrow when open
+    &:not(.collapsed)::after {
+        transform: rotate(-135deg);
+        margin-bottom: -5px; // Minor adjustment for visual centering
+    }
+
+	// Optional: Ensure the button doesn't turn blue/shaded when active
+	&:not(.collapsed) {
+    background-color: transparent !important;
+    color: inherit !important;
+    box-shadow: none !important;
+	}
+}

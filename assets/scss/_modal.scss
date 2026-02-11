@@ -1,0 +1,46 @@
+.Modal-Highlight {
+    background-color: #111; /* Dark background for the image area */
+    overflow: hidden;
+	 
+	img , canvas	
+	{
+		z-index: 1000;
+		max-width: none;
+		object-fit: contain; 
+		width: 60vw; 
+		max-height: 90vh;
+		@media (max-width: 500px) 
+		{
+			width: 90vw !important;
+		}
+	}
+}
+
+/* Anchor overlay to the bottom of the modal body */
+.description-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8)); /* Fade for readability */
+    z-index: 10;
+}
+
+.markup-img-wrap
+{
+	a:hover
+	{
+		background: rgba(0, 0, 0, 0);
+	}
+	.markup-img
+	{
+		width: 100%;
+		object-fit: fill; 
+		&:hover
+		{
+			outline: white solid 4px ;
+			z-index: 500;
+		}
+	}
+}
