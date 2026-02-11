@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div id="jumbotronBase" class="page h-70 col-10 col-lg-8 position-relative border border-secondary shadow-lg" style="z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
+    <div id="jumbotronContent" class="w-100 h-100 position-relative">
+        <div class="details-wrapper w-100 h-100 position-relative">
+            <div class="text-center p-1 w-100 h-100 d-flex flex-column position-absolute top-0 start-0" style="z-index: 4; transition: opacity 0.5s ease-in-out; overflow:auto; scrollbar-width: none;"> 
+                <a href="/">
+                    <div class="my-2 p-2" style="border: 2px solid #ffff;">
+                        <b class="text-light">{{ .Title }}</b>
+                    </div>
+                </a>
+                <iframe src="https://drive.google.com/file/d/1vIMJc4vyKk0x7npSNW8ld4mE1nt2nErl/preview" width="100%" height="800px"></iframe> 
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

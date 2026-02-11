@@ -6,18 +6,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('globalNav');
     let isAnimating = false;
 
-    // Helper to check if current path is Home
+    // Helper to check current path
     const checkIsHome = (path) => path === "/" || path === "/index.html" || path === "";
+    const checkIsResume = (path) => path === "/resume" || path === "/resume.html" || path === "/resume/" || path === "resume";
+    const getPageType = (path) => {
+    if (checkIsHome(path)) return 'home';
+    if (checkIsResume(path)) return 'resume';
+    return 'other';
+    };
 
     // --- 1. FIRST ENTRY LOGIC ---
     const runEntryAnimation = () => {
-        const isHome = checkIsHome(window.location.pathname);
-
+        const PageType = getPageType(window.location.pathname);
+        console.log(window.location.pathname);
         // A. Set initial Nav state before animation starts
-        if (isHome) {
-            nav.classList.add('nav-hidden');
-        } else {
+        if (PageType === 'other'){
             nav.classList.remove('nav-hidden');
+        }  
+        else {
+            nav.classList.add('nav-hidden');
         }
         
         // B. Wipe Background
@@ -103,8 +110,8 @@ document.addEventListener('click', e => {
         isAnimating = true;
         const currentDetails = document.querySelector('.details-wrapper');
         const targetUrl = new URL(url);
-        const isGoingHome = checkIsHome(targetUrl.pathname);
-        
+        const pageType = getPageType(targetUrl.pathname);
+
         // EXIT: Move details down
         if (currentDetails) {
             currentDetails.classList.remove('active');
@@ -112,9 +119,14 @@ document.addEventListener('click', e => {
         }
 
         // Handle Nav Fade OUT if going home
-        if (isGoingHome && nav) {
+        if (pageType === 'home') {
             nav.classList.add('nav-hidden');
         }
+        else if (pageType === 'resume') {
+            nav.classList.add('nav-hidden');
+            jumbotron.classList.add('page');
+        }
+
 
         try {
             const response = await fetch(url);
@@ -124,7 +136,7 @@ document.addEventListener('click', e => {
             
             const newDetailsHTML = newDoc.querySelector('#jumbotronContent').innerHTML;
             const newBgSrc = newDoc.querySelector('.bg-front').src;
-            const fallbackBgSrc = "https://live.staticflickr.com/2744/4302326159_5d35f780ac_m.jpg";
+            const fallbackBgSrc = "svg/error.svg";
 
             // PREPARE FRONT LAYER
             if (newBgSrc === undefined) {
@@ -148,9 +160,15 @@ document.addEventListener('click', e => {
                 bgFront.classList.add('reveal');
 
                 // Handle Nav Fade IN if leaving home
-                if (!isGoingHome && nav) {
+                if (pageType === 'other') 
+                {
                     nav.classList.remove('nav-hidden');
+                    jumbotron.classList.remove('page');
                 }
+                else if (pageType === 'home')
+                {
+                    jumbotron.classList.remove('page');
+                } 
 
                 setTimeout(() => {
                     const newDetails = document.querySelector('.details-wrapper');

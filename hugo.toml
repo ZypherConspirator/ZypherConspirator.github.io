@@ -34,6 +34,14 @@ falogo= "fa-brands fa-instagram"
 
 [[params.social]]
 key = 2
+name = "linkedin"
+url = "https://www.linkedin.com/in/muhd-aimn-alz/"
+target = "_blank"
+aria = "linkedin"
+falogo= "fa-brands fa-linkedin"
+
+[[params.social]]
+key = 2
 name = "Email"
 url = "mailto:aiman.zafry@outlook.com"
 aria = "My e-Mail Address"

@@ -75,18 +75,17 @@
 #jumbotronBase {
     transform: scaleY(0);
     opacity: 0;
-    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease, height 0.5s ease, width 0.5s ease;
     &.h-70 {
     height: 70vh;
+        &.page {
+        --jumbo-page-height : 90vh;
+        height: var(--jumbo-page-height);
+        /* Width should be 100vh * (width/height) = 100vh * (210/297) ≈ 70.71vw */
+        width: calc(var(--jumbo-page-height) * (210 / 297)); /* or calc(100vh * 0.7071) */
+        }
     }
 
-    &.h-75 {
-        height: 75vh;
-    }
-
-    &.h-80 {
-        height: 80vh;
-    }
     &.visible {
     transform: scaleY(1);
     opacity: 1;
