@@ -20,10 +20,10 @@
                     </a>
                     {{ end }}
                     <div class="justify-content-center d-flex align-items-center rounded-pill my-1 my-md-2 bg-black bg-opacity-10" style="backdrop-filter: blur(15px);">
-                        <h1 class="fs-2 fs-md-1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">AIMAN</h1>
+                        <h1 class="fs-2 fs-md-h1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">AIMAN</h1>
                         <span class="d-inline d-md-none align-self-center mx-3"><!-- Spacer --></span>
                         <span class="d-none d-md-inline AceLogo align-self-center"></span>
-                        <h1 class="fs-2 fs-md-1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">ALZAFRY</h1>
+                        <h1 class="fs-2 fs-md-h1 text-light text-uppercase font-tourney-light align-self-center" style="z-index: 2;filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));">ALZAFRY</h1>
                     </div>
                     <div class="justify-content-center d-flex align-items-center">
                         <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-10" style="backdrop-filter: blur(15px); filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));"> 3D GENERALIST </span></h1>
@@ -34,40 +34,41 @@
                         {{ end }}
                     </div>
 
-                    <div class="row my-2 align-items-center"> 
-                        <div class="col-5"><div class="border-top border-light opacity-25"></div></div>
-                        <div class="col-2">
-                            <button id="playReelBtn" onclick="document.getElementById('show-video-link').click(); videoplay();" class="btn text-light btn-lg rounded-circle border-0 py-2">
-                                <span><i class="fa-solid fa-circle-play fa-2xl"></i></span>
-                            </button>
+                    <div class="row my-2 align-items-center justify-content-center"> 
+                        <div class="col-5">
+                            <div class="border-top border-light opacity-25"></div>
                         </div>
-                        <div class="col-5"><div class="border-top border-light opacity-25"></div></div>
+                        <div class="col-2">
+                            <button id="playReelBtn" onclick="document.getElementById('show-video-link').click(); videoplay();" class="btn text-light btn-lg rounded-circle border-0 py-2"></button>
+                        </div>
+                        <div class="col-5">
+                            <div class="border-top border-light opacity-25"></div>
+                        </div>
                     </div>
-
-                <!--- Navigation Buttons -->
-                <div class="home-nav row justify-content-center gap-1 gap-md-3 m-0 m-md-4">
-                    <a href="/about" class="col-md-3 col-5 rounded-pill" >
-                    <div  class="btn border-0 px-0  px-md-4 ">
-                        <span  class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">ABOUT</span>
+                    <!--- Navigation Buttons -->
+                    <div class="home-nav row justify-content-center gap-1 gap-md-3 m-0 m-md-4">
+                        <a href="/about" class="col-md-2 col-5 rounded-pill" >
+                        <div  class="btn border-0 px-0  px-md-4 ">
+                            <span  class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">ABOUT</span>
+                        </div>
+                        </a>
+                        <a href="/animations" class="col-md-2 col-5 rounded-pill">
+                        <div class="btn border-0 px-0  px-md-4">
+                            <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">ANIMATIONS</span>
+                        </div>
+                        </a>
+                        <a href="/projects" class="col-md-2 col-5 rounded-pill">
+                        <div class="btn border-0 px-0  px-md-4">
+                            <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">PROJECTS</span>
+                        </div>
+                        </a>
+                        <a href="/notes" class="col-md-2 col-5 rounded-pill">
+                        <div class="btn border-0 px-0  px-md-4">
+                            <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">NOTES</span>
+                        </div>
+                        </a>
                     </div>
-                    </a>
-                    <a href="/animations" class="col-md-3 col-5 rounded-pill">
-                    <div class="btn border-0 px-0  px-md-4">
-                        <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">ANIMATIONS</span>
-                    </div>
-                    </a>
-                    <a href="/projects" class="col-md-3 col-5 rounded-pill">
-                    <div class="btn border-0 px-0  px-md-4">
-                        <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">PROJECTS</span>
-                    </div>
-                    </a>
-                    <a href="/notes" class="col-md-3 col-5 rounded-pill">
-                    <div class="btn border-0 px-0  px-md-4">
-                        <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">NOTES</span>
-                    </div>
-                    </a>
-                </div>
-                <!--- Navigation End -->
+                    <!--- Navigation End -->
                 </div>
             </div>
             <div class="tab-pane fade w-100 h-100 bg-black position-absolute top-0 start-0" id="home-video" role="tabpanel">

@@ -97,9 +97,13 @@ $writing-modes: (
 		}
 	}
 }
-
 // custom responsive font size
 $font-sizes: (
+    h1: 5rem,
+    h2: 4.5rem,
+    h3: 4rem,
+    h4: 3.5rem,
+    h5: 3rem,
     1: 2.5rem,
     2: 2rem,
     3: 1.75rem,
