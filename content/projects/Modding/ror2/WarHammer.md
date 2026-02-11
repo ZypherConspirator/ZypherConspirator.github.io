@@ -1,8 +1,6 @@
 ---
 title: Warhammer 40K
 weight: 2
-background : https://live.staticflickr.com/2039/3537231524_56a33e1fdf_b.jpg
-draft : true
 
 galleryWarhammer:
 - url: https://lh3.googleusercontent.com/d/1q9oJPYmU5oqcjah-nMTxuI8zFmL8cG2R
