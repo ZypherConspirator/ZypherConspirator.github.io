@@ -34,3 +34,148 @@ a {
 	margin-left: -1rem;
 	z-index: 30;
 }
+
+.h7 { font-size: 0.85rem; }
+.h8 { font-size: 0.75rem; }
+.h9 { font-size: 0.65rem; }
+.h10 { font-size: 0.5rem; }
+
+// custom responsive height
+$height-values: (
+	10: 10%,
+	15: 15%,
+	25: 25%,
+	50: 50%,
+	75: 75%,
+	100: 100%,
+    auto: auto
+);
+
+$grid-breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+);
+
+
+@each $key, $value in $height-values {
+	.h-#{$key} {
+		height: $value !important;
+	}
+}
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+	@media (min-width: #{$min-width}) {
+		@each $key, $value in $height-values {
+		.h-#{$breakpoint}-#{$key} {
+			height: $value !important;
+		}
+		}
+	}
+} 
+
+// custom resposnive writing mode
+$writing-modes: (
+	horizontal: horizontal-tb,
+	vertical-rl: vertical-rl,
+	vertical-lr: vertical-lr
+);
+
+@each $name, $value in $writing-modes {
+	.wm-#{$name} {
+		writing-mode: $value !important;
+	}
+}
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+	@media (min-width: #{$min-width}) {
+		@each $name, $value in $writing-modes {
+		.wm-#{$breakpoint}-#{$name} {
+			writing-mode: $value !important;
+		}
+		}
+	}
+}
+
+// custom responsive font size
+$font-sizes: (
+    1: 2.5rem,
+    2: 2rem,
+    3: 1.75rem,
+    4: 1.5rem,
+    5: 1.25rem,
+    6: 1rem,
+    7: 0.75rem,
+    8: 0.5rem
+);
+
+@each $key, $value in $font-sizes {
+  .fs-#{$key} {
+    font-size: $value !important;
+  }
+}
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+  @media (min-width: #{$min-width}) {
+    @each $key, $value in $font-sizes {
+      .fs-#{$breakpoint}-#{$key} {
+        font-size: $value !important;
+      }
+    }
+  }
+}
+
+//custom responsive positioning
+
+$position-values: (
+    0: 0,
+    10: 10%,
+    25: 25%,
+    30: 30%,
+    50: 50%,
+    75: 75%,
+    100: 100%
+);
+
+@each $key, $value in $position-values {
+    .top-#{$key} {
+        top: $value !important;
+    }
+
+    .bottom-#{$key} {
+        bottom: $value !important;
+    }
+
+    .start-#{$key} {
+        left: $value !important;
+    }
+
+    .end-#{$key} {
+        right: $value !important;
+    }
+}
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+    @media (min-width: #{$min-width}) {
+        @each $key, $value in $position-values {
+
+        .top-#{$breakpoint}-#{$key} {
+            top: $value !important;
+        }
+
+        .bottom-#{$breakpoint}-#{$key} {
+            bottom: $value !important;
+        }
+
+        .start-#{$breakpoint}-#{$key} {
+            left: $value !important;
+        }
+
+        .end-#{$breakpoint}-#{$key} {
+            right: $value !important;
+        }
+
+        }
+    }
+}
