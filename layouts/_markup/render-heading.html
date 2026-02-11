@@ -1,5 +1,4 @@
 {{- $isCollapse := .Attributes.class | findRE "head-accordion" -}}
-
 {{- if $isCollapse -}}
 
   {{- $id := printf "collapse-%s" .Anchor -}}
@@ -17,4 +16,4 @@
   <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
     {{- .Text | safeHTML -}}
   </h{{ .Level }}>
-{{- end -}}{{- $isCollapse := .Attributes.class | findRE "collapse" -}}
+{{- end -}}
