@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
     var video = document.getElementById('midgroundImg');
-    // Explicitly mute and set to play
-    video.muted = true; 
+    if(!video) return;
     // Play the video
     var playPromise = video.play();
     if (playPromise !== undefined) {
