@@ -1,3 +1,5 @@
+@import "variables";
+
 html
 {
     scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
@@ -50,14 +52,6 @@ $height-values: (
 	100: 100%,
     auto: auto
 );
-
-$grid-breakpoints: (
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px
-);
-
 
 @each $key, $value in $height-values {
 	.h-#{$key} {
@@ -182,4 +176,10 @@ $position-values: (
 
         }
     }
+}
+
+
+.ratio-1x1
+{
+    aspect-ratio: 1/1;
 }

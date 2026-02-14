@@ -6,7 +6,7 @@
                 
                 <div class="col-12 col-lg-3 d-flex flex-column h-auto h-md-100">
                     <div class="rounded-5 mb-3 p-3 text-center flex-grow-0" style="background: rgba(255, 255, 255, 0.2); flex: 0 1 auto;">
-                        <img src="\img\Background\Self.png" class="h-50 h-md-auto d-none d-md-block rounded-5 mb-3 img-fluid" style="max-height: 260px; object-fit: cover; object-position: top;">
+                        <img src="\img\Personal\Self.png" class="w-100 h-50 h-md-auto d-none d-md-block rounded-5 mb-3 img-fluid" style="max-height: 260px; object-fit: cover; object-position: top;">
                         <h4 class="fw-bold mb-1"> Aiman Alzafry </h4>
                         <h5 class="fw-light small">He/Him • June 2001</h5>
                     </div>
@@ -25,8 +25,7 @@
                             <span class="mx-1 icon-Unity"></span>
                         </p>
                     </div>
-
-                    <div class="rounded-5 p-2 mt-none mt-md-auto" style="background: rgba(255, 255, 255, 0.2);">
+                    <div class="rounded-5 mb-3 p-2" style="background: rgba(255, 255, 255, 0.2);">
                         <p class="m-1 justify-content-evenly d-flex">
                         {{ range sort .Site.Params.social "key"}}
                             <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
@@ -40,7 +39,7 @@
                     <div class="rounded-5 mb-3 p-4 text-light font-raleway flex-grow-1 shadow-sm" style="background: rgba(255, 255, 255, 0.2); overflow-y: auto; scrollbar-width: thin;">
                         {{ .Content }}
                     </div>
-                    <div class="rounded-5 p-2 h-25 h-md-auto" style="background: rgba(255, 255, 255, 0.2); height: 220px; flex-shrink: 0;">
+                    <div class="rounded-5 p-2 h-25 h-md-auto" style="background: rgba(255, 255, 255, 0.2); flex-shrink: 0;">
                         <div id="projectCarousel" class="carousel slide h-100" data-bs-ride="carousel">
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active h-100">
