@@ -45,7 +45,7 @@ key = 2
 name = "Email"
 url = "mailto:aiman.zafry@outlook.com"
 aria = "My e-Mail Address"
-falogo= "fa-regular fa-envelope"
+falogo= "fa-solid fa-envelope"
 
 [markup]
   [markup.tableOfContents]

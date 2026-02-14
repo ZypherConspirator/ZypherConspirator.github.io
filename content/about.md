@@ -1,6 +1,6 @@
 ---
 title: About
-background: https://live.staticflickr.com/5486/11459675256_4c4c4d196b_b.jpg
+background: https://live.staticflickr.com/5064/5593429385_cd3a61a5d6_b.jpg
 type: about
 ---
 hey there! i’m Aiman Alzafry! Welcome to my Web Gallery/Portfolio
