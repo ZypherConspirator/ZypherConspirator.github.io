@@ -9,8 +9,11 @@
             </ul>
 
             <div class="tab-pane fade show active w-100 h-100 position-relative" id="home-hero" role="tabpanel">
-                <img id="midgroundImg" src="/img/Background/BaseForeground.png" class="position-absolute top-30 top-md-50 start-50 translate-middle h-75 h-md-auto" style="z-index: 3; filter: drop-shadow(0 0 30px rgba(0,0,0,0.8)); transition: opacity 0.5s ease-in-out; pointer-events: none; max-height: 90vh;">
-                
+                <!-- <img id="midgroundImg" src="/img/Background/BaseForeground.png" class="position-absolute top-30 top-md-50 start-50 translate-middle h-75 h-md-auto" style="z-index: 3; filter: drop-shadow(0 0 30px rgba(0,0,0,0.8)); transition: opacity 0.5s ease-in-out; pointer-events: none; max-height: 90vh;">
+                -->
+                <video id ="midgroundImg"class="position-absolute top-30 top-md-50 start-50 translate-middle h-75 h-md-auto" style="z-index: 3; filter: drop-shadow(0 0 30px rgba(0,0,0,0.8)); transition: opacity 0.5s ease-in-out; pointer-events: none; max-height: 100vh;" autoplay>
+                    <source  type="video/webm" src="/vid/beetle.webm"> 
+                </video>
                 <div class="text-center px-4 mx-md-0  p-2 p-md-5 w-100 h-100 d-flex flex-column justify-content-center position-absolute top-0 start-0" style="z-index: 4;"> 
                     {{if .Site.Params.openforhire }}
                     <a href="/resume">
@@ -46,25 +49,25 @@
                         </div>
                     </div>
                     <!--- Navigation Buttons -->
-                    <div class="home-nav row justify-content-center gap-1 gap-md-3 m-0 m-md-4">
+                    <div class="home-nav row justify-content-center gap-1 gap-md-3 m-0">
                         <a href="/about" class="col-md-2 col-5 rounded-pill" >
-                        <div  class="btn border-0">
-                            <span  class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">ABOUT</span>
+                        <div  class="btn border-0 p-0">
+                            <span  class="fs-7 fs-lg-5 fw-bold text-decoration-none text-white">ABOUT</span>
                         </div>
                         </a>
                         <a href="/animations" class="col-md-2 col-5 rounded-pill">
-                        <div class="btn border-0">
-                            <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">ANIMATIONS</span>
+                        <div class="btn border-0 p-0">
+                            <span class="fs-7 fs-lg-5 fw-bold text-decoration-none text-white">ANIMATIONS</span>
                         </div>
                         </a>
                         <a href="/projects" class="col-md-2 col-5 rounded-pill">
-                        <div class="btn border-0">
-                            <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">PROJECTS</span>
+                        <div class="btn border-0 p-0">
+                            <span class="fs-7 fs-lg-5 fw-bold text-decoration-none text-white">PROJECTS</span>
                         </div>
                         </a>
                         <a href="/notes" class="col-md-2 col-5 rounded-pill">
-                        <div class="btn border-0">
-                            <span class="fs-7 fs-md-5 fw-bold text-decoration-none text-white">NOTES</span>
+                        <div class="btn border-0 p-0">
+                            <span class="fs-7 fs-lg-5 fw-bold text-decoration-none text-white">NOTES</span>
                         </div>
                         </a>
                     </div>
