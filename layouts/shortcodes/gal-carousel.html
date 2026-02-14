@@ -17,9 +17,20 @@
 {{/* Determine Column Width: col-12 for mobile, dynamic for desktop */}}
 {{ $cols := 4 }} 
 {{ if eq $chunk 1 }} {{ $cols = 12 }} {{ end }}
-
 {{/* Only show controls if there are more items than the chunk size */}}
 {{ $showControls := gt $total $chunk }}
+
+
+<!-- 
+md item example:
+
+-   url:
+    name:
+    name_link:
+    sub: 
+    sub_link:
+    description:
+-->
 
 {{ $carouselID := printf "gal-%s-%d" (.Get "name" | urlize) now.UnixNano }}
 
@@ -45,7 +56,7 @@
                                             {{ if and (eq $showLike "true") $item.likes }}
                                                 <span class="gal-label-corner"><i class="fa-solid fa-download"></i> {{ $item.likes }}</span>
                                             {{ end }}
-                                            <canvas data-src="{{ $item.url }}" alt="{{ $item.name }}" class="watermarkedCanvas lozad" image.crossOrigin="anonymous" loading="lazy"></canvas>
+                                            <canvas data-src="{{ $item.url }}" alt="{{ $item.name }}" class="watermarkedCanvas lozad bg-black bg-opacity-25" image.crossOrigin="anonymous" loading="lazy"></canvas>
                                                                         <!-- Description Data -->
                                             {{ if $item.name }} <p class="gal-title d-none" {{ with $item.name_link }} href="{{ . }}" {{ end }}>{{ $item.name }}</p>{{ end }}
                                             {{ if $item.sub }}<p class="gal-sub-title d-none" {{ with $item.sub_link }} href="{{ . }}" {{ end }}>{{ $item.sub }}</p>{{ end }}

@@ -39,6 +39,6 @@ gallery:
 ---
 <!--more-->
 ---
-{{< gallery name="gallery" showName="true" showLike="false">}}
+{{< gallery name="gallery" class="column-1 column-md-3" showName="true" showLike="false">}}
 
 ---

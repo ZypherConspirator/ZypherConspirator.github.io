@@ -6,6 +6,8 @@ gallery:
   name: Kamen Rider Kabuto Masked
 - url: https://lh3.googleusercontent.com/d/1MQooOPUFRZ531BcFSgX0gI2zQ4XQRQnT
   name: Dragonborn
+- url: https://lh3.googleusercontent.com/d/1YDZ0IMJFpzU8bUGFEpjge_vUIJ6z_pGS
+  name: Autumn bird
 - url: https://lh3.googleusercontent.com/d/19Ay-ZC4Wzdo9AgNnjVi4XXLO9et2dE_a
   name: Hollow Knight
 - url: https://lh3.googleusercontent.com/d/1ujDvsJ-ZJ9SOPcvEtIUqRiuKOqTHPqjF
@@ -33,4 +35,4 @@ gallery:
 ---
 <!--more-->
 ---
-{{< gallery name="gallery" showName="true" showLike="false">}}
+{{< gallery name="gallery" class="column-1 column-md-3" showName="true" showLike="false">}}
