@@ -188,10 +188,21 @@ function initializeWatermarkedCanvases() {
             {
                 descOut = desc.innerText || "";
             }
+
             // Apply details to modal
-            document.getElementById("modal-title-text").innerText = title;
-            document.getElementById("modal-title-text").setAttribute("href",titlelink);
+
+            const Tmodal= document.getElementById("modal-title-text");
             const subTmodal = document.getElementById("modal-sub-title-text");
+            
+            Tmodal.innerText = title;
+            if (titlelink) 
+            {
+                Tmodal.setAttribute("href",titlelink);
+            }
+            else
+            {
+                Tmodal.removeAttribute("href");
+            }
             if (subtitle) 
             {
                 subTmodal.innerText = sub;
@@ -201,6 +212,7 @@ function initializeWatermarkedCanvases() {
             {
                 subTmodal.innerText = "";
             }
+            
             if (descOut)
             {
                 document.getElementById("description-section").classList.remove('d-none');
