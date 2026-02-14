@@ -1,3 +1,21 @@
+window.addEventListener('load', () => {
+    var video = document.getElementById('midgroundImg');
+    // Explicitly mute and set to play
+    video.muted = true; 
+    // Play the video
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            // Autoplay started!
+        }).catch(error => {
+            // Autoplay was prevented.
+            // Show a "Play" button so the user can start it manually
+            console.log("Autoplay blocked: " + error);
+        });
+    }
+});
+
+
 // Simplified HomeVid.js
 export function videoplay() {
     const iframe = document.getElementById('reelVideo');
