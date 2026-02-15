@@ -18,4 +18,7 @@ so the design framework i worked up:
 
 this basically mean that 
 
-###
+### Cool Nifty stuff
+
+if you would notice ive laced all the pictures on here with a certain noise code i cooked up. its add noise and my watermark on every marked < canvas >. This was a carryover from v1 of the site. this was made less about Anti-AI more toward Anti-Copy Pasting my work, not sure how actually effective is it but its more for my peace of mind.
+
