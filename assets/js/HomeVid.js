@@ -1,19 +1,37 @@
 window.addEventListener('load', () => {
-    var video = document.getElementById('midgroundImg');
-    if(!video) return;
-    // Play the video
+    const video = document.getElementById('midgroundImg');
+    if (!video) return;
+
+    let isPlaying = false;
+
+    function syncVideo() {
+        if (!isPlaying) return;
+
+        // rAF helps the browser compositor prioritize the video layer 
+        // to match the screen's refresh rate.
+        requestAnimationFrame(syncVideo);
+    }
+
     var playPromise = video.play();
+
     if (playPromise !== undefined) {
         playPromise.then(_ => {
-            // Autoplay started!
+            isPlaying = true;
+            requestAnimationFrame(syncVideo); // Start the sync loop
         }).catch(error => {
-            // Autoplay was prevented.
-            // Show a "Play" button so the user can start it manually
             console.log("Autoplay blocked: " + error);
         });
     }
-});
 
+    // Stop the loop if the video pauses to save battery
+    video.addEventListener('pause', () => isPlaying = false);
+    video.addEventListener('play', () => {
+        if (!isPlaying) {
+            isPlaying = true;
+            requestAnimationFrame(syncVideo);
+        }
+    });
+});
 
 // Simplified HomeVid.js
 export function videoplay() {
