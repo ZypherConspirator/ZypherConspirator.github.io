@@ -28,7 +28,7 @@ md item example:
                 {{ if $gallery }}
                     {{ range $gallery }}
                         {{if .href }}<a href="{{ .href }}">{{end}}
-                        <div class="gal-item d-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative">
+                        <div class="gal-item d-inline-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative">
                             <div class="spinner-border text-light"  role="status"></div>
 
                             <!-- Image Data -->
