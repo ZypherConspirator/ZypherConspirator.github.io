@@ -4,6 +4,7 @@
 {{ $dummy := .Get "dummy" }} <!-- int, add empty dummy items -->
 {{ $1x1 := .Get "1x1" }} <!-- bool, set all to 1x1 ratio -->
 {{ $class := .Get "class" }}
+{{ $itemclass := .Get "item-class" }}
 <!-- 
 md item example:
 
@@ -18,16 +19,16 @@ md item example:
 
 {{ $dummyImage := "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=" }}
 
-<div class="container">
-    <div class="col-md-12">
-        <div class="row">
+<div class="container h-100">
+    <div class="col-md-12 h-100">
+        <div class="row h-100">
             <!-- Gallery Section -->
-            <div id="image" class="gal-row {{ if $class }}{{ $class }}{{end}} justify-content-center">
+            <div id="image" class="gal-row {{ if $class }}{{ $class }}{{end}} justify-content-center align-middle  align-content-center">
                 {{ $gallery := index $.Page.Params $galleryName }}
                 {{ if $gallery }}
                     {{ range $gallery }}
                         {{if .href }}<a href="{{ .href }}">{{end}}
-                        <div class="gal-item d-flex gal-wrap {{if not .href }} thumbnail {{end}} position-relative">
+                        <div class="gal-item d-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative">
                             <div class="spinner-border text-light"  role="status"></div>
 
                             <!-- Image Data -->
@@ -42,7 +43,7 @@ md item example:
                             <!-- end -->
 
                             <!-- Image itself -->
-                            <canvas data-src="{{ $dummyImage }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad bg-black bg-opacity-25" image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                            <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad bg-black bg-opacity-25 flex-grow-1" image.crossOrigin = "anonymous" loading="lazy"></canvas>
                             <!-- end -->
                         </div>
                         {{if .href }}</a>{{end}}

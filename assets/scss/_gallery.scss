@@ -176,7 +176,7 @@
     .gal-wrap {
         
         canvas, img {
-            flex: 0 0;
+            flex: 0 0 auto;
             width: auto;      // Width scales based on aspect ratio
             height: 100%;
             object-fit: cover;
@@ -211,3 +211,4 @@
         }
     }
 }
+
