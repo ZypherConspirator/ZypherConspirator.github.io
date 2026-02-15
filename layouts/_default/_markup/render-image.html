@@ -6,7 +6,7 @@
         <!-- Render <img> if useCanvas=false is found -->
         <a href="#" class="thumbnail position-relative">
             <div class="spinner-border text-light"  role="status"></div>
-            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="processedImg img-fluid markup-img lozad bg-black bg-opacity-25" loading="lazy">
+            <img src="{{ $imageURL }}" alt="{{ $altText }}" class="processedImg img-fluid markup-img lozad bg-black bg-opacity-25" loading="lazy">
         </a>
     {{ else }}
         <!-- Default: Render <canvas> -->

@@ -37,7 +37,8 @@
     }
     // --- Styles for internal elements ---
     img, canvas { 
-        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, transform .05s ease-in-out;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, outline .3s ease-in-out, transform .05s ease-in-out;
+        outline: rgba(255, 255, 255, 0) solid 0px ;
         width: 100%; 
         object-fit: cover;
         filter: drop-shadow(0 3mm 4mm rgba(31, 31, 31, 0.8));
@@ -106,8 +107,8 @@
             @media (max-width: 768px) {
                 aspect-ratio: 16 / 9;
             }
-            
-            transition: transform 0.2s ease-in-out, outline 0.1s ease-in-out;
+            outline: rgba(255, 255, 255, 0) solid 0px ;
+            transition: transform 0.2s ease-in-out, outline 0.3s ease-in-out;
             filter: drop-shadow(0 2mm 3mm rgba(0, 0, 0, 0.3));
         }
                 // Shared Label Styles
@@ -150,10 +151,63 @@
     .carousel-control-prev, .carousel-control-next {
         width: 40px;
         opacity: 0.8;
-         z-index: 2000;
+        z-index: 2000;
         &:hover { opacity: 1; }
         .carousel-control-prev-icon, .carousel-control-next-icon {
             filter: invert(1);
+        }
+    }
+}
+
+.gal-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; // Space between items
+    
+    .gal-item 
+    {
+        height: 140px;
+        @media (min-width: 768px) 
+        { 
+            height: 230px;
+        }
+    }
+
+    .gal-wrap {
+        
+        canvas, img {
+            flex: 0 0;
+            width: auto;      // Width scales based on aspect ratio
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, outline 0.2s ease;
+        }
+        .corner, .bottom {
+        display: none;
+        user-select: none;
+        margin: 0;
+        padding: 0 4%;
+        box-shadow: inset 4px 4px white, inset -4px -4px white;
+        background-color: white;
+        color: darkgrey;
+        }
+
+        &:hover {
+            canvas, img {
+                transform: scale(1.05);
+                outline: white solid 4px;
+                z-index: 10;
+            }
+            .corner, .bottom {
+                display: inline-block;
+                position: absolute;
+                background: white;
+                color: #333;
+                padding: 2px 8px;
+                z-index: 20;
+            }
+            .corner { top: 10px; left: 0; font-size: 12px; }
+            .bottom { bottom: 10px; right: 0; font-size: 14px; }
         }
     }
 }

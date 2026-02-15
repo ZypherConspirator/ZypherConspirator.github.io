@@ -24,7 +24,7 @@
         {{- range .TBody }}
         <tr>
             {{- range . }}
-            <td class="h8 fw-lighter {{ with .Alignment }}{{ index $alignMap . }}{{ end }}">
+            <td class="h8 fw-light {{ with .Alignment }}{{ index $alignMap . }}{{ end }}">
                 {{- .Text -}}
             </td>
             {{- end }}

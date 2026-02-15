@@ -36,6 +36,8 @@
 	{
 		width: 100%;
 		object-fit: fill; 
+		outline: rgba(255, 255, 255, 0) solid 0px ;
+		transition: outline 0.3s ease-out;
 		&:hover
 		{
 			outline: white solid 4px ;

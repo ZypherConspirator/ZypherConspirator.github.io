@@ -5,7 +5,6 @@ Released : 2025
 tags : 
     - Experimental
     - Final Year Project
-    - Uni Project
 background: http://img.youtube.com/vi/Z2zNZvFf9MA/hqdefault.jpg
 video : https://www.youtube.com/embed/Z2zNZvFf9MA
 weight: 12

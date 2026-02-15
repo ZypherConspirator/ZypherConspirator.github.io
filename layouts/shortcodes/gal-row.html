@@ -1,0 +1,64 @@
+{{ $galleryName := .Get "name" }} <!-- name variable -->
+{{ $showName := .Get "showName" }} <!-- bool, show name -->
+{{ $showLike := .Get "showLike" }} <!-- bool, show like value -->
+{{ $dummy := .Get "dummy" }} <!-- int, add empty dummy items -->
+{{ $1x1 := .Get "1x1" }} <!-- bool, set all to 1x1 ratio -->
+{{ $class := .Get "class" }}
+<!-- 
+md item example:
+
+-   url:
+    name:
+    name_link:
+    sub: 
+    sub_link:
+    description:
+-->
+
+
+{{ $dummyImage := "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=" }}
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <!-- Gallery Section -->
+            <div id="image" class="gal-row {{ if $class }}{{ $class }}{{end}} justify-content-center">
+                {{ $gallery := index $.Page.Params $galleryName }}
+                {{ if $gallery }}
+                    {{ range $gallery }}
+                        {{if .href }}<a href="{{ .href }}">{{end}}
+                        <div class="gal-item d-flex gal-wrap {{if not .href }} thumbnail {{end}} position-relative">
+                            <div class="spinner-border text-light"  role="status"></div>
+
+                            <!-- Image Data -->
+                            {{ if eq $showName "true" }}{{if .name }} <span class="bottom">{{ .name }}</span>{{ end }}{{ end }}
+                            {{ if eq $showLike "true" }}{{if .likes }} <span class="corner"><i class="fa-solid fa-download"></i> {{ .likes }}</span>{{ end }}{{ end }}
+                            <!-- end -->
+
+                            <!-- Description Data -->
+                            {{ if .name }} <p class="gal-title d-none" {{ with .name_link }} href="{{ . }}" {{ end }}>{{ .name }}</p>{{ end }}
+                            {{ if .sub }}<p class="gal-sub-title d-none" {{ with .sub_link }} href="{{ . }}" {{ end }}>{{ .sub }}</p>{{ end }}
+                            {{ if .description }}<p class="gal-desc d-none">{{ .description }}</p>{{ end }}
+                            <!-- end -->
+
+                            <!-- Image itself -->
+                            <canvas data-src="{{ $dummyImage }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad bg-black bg-opacity-25" style="" image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                            <!-- end -->
+                        </div>
+                        {{if .href }}</a>{{end}}
+                    {{ end }}
+                {{ else }}
+                    <p>No images available in the gallery.</p>
+                {{ end }}
+                {{ if gt $dummy 0 }}
+                {{ range seq $dummy }}
+                    <div class="d-flex gal-wrap py-2 position-relative">
+                        <canvas data-src="{{ $dummyImage }}" class="ratio-1x1 bg-black bg-opacity-25" width="100" height="100" image.crossOrigin="anonymous">
+                        </canvas>
+                    </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
