@@ -20,7 +20,23 @@ margin: 15px;
 border-bottom: 1px solid;
 }
 
+.ForHire
+{
+    transition: border 0.2s ease;
+    animation: borderFocus 0.6s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+    &:hover{
+		animation: none;
+        border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    }
+}
 
+
+@keyframes borderFocus {
+	from {border: 0px var(--bs-border-style) transparent !important;}
+	to {border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;}
+}
 
 #playReelBtn {
     filter: drop-shadow(0px 0px 0px #ffffff);

@@ -206,11 +206,18 @@ function initializeWatermarkedCanvases() {
             if (subtitle) 
             {
                 subTmodal.innerText = sub;
-                subTmodal.setAttribute("href",sublink);
             }
             else
             {
                 subTmodal.innerText = "";
+            }
+            if (sublink) 
+            {
+                subTmodal.setAttribute("href", sublink);
+            }
+            else
+            {
+                subTmodal.removeAttribute("href");
             }
             
             if (descOut)
