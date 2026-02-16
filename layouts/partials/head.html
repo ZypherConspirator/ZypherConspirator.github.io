@@ -16,24 +16,3 @@
 <link href="{{ $style.RelPermalink }}" rel="stylesheet">
 <!-- Custom module -->
 {{ $script := resources.Get "js/HomeVid.js" }}
-<script type="module">
-    import { video_play, video_exit } from "{{ $script.RelPermalink }}";
-    window.video_play = video_play;
-    window.video_exit = video_exit;
-    document.addEventListener('click', (e) => {
-        console.log("Event Clicked");
-        var playBtn = e.target.closest('#playReelBtn');
-        var closeBtn = e.target.closest('#closeVid');
-
-        if (playBtn) {
-            console.log("Play Button Clicked");
-            e.preventDefault();
-            window.video_play();
-        }
-        if (closeBtn) {
-            console.log("Exit Button Clicked");
-            e.preventDefault();
-            window.video_exit();
-        }
-    });
-</script>

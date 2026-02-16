@@ -18,7 +18,7 @@
                     {{if .Site.Params.openforhire }}
                     <a href="/resume">
                         <div class=" justify-content-center d-flex align-items-center">
-                            <h1 class="fs-5 fs-md-3 text-light text-uppercase"><span class="ForHire badge rounded-pill px-5 bg-black bg-opacity-10 fw-light" style="backdrop-filter: blur(15px);"> #OpenForHire </span></h1>
+                            <h1 class="fs-5 fs-md-3 text-light text-uppercase"><span class="ForHire badge rounded-pill px-5 bg-black bg-opacity-10 fw-light" style="backdrop-filter: blur(15px);"> #Open-For-Hire </span></h1>
                         </div>
                     </a>
                     {{ end }}
@@ -31,20 +31,20 @@
                     <div class="justify-content-center d-flex align-items-center">
                         <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-10 filter-drop-shadow" style="backdrop-filter: blur(15px);"> 3D GENERALIST </span></h1>
                     </div>
-                    <div class="mx-4 d-flex justify-content-center mb-4 mt-2">
+                    <div class="d-flex justify-content-center my-3 mx-4">
                         {{ range sort .Site.Params.social "key"}}
                             <span class="mx-2 h1 rounded-circle filter-drop-shadow"><a href="{{ .url | safeURL }}" class="text-white"><i class="{{ .falogo }}"></i></a></span>
                         {{ end }}
                     </div>
 
-                    <div class="row my-2 align-items-center justify-content-center"> 
-                        <div class="col-5">
+                    <div class="row my-2 py-3 align-items-center justify-content-center"> 
+                        <div class="col-3 col-md-5">
                             <div class="border-top border-light opacity-25"></div>
                         </div>
-                        <div class="col-2">
-                            <button id="playReelBtn" onclick="document.getElementById('show-video-link').click(); videoplay();" class="btn text-light btn-lg rounded-circle border-0 py-2"></button>
-                        </div>
-                        <div class="col-5">
+                        <a id="playReelBtn" onclick="document.getElementById('show-video-link').click(); videoplay();" class="col-4 col-md-2 py-2 py-md-3 filter-bg-blur rounded-pill bg-black bg-opacity-25 d-flex align-items-center justify-content-center">
+                            <span class="fs-6 fs-lg-5 fw-medium text-decoration-none text-white"></span>
+                        </a>
+                        <div class="col-3 col-md-5">
                             <div class="border-top border-light opacity-25"></div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="tab-pane fade w-100 h-100 bg-black position-absolute top-0 start-0" id="home-video" role="tabpanel">
-                <button onclick="document.getElementById('show-hero-link').click(); videoexit();" class="btn btn-lg  bg-black bg-opacity-50 rounded-start-pill position-absolute top-50 end-0" style="z-index: 10;">
+                <button id="ExitReelBtn" onclick="document.getElementById('show-hero-link').click(); videoexit();" class="btn btn-lg border-0  bg-white bg-opacity-50 rounded-start-pill position-absolute top-50 end-0" style="z-index: 10;">
                     <i class=" text-light fa-solid fa-right-from-bracket fa-flip-horizontal"></i>
                 </button>
                 <iframe id="reelVideo" class="w-100 h-100" src="https://www.youtube.com/embed/V6Mboe9_BHA?si=Jhrc2frr2SkHmIH3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

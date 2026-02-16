@@ -39,26 +39,30 @@ border-bottom: 1px solid;
 }
 
 #playReelBtn {
-    filter: drop-shadow(0px 0px 0px #ffffff);
-	--bs-btn-padding-x:0;
-	--bs-btn-padding-y:0;
-    transition: filter 0.3s ease;
-	&::after
+	&::before
 	{
 		content: "";
-		background-image: url("/svg/play-btn.svg");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		display: inline-block;
-		filter: invert(1);
-		width: 30px;
-		height: 30px;
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 20px solid var(--bs-border-color);
+		height: 0px;
+	}
+	&:focus, &:hover {
+	animation: pulse 1s;
+	box-shadow: 0 0 0 1em transparent;
+	}
+}
 
+#ExitReelBtn {
+	&:focus, &:hover {
+	animation: pulse 1s;
+	box-shadow: 0 0 0 1em transparent;
 	}
-	&:hover{
-    filter: drop-shadow(0px 0px 4px #ffffff);
-	}
+}
+
+
+@keyframes pulse {
+0% { box-shadow: 0 0 0 0 var(--bs-border-color); }
 }
 
 .anim-card {
@@ -83,5 +87,13 @@ border-bottom: 1px solid;
 	&drop-shadow
 	{
 		filter:drop-shadow(0 0 10px rgba(0,0,0,0.8));
+	}
+
+	&bg
+	{
+		&-blur
+		{
+			backdrop-filter : blur(15px);
+		}
 	}
 }
