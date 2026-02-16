@@ -21,21 +21,27 @@ function initializeWatermarkedCanvases() {
             return null; // Return null if fetch fails
         }
     }
+    images.forEach(async (imgElement) => {
+        // 1. Get the real URL from a data attribute instead of 'src'
+        const hiddenSrc = imgElement.getAttribute("data-src");
+        if (!hiddenSrc) return;
 
-    images.forEach(async (images) => {
-        const imageSrc = images.getAttribute("src");
-        const spinner = images.parentElement.querySelector('.spinner-border');
-        // Fetch and load images
-        const [mainImage] = await Promise.all([loadImage(imageSrc)]);
+        const spinner = imgElement.parentElement.querySelector('.spinner-border');
 
-        if (!mainImage) {
-            if(spinner) spinner.classList.add('d-none');
-            console.warn("Using fallback SVG due to image load failure.");
+        // 2. Load the image via your existing loadImage (which uses fetch + Blobs)
+        const loadedImg = await loadImage(hiddenSrc);
+
+        if (loadedImg) {
+            // 3. Set the image src to the ObjectURL (e.g., blob:https://yoursite.com/...)
+            imgElement.src = loadedImg.src;
+            
+            // 4. OBFUSCATION: Remove the evidence from the DOM
+            imgElement.removeAttribute("data-src");
+        } else {
+            imgElement.src = fallbackSVG;
         }
-        else
-        {
-            if(spinner) spinner.classList.add('d-none');
-        }
+
+        if (spinner) spinner.classList.add('d-none');
     });
 
     canvases.forEach(async (canvas) => {
@@ -137,6 +143,7 @@ function initializeWatermarkedCanvases() {
         ctx.globalCompositeOperation = "multiply";
         ctx.globalAlpha = 0.15;
         ctx.drawImage(noiseCanvas, 0, 0, canvas.width, canvas.height);
+        canvas.removeAttribute("data-src");
     });
 
     // Modal logic

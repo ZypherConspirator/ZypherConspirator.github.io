@@ -6,13 +6,13 @@
         <!-- Render <img> if useCanvas=false is found -->
         <a href="#" class="thumbnail position-relative">
             <div class="spinner-border text-light"  role="status"></div>
-            <img src="{{ $imageURL }}" alt="{{ $altText }}" class="processedImg img-fluid markup-img lozad bg-black bg-opacity-25" loading="lazy">
+            <img data-src="{{ $imageURL }}" alt="{{ $altText }}" class="processedImg img-fluid markup-img lozad bg-black bg-opacity-25 h-100" loading="lazy">
         </a>
     {{ else }}
         <!-- Default: Render <canvas> -->
         <a href="#" class="thumbnail position-relative">
             <div class="spinner-border text-light"  role="status"></div>
-            <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas img-fluid markup-img lozad bg-black bg-opacity-25" aria-label="{{ $altText }}"> </canvas>
+            <canvas data-src="{{ $imageURL }}" class="watermarkedCanvas img-fluid markup-img lozad bg-black bg-opacity-25 h-100" aria-label="{{ $altText }}"> </canvas>
         </a>
     {{ end }}
 </div>

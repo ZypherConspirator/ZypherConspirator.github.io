@@ -56,7 +56,7 @@ md item example:
                                             {{ if and (eq $showLike "true") $item.likes }}
                                                 <span class="gal-label-corner"><i class="fa-solid fa-download"></i> {{ $item.likes }}</span>
                                             {{ end }}
-                                            <canvas data-src="{{ $item.url }}" alt="{{ $item.name }}" class="watermarkedCanvas lozad bg-black bg-opacity-25" image.crossOrigin="anonymous" loading="lazy"></canvas>
+                                            <canvas data-src="{{ $item.url }}" alt="{{ $item.name }}" class="watermarkedCanvas lozad bg-black bg-opacity-25 h-100" image.crossOrigin="anonymous" loading="lazy"></canvas>
                                                                         <!-- Description Data -->
                                             {{ if $item.name }} <p class="gal-title d-none" {{ with $item.name_link }} href="{{ . }}" {{ end }}>{{ $item.name }}</p>{{ end }}
                                             {{ if $item.sub }}<p class="gal-sub-title d-none" {{ with $item.sub_link }} href="{{ . }}" {{ end }}>{{ $item.sub }}</p>{{ end }}

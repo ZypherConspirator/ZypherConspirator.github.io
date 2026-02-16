@@ -43,7 +43,7 @@ md item example:
                             <!-- end -->
 
                             <!-- Image itself -->
-                            <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad " image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                            <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad h-100" image.crossOrigin = "anonymous" loading="lazy"></canvas>
                             <!-- end -->
                         </div>
                         {{if .href }}</a>{{end}}
