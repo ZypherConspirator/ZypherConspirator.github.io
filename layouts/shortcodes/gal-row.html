@@ -28,7 +28,7 @@ md item example:
                 {{ if $gallery }}
                     {{ range $gallery }}
                         {{if .href }}<a href="{{ .href }}">{{end}}
-                        <div class="gal-item d-inline-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative">
+                        <div class="gal-item d-inline-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative bg-black bg-opacity-25">
                             <div class="spinner-border text-light"  role="status"></div>
 
                             <!-- Image Data -->
@@ -43,7 +43,7 @@ md item example:
                             <!-- end -->
 
                             <!-- Image itself -->
-                            <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad bg-black bg-opacity-25 flex-grow-1" image.crossOrigin = "anonymous" loading="lazy"></canvas>
+                            <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad " image.crossOrigin = "anonymous" loading="lazy"></canvas>
                             <!-- end -->
                         </div>
                         {{if .href }}</a>{{end}}

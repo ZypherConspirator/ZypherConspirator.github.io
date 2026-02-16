@@ -1,17 +1,10 @@
 .Modal-Highlight {
-    background-color: #111; /* Dark background for the image area */
     overflow: hidden;
 	img , canvas	
 	{
 		z-index: 1000;
 		max-width: none;
 		object-fit: contain; 
-		width: 60vw; 
-		max-height: 90vh;
-		@media (max-width: 500px) 
-		{
-			width: 90vw !important;
-		}
 	}
 }
 
