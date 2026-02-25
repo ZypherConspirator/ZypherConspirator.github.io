@@ -1,6 +1,6 @@
 ---
 title: beetleGuard
-background: https://live.staticflickr.com/2918/33614955300_38fde360b2_b.jpg
+background: https://live.staticflickr.com/2518/4087578998_5403a5fdf0_b.jpg
 layout: highlight
 
 Row1:
