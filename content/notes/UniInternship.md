@@ -28,5 +28,5 @@ well working there was...intrestingly silent? not to say my coworkers were rude 
 Our breaks were given 1 hr anytime of the day, but is laxed enough to the point that can extend longer if needed. Food in the area is expensive.
 
 ### Conclusions
-to be frank i already think for an internship, ive done abit above and beyond for what is intended. i still feel this just gave a good stepping stone to finish my studies instead of giving me proper guidance in this particular style of buisness and work.
+to be frank i already think for an internship, ive done abit above and beyond for what is intended. i still feel this was a good stepping stone to finish my studies but i would prefer something that would have gave proper guidance. in an indirect way i did learn how to handle work life better, less anxiety on that part. looking for forward to what comes next.
 

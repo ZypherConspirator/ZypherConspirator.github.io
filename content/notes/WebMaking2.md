@@ -11,12 +11,12 @@ got too many comments of the website looking dull even though it was impressive 
 with that said, its not like its not going to be highly technical, might be more so.
 
 #### Here's What i Got Cookin'
-so the design framework i worked up:
+so the design framework i worked up goes as follows:
 - a website that made scrolling less nesssary, everything in plain view. 
-- focus on more variations of the same thing.
-- make it as flexible as possible.
+- focus on unifying asthethics, looks like purely grey didnt work before.
+- make it as design flexible as possible, "change of perspective" kind of mentality
 
-this basically mean that 
+so this turn into basically a website a focus on having any and things to be glasslike. i did more research on other portfolio site like artstation. i notice others focus more on instagram like post showcases, which i have to admit is more effective so i went and add that grid showcase method as well.
 
 ### Cool Nifty stuff
 
