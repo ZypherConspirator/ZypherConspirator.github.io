@@ -1,5 +1,5 @@
 ---
-title: Akaboshi Bisco - Saibikui Bisco FanArt
+title: Akaboshi Bisco - Sabikui Bisco FanArt
 background: https://live.staticflickr.com/4195/34503816470_cd0a486287_b.jpg
 layout: highlight
 
