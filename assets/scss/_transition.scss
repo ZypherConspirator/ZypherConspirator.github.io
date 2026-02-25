@@ -80,12 +80,7 @@
     height: 70vh;
         &.page 
         {
-            --jumbo-page-height : 60vh;
-            @media (min-width: 576px) {
-                & {
-                    --jumbo-page-height : 70vh;
-                }
-            }
+            --jumbo-page-height : 70vh;
             @media (min-width: 768px) {
                 & {
                     --jumbo-page-height : 90vh;
