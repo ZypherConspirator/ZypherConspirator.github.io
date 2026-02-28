@@ -4,7 +4,7 @@
         <div class="details-wrapper w-100 h-100 position-relative">
             <div class="text-center p-2 w-100 h-100 d-flex flex-column position-absolute top-0 start-0" style="z-index: 4; transition: opacity 0.5s ease-in-out; "> 
                 <div class="my-2 p-2" style="border: 2px solid #ffff;">
-                    <b class="text-light">{{ .Title }}</b>
+                    <a href="/projects" class="text-light float-start bg-black bg-opacity-25 px-2 rounded-pill"><i class="fa-solid fa-angles-left"></i></a><b class="text-light">{{ .Title }}</b>
                 </div>
                 <div class="my-2 p-2 text-light h-100 text-start fs-7 fs-md-6 overflow-auto" style="background-color: rgba(0, 0, 0, 0.5);">
                     {{ .Content }}

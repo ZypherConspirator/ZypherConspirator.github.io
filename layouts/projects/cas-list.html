@@ -5,7 +5,7 @@
 
             <div class="text-center py-2 w-100 h-100 d-flex flex-column position-absolute top-0 start-0 overflow-y-scroll text-light" style="z-index: 4; transition: opacity 0.5s ease-in-out; overflow-x: hidden;"> 
                 <div class="my-2 p-2 mx-4" style="border: 2px solid #ffff;">
-                    <b class="text-light">{{ .Title }}</b>
+                    <a href="/projects" class="text-light float-start bg-black bg-opacity-25 px-2 rounded-pill"><i class="fa-solid fa-angles-left"></i></a><b class="text-light">{{ .Title }}</b>
                 </div>
                 {{.Content}}
                 {{ range .Pages }}
