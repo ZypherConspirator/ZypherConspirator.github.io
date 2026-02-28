@@ -38,15 +38,14 @@
     backdrop-filter :blur(0px);
     transition: backdrop-filter 0.8s ease, border 0.8s ease;
     &.active {
-    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
-    backdrop-filter : blur(15px);
+        border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        backdrop-filter : blur(15px);
     }
 }
 
 .home-nav > *
 {
     border: var(--bs-border-width) var(--bs-border-style) transparent !important;
-    backdrop-filter : blur(15px);
     background-color: #0000002a;
     transition: border 0.2s ease;
     &:hover{
