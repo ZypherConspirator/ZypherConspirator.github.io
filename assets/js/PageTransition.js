@@ -127,57 +127,49 @@ const handleTransition = async (url, pushToHistory = true) => {
         bgFront.classList.remove('reveal');
         bgFront.src = newBgSrc || "svg/error.svg";
         
-        // Slight delay to ensure the browser has registered the '0s' transition reset
+// Trigger the text fade-in
         setTimeout(() => {
-            if (pushToHistory) history.pushState(null, '', url);
-            
-            contentArea.innerHTML = newDetailsHTML;
-            updateActiveNav(url);
-
-            // 4. TRIGGER REVEAL
-            bgFront.style.transition = 'clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
-            bgFront.classList.add('reveal');
-
-            if (pageType === 'other') 
-            {
-                nav.classList.remove('nav-hidden');
-                jumbotron.classList.remove('page');
+            const newDetails = document.querySelector('.details-wrapper');
+            if (newDetails) newDetails.classList.add('active');
+            document.dispatchEvent(new Event('pageTransitionFinished'));
+            // Re-init carousels etc.
+            if(typeof bootstrap !== 'undefined') {
+                document.querySelectorAll('.carousel').forEach(c => {
+                    if (!bootstrap.Carousel.getInstance(c)) new bootstrap.Carousel(c);
+                });
             }
-            else if (pageType === 'home')
-            {
-                jumbotron.classList.remove('page');
-            } 
+        }, 50);
 
-            setTimeout(() => {
-                const newDetails = document.querySelector('.details-wrapper');
-                if (newDetails) newDetails.classList.add('active');
-                
-                // Final clean up
-                if (window.location.pathname === "/") {
-                    const videoWrap = document.getElementById('videoContainer');
-                    if (videoWrap) videoWrap.classList.add('d-none', 'opacity-0');
-                }
-                
-                document.dispatchEvent(new Event('pageTransitionFinished'));
-                
-                setTimeout(() => { 
-                    if(bgBack) bgBack.src = bgFront.src; 
-                    isAnimating = false; // Reset state at the very end
-                }, 800);
+        // 4. BACKGROUND TRACK (Runs in parallel)
+        if (newBgSrc) {
+            preloadImage(newBgSrc).then(() => {
+                // Reset reveal state
+                bgFront.style.transition = '0s';
+                bgFront.classList.remove('reveal');
+                bgFront.src = newBgSrc;
 
-                // Re-init Bootstrap
-                if(typeof bootstrap !== 'undefined') {
-                    document.querySelectorAll('.carousel').forEach(c => {
-                        if (!bootstrap.Carousel.getInstance(c)) new bootstrap.Carousel(c);
-                    });
-                }
-            }, 50);
-        }, 400); // Buffer for DOM stability
-        
-    } catch (error) {
+                // Trigger Reveal Wipe
+                setTimeout(() => {
+                    bgFront.style.transition = 'clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
+                    bgFront.classList.add('reveal');
+                    
+                    // Sync the back layer after wipe finishes
+                    setTimeout(() => { 
+                        if(bgBack) bgBack.src = newBgSrc; 
+                        isAnimating = false; // Finally unlock navigation
+                    }, 800);
+                }, 50);
+            });
+        } 
+        else {
+            // No background to load? Unlock immediately
+            isAnimating = false;
+        }
+    } 
+    catch (error) {
         console.error("Transition failed:", error);
         isAnimating = false;
-        window.location.href = url; // Hard reload fallback
+        window.location.href = url;
     }
 };
 
