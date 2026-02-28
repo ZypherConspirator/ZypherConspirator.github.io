@@ -119,15 +119,24 @@ const handleTransition = async (url, pushToHistory = true) => {
         const newDetailsHTML = newDoc.querySelector('#jumbotronContent').innerHTML;
         const newBgSrc = newDoc.querySelector('.bg-front')?.src;
 
-        // Await new BG
-        if (newBgSrc) {
-            await preloadImage(newBgSrc);
-        }
-        bgFront.style.transition = '0s';
-        bgFront.classList.remove('reveal');
-        bgFront.src = newBgSrc || "svg/error.svg";
-        
 // Trigger the text fade-in
+                // Slight delay to ensure the browser has registered the '0s' transition reset
+        setTimeout(() => {
+            if (pushToHistory) history.pushState(null, '', url);
+            
+            contentArea.innerHTML = newDetailsHTML;
+            updateActiveNav(url);
+
+            if (pageType === 'other') 
+            {
+                nav.classList.remove('nav-hidden');
+                jumbotron.classList.remove('page');
+            }
+            else if (pageType === 'home')
+            {
+                jumbotron.classList.remove('page');
+            } 
+        
         setTimeout(() => {
             const newDetails = document.querySelector('.details-wrapper');
             if (newDetails) newDetails.classList.add('active');
@@ -165,6 +174,7 @@ const handleTransition = async (url, pushToHistory = true) => {
             // No background to load? Unlock immediately
             isAnimating = false;
         }
+        }, 400); // Buffer for DOM stability
     } 
     catch (error) {
         console.error("Transition failed:", error);
