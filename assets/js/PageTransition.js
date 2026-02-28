@@ -9,9 +9,9 @@ let isAnimating = false;
 const checkIsHome = (path) => path === "/" || path === "/index.html" || path === "";
 const checkIsResume = (path) => path === "/resume" || path === "/resume.html" || path === "/resume/" || path === "resume";
 const getPageType = (path) => {
-if (checkIsHome(path)) return 'home';
-if (checkIsResume(path)) return 'resume';
-return 'other';
+if (checkIsHome(path)) {return 'home';}
+else if (checkIsResume(path)) {return 'resume';}
+else {return 'other';}
 };
 
 
@@ -138,12 +138,15 @@ const handleTransition = async (url, pushToHistory = true) => {
             bgFront.style.transition = 'clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1)';
             bgFront.classList.add('reveal');
 
-            if (pageType === 'other') {
+            if (pageType === 'other') 
+            {
                 nav.classList.remove('nav-hidden');
                 jumbotron.classList.remove('page');
-            } else {
-                jumbotron.classList.remove('page');
             }
+            else if (pageType === 'home')
+            {
+                jumbotron.classList.remove('page');
+            } 
 
             setTimeout(() => {
                 const newDetails = document.querySelector('.details-wrapper');
