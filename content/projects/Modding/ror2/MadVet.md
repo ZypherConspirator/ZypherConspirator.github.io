@@ -3,7 +3,7 @@ title: Mad Veteran Skin pack
 link: https://thunderstore.io/package/KrononConspirator/MadVeteran_Skinpack/
 weight: 1
 gallery:
-- url: 
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820520/Hunt_dizm16.png
   name: Half-Life Huntress
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Load_uxpkw7.png
   name: Runebound Loader
