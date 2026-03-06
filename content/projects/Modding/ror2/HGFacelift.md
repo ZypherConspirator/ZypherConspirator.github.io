@@ -3,16 +3,16 @@ title: HGFacelift Initiative
 weight: 12
 
 GalleryHGFacelift:
-- url: https://lh3.googleusercontent.com/d/1lb-ReHA891ipfb-s5IrwSF5Yp8QHVMaQ
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820519/HGF_Melenia_lhnlec.png
   name: Malenia Seraphim
   likes: 43925
-- url: https://lh3.googleusercontent.com/d/1a00llBWd_UPTnKYkcmaipdMSthEZlCsq
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820518/HGF_Ganon_yfavpy.png
   name: Ganon Conquerer
   likes: 73453
-- url: https://lh3.googleusercontent.com/d/1INZWplTOZ5xIw6PDU4A6PmQUbdw1DZ0u
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820517/HGF_Deku_brswox.png
   name: Deku Hopper
   likes:  22352
-- url: https://lh3.googleusercontent.com/d/1Ttr3O_z8mFuc2dHSv_gFhrV45pnCtIsN
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820518/HGF_Deku_Mastery_pbehws.png
   name: Deku Hopper Mastery
   likes:  22352
 

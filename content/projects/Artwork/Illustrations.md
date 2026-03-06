@@ -1,40 +1,40 @@
 ---
 title: Illustrations
-background : https://lh3.googleusercontent.com/d/1s7r00eCAsd-hEfAZEpoycAnQi54cN4gl
+background : https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820526/Actual_Bug_Folk_rn0rgh.png
 gallery:
-- url: https://lh3.googleusercontent.com/d/1s7r00eCAsd-hEfAZEpoycAnQi54cN4gl
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820526/Actual_Bug_Folk_rn0rgh.png
   name: BugFolk Concept Drafts
-- url: https://lh3.googleusercontent.com/d/1w2TFEm3mjkLeAO_-eZldWcQdzu6VnoD0
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/OtterHybrid_idjdn7.jpg
   name: Turtle Otter
-- url: https://lh3.googleusercontent.com/d/1IGrNSS7KPiNHoTggGL8Rt5FM4EwOiYrY
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820527/Flames_gpvbp0.jpg
   name: Into the Abyss
-- url: https://lh3.googleusercontent.com/d/1beiUkUoRfTKWntMY_sC5Xx3Vw4jKEnUI
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820529/Watching_kqnjgp.jpg
   name: Seeking
-- url: https://lh3.googleusercontent.com/d/1WgC1vhtSY-FlSA-szefhFnU8R1zLpk0e
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/PickingYerBrain_mvdq4x.jpg
   name: Picking the Brain
-- url: https://lh3.googleusercontent.com/d/1Vl4qPJ6EPvKJ_e3jq9J_eISG0wobXKkv
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/TheTouch_ba51tb.jpg
   name: The Touch
-- url: https://lh3.googleusercontent.com/d/1_7C9MJlVTD7sx1NdoLKIaX8-XrAVHAVO
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/Purga_xgipoo.jpg
   name: Purgatory
-- url: https://lh3.googleusercontent.com/d/13R8CKGy3o4tXQ6EhY4a8QxR_588cax2O
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820529/UnderKept_Overview_lnsjjt.jpg
   name: Hollow Croc Concept; Eye of the Storm
-- url: https://lh3.googleusercontent.com/d/1E7F2zxkPbK_277_0INhQPSpsqTQd2urI
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/UnderKept_Chase_zoojzh.jpg
   name: Hollow Croc Concept; Odd Fauna
-- url: https://lh3.googleusercontent.com/d/1swCM3GaYQu9IR-W45B65QXRUpUps9TUG
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/Okarun_htqj7k.jpg
   name: Dandadan Turbo Okarun
-- url: https://lh3.googleusercontent.com/d/1moEU_YgFgJOAwoN7f8-2FgIhv81sRXVt
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820536/JunjiBubble_mas1sf.png
   name: Junji Ito Stickers
-- url: https://lh3.googleusercontent.com/d/1J2n8Hycvqs8t_RwkQJ-gb-qTBAlYiiLt
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820528/Reaper_nnsimu.jpg
   name: Reaper
-- url: https://lh3.googleusercontent.com/d/1CYTBsQ_OQTVrylbQWii__RrGpkg8ryy7
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820527/Demonskull_hyh8w1.jpg
   name: Demon
-- url: https://lh3.googleusercontent.com/d/1haITTpnt7-DtNwFTkj4KLWdK2gl1rh7X
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820527/brewing_s3xpqt.jpg
   name: Cauldron
-- url: https://lh3.googleusercontent.com/d/1OK8uGzG1RKRBCmdlH9KIlGACmZhwgUje
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820527/Actual_Soldier_f8ndk3.png
   name: BugFolk Concept; Soldier
-- url: https://lh3.googleusercontent.com/d/1W1LxK6fzjd6f4gDWxIbAtKSuaU9eiBd7
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820526/Actual_Flyer_zgcft3.png
   name: BugFolk Concept; Hive Scout
-- url: https://lh3.googleusercontent.com/d/1eRN5jpevCQv89Zrblk0Xwapvgjc2QYQO
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820527/Actual_Repairman_cleu3i.png
   name: BugFolk Concept; Technician
 ---
 <!--more-->

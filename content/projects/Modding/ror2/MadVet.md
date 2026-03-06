@@ -3,27 +3,27 @@ title: Mad Veteran Skin pack
 link: https://thunderstore.io/package/KrononConspirator/MadVeteran_Skinpack/
 weight: 1
 gallery:
-- url: https://lh3.googleusercontent.com/d/117d7nXWiCwNdB6SKS5IjiP3ljozQtlKg
+- url: 
   name: Half-Life Huntress
-- url: https://lh3.googleusercontent.com/d/17FdqXULptuMYQTDreWq0yczHEcmLNFWy
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Load_uxpkw7.png
   name: Runebound Loader
-- url: https://lh3.googleusercontent.com/d/1EhSy2dkfgyz4i646XeiaDj7GJerMmr0M
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820519/Arti_nmyayr.png
   name: Ice Witch Artificer
-- url: https://lh3.googleusercontent.com/d/1Il1SnG2UIQEKPjz-BiAdSxv2zDnGma18
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820520/Comm_y8w4oz.png
   name: Super Soldier Commando
-- url: https://lh3.googleusercontent.com/d/1bkkLhFAznSIOPmitAJ0Hb09Fwj0sjsy8
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820522/VF_lslyx8.png
   name: Cultist Void Fiend
-- url: https://lh3.googleusercontent.com/d/1lOf9tqWefHwJDLSLOpBtFNpX-OUS7pTe
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820519/Acrid_dgajgi.png
   name: Plague Rat Acrid
-- url: https://lh3.googleusercontent.com/d/1pA-sLun1ku8BtCE-ZPcF6VK-pRAu3u3y
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Engi_dzeajl.png
   name: Fungus Controlled Engineer
-- url: https://lh3.googleusercontent.com/d/1qezgo9VYRLMdbgomwYoCJHrRWga1jCOw
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Rail_uvwmud.png
   name: USAF Railgunner
-- url: https://lh3.googleusercontent.com/d/1sIhK8yBbn43qZI_6n5Vr1Q7eaAmdIPlY
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820522/rex_cwmu5t.png
   name: Plant Bowl Rex
-- url: https://lh3.googleusercontent.com/d/1wql-ceGQCXbRFDsz0k7B8zQPLoTZI_jS
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/MulT_zyblpr.png
   name: Retro Tank Mul-T
-- url: https://lh3.googleusercontent.com/d/1xYtYX1n43TK079TjJd5QOM7OH1I0ECZb
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820520/Cap_pfmadr.png
   name: Nuke Lieutenant Captain
 
 ---
