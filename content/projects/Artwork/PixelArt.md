@@ -1,36 +1,36 @@
 ---
 title: Pixel Art
-background : https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820515/KabutoRider_2_Text_rb3dgj.png
+background : https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KabutoRider_2_Text_rb3dgj.png
 gallery:
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820515/KabutoRider_2_Text_rb3dgj.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KabutoRider_2_Text_rb3dgj.png
   name: Kamen Rider Kabuto Masked
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820514/Dovah_nl5dsk.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Dovah_nl5dsk.png
   name: Dragonborn
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820513/Birb_rv1igj.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Birb_rv1igj.png
   name: Autumn bird
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820515/HallowEgg_oea2tt.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/HallowEgg_oea2tt.png
   name: Hollow Knight
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820514/Eyes_dpea9f.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Eyes_dpea9f.png
   name: Melting Eyes
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820513/DemonPengus_tpmgcg.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/DemonPengus_tpmgcg.png
   name: One of Us
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820516/Sear_fh4ekh.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Sear_fh4ekh.png
   name: Seeker
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820516/Ultra_sigbj5.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Ultra_sigbj5.png
   name: Ultraman
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820515/fly_pofhek.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/fly_pofhek.png
   name: Man-Fly
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820513/dera_xomsc5.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/dera_xomsc5.png
   name: Dragoon
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820516/KuugaPix_Ultimate_xstenn.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KuugaPix_Ultimate_xstenn.png
   name: Kamen Rider Kuuga Ultimate
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820517/windo_tmdmob.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/windo_tmdmob.png
   name: Wendigo
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820515/KabutoRider_1_Text_ba5t3l.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KabutoRider_1_Text_ba5t3l.png
   name: Kamen Rider Kabuto ClockUp
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820514/Dodo_yiwjo4.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Dodo_yiwjo4.png
   name: Dodo Airport
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820515/Gojira_xfg6ep.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Gojira_xfg6ep.png
   name: Gojira
 ---
 <!--more-->

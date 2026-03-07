@@ -3,27 +3,27 @@ title: Mad Veteran Skin pack
 link: https://thunderstore.io/package/KrononConspirator/MadVeteran_Skinpack/
 weight: 1
 gallery:
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820520/Hunt_dizm16.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Hunt_dizm16.png
   name: Half-Life Huntress
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Load_uxpkw7.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Load_uxpkw7.png
   name: Runebound Loader
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820519/Arti_nmyayr.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Arti_nmyayr.png
   name: Ice Witch Artificer
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820520/Comm_y8w4oz.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Comm_y8w4oz.png
   name: Super Soldier Commando
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820522/VF_lslyx8.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/VF_lslyx8.png
   name: Cultist Void Fiend
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820519/Acrid_dgajgi.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Acrid_dgajgi.png
   name: Plague Rat Acrid
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Engi_dzeajl.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Engi_dzeajl.png
   name: Fungus Controlled Engineer
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/Rail_uvwmud.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Rail_uvwmud.png
   name: USAF Railgunner
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820522/rex_cwmu5t.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/rex_cwmu5t.png
   name: Plant Bowl Rex
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820521/MulT_zyblpr.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/MulT_zyblpr.png
   name: Retro Tank Mul-T
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820520/Cap_pfmadr.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Cap_pfmadr.png
   name: Nuke Lieutenant Captain
 
 ---

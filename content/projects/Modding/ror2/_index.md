@@ -5,24 +5,24 @@ weight: 2
 layout: cas-list
 
 galleryEtc:
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820523/RCorp_dh9teb.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/RCorp_dh9teb.png
   name: R-Corp Commando
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820526/YanDistort_vjyxyl.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/YanDistort_vjyxyl.png
   name: Yan Distorted Loader
   likes: 14564
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820523/Rider_wn8wik.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Rider_wn8wik.png
   name: Kamen Rider Zero-One Merc
   likes: 5695
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820517/Cebela_ngjx5n.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Cebela_ngjx5n.png
   name: CebelaYT Deku 
   likes: 5322
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820523/TeiflingLoader_lteatb.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/TeiflingLoader_lteatb.png
   name: Tiefling Trixie Loader
   likes:  2750
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820519/KonoichiArti_qjftip.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KonoichiArti_qjftip.png
   name: Konoichi Artificer
   likes: 5440
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820523/Rider_wn8wik.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Rider_wn8wik.png
   name: KunoroSilver Bandit
   likes:  5324
 

@@ -3,11 +3,11 @@ title: Mastery
 weight: 12
 
 galleryMastery:
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820523/PathFinder_Mastery_fsqeas.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/PathFinder_Mastery_fsqeas.png
   name: Pathfinder HeadHunter
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820523/Tesla_Mastery_knr6w8.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Tesla_Mastery_knr6w8.png
   name: TeslaTrooper Spetsnaz
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820522/Desolator_Mastery_rnepgg.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Desolator_Mastery_rnepgg.png
   name: Desolator Desolation
 
 ---

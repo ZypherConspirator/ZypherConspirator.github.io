@@ -10,7 +10,7 @@ GalleryHighlight:
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820512/RustEater_ylyx3u.png
   name: Akaboshi Bisco - Sabikui Bisco FanArt
   href: /projects/highlight/rusteater
-- url: 
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Bujang_profile_ba8xd3.png
   name: Bujang Senang
   href: /projects/highlight/bujangsenang
 ---
