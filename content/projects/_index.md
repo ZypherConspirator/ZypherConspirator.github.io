@@ -4,10 +4,10 @@ background: /img/Background/project.jpeg
 type: projects
 
 GalleryHighlight:
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820511/beetleprofile_oa0njb.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/beetleprofile_oa0njb.png
   name: Beetle Guard
   href: /projects/highlight/beetle
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/v1772820512/RustEater_ylyx3u.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/RustEater_ylyx3u.png
   name: Akaboshi Bisco - Sabikui Bisco FanArt
   href: /projects/highlight/rusteater
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Bujang_profile_ba8xd3.png
