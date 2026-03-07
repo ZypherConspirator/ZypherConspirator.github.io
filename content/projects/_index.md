@@ -14,4 +14,4 @@ GalleryHighlight:
   name: Bujang Senang
   href: /projects/highlight/bujangsenang
 ---
-{{< gal-row name="GalleryHighlight" class="column-2 column-md-3 column-lg-5" showName="true" 1x1="true" >}}
+{{< gal-row name="GalleryHighlight" class="column-2 column-md-3 column-lg-5" showName="true" 1x1="true" highlight="true" >}}

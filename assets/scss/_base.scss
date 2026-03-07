@@ -183,7 +183,13 @@ $position-values: (
 }
 
 
-.ratio-1x1
+.ratio{
+&-1x1
 {
     aspect-ratio: 1/1;
+}
+&-9x16
+{
+    aspect-ratio: 9/16;
+}
 }

@@ -163,19 +163,29 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px; // Space between items
-    
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+
     .gal-item 
     {
-        height: 140px;
+        height: 130px;
         @media (min-width: 768px) 
         { 
-            height: 230px;
+            height: 280px;
+        }
+        &.highlight
+        {
+            @media (min-width: 768px) 
+            { 
+                height: 230px;
+            }
         }
     }
 
     .gal-wrap {
         
-        canvas, img {
+        canvas, img, iframe {
             flex: 0 0 auto;
             width: auto;      // Width scales based on aspect ratio
             height: 100%;

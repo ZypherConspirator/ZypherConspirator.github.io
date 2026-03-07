@@ -3,6 +3,7 @@
 {{ $showLike := .Get "showLike" }} <!-- bool, show like value -->
 {{ $dummy := .Get "dummy" }} <!-- int, add empty dummy items -->
 {{ $1x1 := .Get "1x1" }} <!-- bool, set all to 1x1 ratio -->
+{{ $highlight := .Get "highlight" }}
 {{ $class := .Get "class" }}
 {{ $itemclass := .Get "item-class" }}
 <!-- 
@@ -28,7 +29,7 @@ md item example:
                 {{ if $gallery }}
                     {{ range $gallery }}
                         {{if .href }}<a href="{{ .href }}">{{end}}
-                        <div class="gal-item d-inline-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative bg-black bg-opacity-25">
+                        <div class="gal-item {{ if $highlight }} highlight {{end}} d-inline-flex gal-wrap {{if not .href }} thumbnail {{end}}{{if $itemclass}}{{$itemclass}}{{end}} position-relative bg-black bg-opacity-25">
                             <div class="spinner-border text-light"  role="status"></div>
 
                             <!-- Image Data -->
@@ -44,7 +45,7 @@ md item example:
 
                             <!-- Content itself (Video or Image) -->
                             {{ if .video }}
-                            <iframe class="border-0 gal-row-frame" src="{{ .url }}" {{ if .YTshort }} width="315" height="560" {{ end }} allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen="allowfullscreen"></iframe>
+                            <iframe class="border-0 gal-row-frame lozad {{ if .YTshort }}ratio-9x16{{ end }}" src="{{ .url }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen ></iframe>
                             {{ else }}
                             <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad h-100" image.crossOrigin = "anonymous" loading="lazy"></canvas>
                             <!-- end -->
