@@ -1,6 +1,7 @@
 function initializeWatermarkedCanvases() {
     const canvases = document.querySelectorAll(".watermarkedCanvas");
     const images = document.querySelectorAll(".processedImg");
+    const iframes = document.querySelectorAll(".gal-row-frame");
     const fallbackSVG = "/svg/error.svg"; // Path to your fallback SVG
     const watermarkSrc = "/svg/watermark.svg"; // Watermark path
 
@@ -21,6 +22,11 @@ function initializeWatermarkedCanvases() {
             return null; // Return null if fetch fails
         }
     }
+    iframes.forEach(async (iframe) => {
+        const spinner = iframe.parentElement.querySelector('.spinner-border');
+        if (spinner) spinner.classList.add('d-none');
+    });
+
     images.forEach(async (imgElement) => {
         // 1. Get the real URL from a data attribute instead of 'src'
         const hiddenSrc = imgElement.getAttribute("data-src");

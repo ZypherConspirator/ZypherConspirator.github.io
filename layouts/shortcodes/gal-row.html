@@ -23,7 +23,7 @@ md item example:
     <div class="col-md-12 h-100">
         <div class="row h-100">
             <!-- Gallery Section -->
-            <div id="image" class="gal-row {{ if $class }}{{ $class }}{{end}} justify-content-center align-middle  align-content-center">
+            <div id="image" class="gal-row {{ if $class }}{{ $class }}{{end}} justify-content-center align-middle">
                 {{ $gallery := index $.Page.Params $galleryName }}
                 {{ if $gallery }}
                     {{ range $gallery }}
@@ -42,9 +42,13 @@ md item example:
                             {{ if .description }}<p class="gal-desc d-none">{{ .description }}</p>{{ end }}
                             <!-- end -->
 
-                            <!-- Image itself -->
+                            <!-- Content itself (Video or Image) -->
+                            {{ if .video }}
+                            <iframe class="border-0 gal-row-frame" src="{{ .url }}" {{ if .YTshort }} width="315" height="560" {{ end }} allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen="allowfullscreen"></iframe>
+                            {{ else }}
                             <canvas data-src="{{ .url }}" alt="{{ .name }}" class="{{ if $1x1 }}ratio-1x1{{ end }} watermarkedCanvas lozad h-100" image.crossOrigin = "anonymous" loading="lazy"></canvas>
                             <!-- end -->
+                            {{ end }}
                         </div>
                         {{if .href }}</a>{{end}}
                     {{ end }}
