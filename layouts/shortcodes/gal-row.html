@@ -20,9 +20,9 @@ md item example:
 
 {{ $dummyImage := "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=" }}
 
-<div class="container h-100">
+<div class="container h-auto">
     <div class="col-md-12 h-100">
-        <div class="row h-100">
+        <div class="row h-auto">
             <!-- Gallery Section -->
             <div id="image" class="gal-row {{ if $class }}{{ $class }}{{end}} justify-content-center align-middle">
                 {{ $gallery := index $.Page.Params $galleryName }}
