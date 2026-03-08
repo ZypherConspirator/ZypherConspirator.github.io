@@ -4,15 +4,15 @@ Date: 2026-01-20
 background: https://live.staticflickr.com/3672/11792034414_da509d5af9_b.jpg
 type: notes
 ---
-### how I got here?
-a bit ambitious, got previous offers to go international before but got no support system to go, so i looked locally
-sent weeks just sending out weeks before the end of my final study semester and continued into my holiday. out of 54 Applications, only 3 were accepted for an interview and only 1 left me an offer.
+### So Time work huh..
+finally finished staying withing University bounds and off for my final semester, Internship. I did get a bit ambitious, got previous offers to go international before but got no support system to go, so i looked locally sent weeks just sending out weeks before the end of my final study semester and continued into my holiday. out of 54 Applications, only 3 were accepted for an interview and only 1 left me an offer.
 
+---
 ### So it Began
 First Day was already odd, the Boss nor any of the staff were compelled to introduce themselves. we Interns got to know each other and  we just had to guess about how this company works. We were directly assigned to work. We figured out from there. no mentors.
 
+---
 ### What was I upto?
-
 My intended Job scope covers 3D Animation and Motion Design . During this internship, I made 3D assets and animated promotion adverts, industrial process guides, Ecommerce App animation, and even Event layout visual drafts.
 
 Since the Company was quite small and have an intrestingly small crew of 10 people working there max, i also got pulled into other jobscopes. 
@@ -22,11 +22,11 @@ Since the Company was quite small and have an intrestingly small crew of 10 peop
 **Web Design**, simply needed a person familiar with UI design and Wordpress (me) to edit and add new pages to the company website.
 I was also involved **assisting in events**,  helping with whatever the event needs, usually manning as a Multimedia Operator.
 
+---
 ### how was there?
-well working there was...intrestingly silent? not to say my coworkers were rude or anything, they were keeping to themselves mainly and even the boss just stays in his room until he got a job he wants us to be involved in. there werent any deadlines to chase that ever was informed on but we infered from the website its probably around 2 weeks+. Boss also never pressured me or anyone, he only acts as an informant to his clients. this sometimes cause problems as he doesnt insert his opinion or judgement on the matter of the request is reasonable to be completed, is task even practical, or even if the task is even worth the effort until the staff in question bothers enough to speak up. this has resulted in the silence from earlier.
+well working there was...intrestingly silent? they were keeping to themselves mainly and even the boss just stays in his room until he got a job he wants us to be involved in. there werent any deadlines to chase that ever was informed on but we inferred from the website its probably around 2 weeks+. Boss also never pressured me or anyone, he only acts as an informant to his clients. this sometimes cause problems as he doesnt insert his opinion or judgement on the matter of the request is reasonable to be completed, is task even practical, or even if the task is even worth the effort until the staff in question bothers enough to speak up. this has resulted in the silence from earlier. Our breaks were given 1 hr anytime of the day, but is lax enough to the point that can extend longer if needed. Food in the area is expensive tho. 
 
-Our breaks were given 1 hr anytime of the day, but is laxed enough to the point that can extend longer if needed. Food in the area is expensive.
-
-### Conclusions
-to be frank i already think for an internship, ive done abit above and beyond for what is intended. i still feel this was a good stepping stone to finish my studies but i would prefer something that would have gave proper guidance. in an indirect way i did learn how to handle work life better, less anxiety on that part. looking for forward to what comes next.
+---
+### so in summary..
+to be frank i already think for an internship, ive done a bit above and beyond for what is intended. I still feel this was a good stepping stone to finish my studies but i would prefer something that would have gave proper guidance. in an indirect way i did learn how to handle work life better, less anxiety on that part. looking for forward to what comes next.
 

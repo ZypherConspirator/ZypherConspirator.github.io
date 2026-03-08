@@ -1,5 +1,5 @@
 ---
-title: Project; Tau40K
+title: Project Tau40K : RoR2 Skin Modding Breakdown
 Date: 2024-11-03
 layout: wiki-single
 ---
