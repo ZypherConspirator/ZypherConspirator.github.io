@@ -1,20 +1,8 @@
 baseURL = 'https://zypherconspirator.github.io/'
 languageCode = 'en-us'
-title = 'A.Alzafry Porfolio'
+title = 'A.Alzafry Portfolio'
 
 [[params.openforhire]]
-
-[[params.highlight]]
-key = 0
-page = "ScrewUp"
-
-[[params.highlight]]
-key = 1
-page = "WarHammer"
-
-[[params.highlight]]
-key = 2
-page = "Precipes"
 
 [[params.social]]
 key = 0

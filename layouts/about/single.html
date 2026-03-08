@@ -1,31 +1,25 @@
 {{ define "main" }}
 <div id="jumbotronBase" class="col-10 col-lg-8 position-relative border border-secondary shadow-lg h-70" style="z-index: 2; backdrop-filter: blur(15px); background: rgba(255,255,255,0.03);">
     <div id="jumbotronContent" class="w-100 h-100 position-relative">
-        <div class="details-wrapper w-100 h-100 p-3 p-md-4">
-            <div class="row h-100 justify-content-center g-3"> 
+        <div class="details-wrapper w-100 h-100 p-3 p-md-4" style="overflow-inline:auto">
+            <div class="row h-100 justify-content-center g-3" > 
                 
                 <div class="col-12 col-lg-3 d-flex flex-column h-auto h-md-100">
-                    <div class="rounded-5 mb-3 p-3 text-center flex-grow-0" style="background: rgba(255, 255, 255, 0.2); flex: 0 1 auto;">
-                        <img src="\img\Personal\Self.png" class="w-100 h-50 h-md-auto d-none d-md-block rounded-5 mb-3 img-fluid" style="max-height: 260px; object-fit: cover; object-position: top;">
-                        <h4 class="fw-bold mb-1"> Aiman Alzafry </h4>
-                        <h5 class="fw-light small">He/Him • June 2001</h5>
+                    <div class="rounded-2 mb-3 p-3 text-center flex-grow-0 bg-white bg-opacity-10" style="flex: 0 1 auto;">
+                        <div class="row">
+                            <div class="col-3 col-md-12 p-1">
+                            <img src="\img\Personal\Self.png" class="w-100 h-auto rounded-3 mb-3" style="max-height: 260px; object-fit: cover; object-position: top;">
+                            </div>
+                            <div class="col-9 col-md-12 text-center p-1">
+                                <h4 class="fw-bold mb-1 text-light"> Aiman Alzafry </h4>
+                                <h5 class="fw-light small text-light"> 3D Generalist </h5>
+                                <a href="/resume" class="btn btn-sm btn-outline-light rounded-pill px-4" target="_blank">
+                                    <i class="fas fa-file-download me-2"></i>Resume
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="rounded-5 mb-3 p-2" style="background: rgba(255, 255, 255, 0.2);">
-                        <h4 class="text-center"> Software i've used </h4>
-                        <p class="m-1 align-middle justify-content-evenly d-flex">
-                            <span class="mx-1 icon-Adobe-AE"></span>
-                            <span class="mx-1 icon-Adobe-PR"></span>
-                            <span class="mx-1 icon-Adobe-AI"></span>
-                            <span class="mx-1 icon-Adobe-SP"></span>
-                            <br>
-                            <span class="mx-1 icon-Aseprite"></span>
-                            <span class="mx-1 icon-Blender"></span>
-                            <span class="mx-1 icon-CSP"></span>
-                            <span class="mx-1 icon-Unity"></span>
-                        </p>
-                    </div>
-                    <div class="rounded-5 mb-3 p-2" style="background: rgba(255, 255, 255, 0.2);">
+                    <div class="rounded-2 mb-3 p-2 bg-white bg-opacity-10 flex-grow-1">
                         <p class="m-1 justify-content-evenly d-flex">
                         {{ range sort .Site.Params.social "key"}}
                             <span class="mx-1 h1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
@@ -34,31 +28,25 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-lg-9 d-flex flex-column h-50 h-md-100" style="min-height: 0;">
-                    
-                    <div class="rounded-5 mb-3 p-4 text-light font-raleway flex-grow-1 shadow-sm" style="background: rgba(255, 255, 255, 0.2); overflow-y: auto; scrollbar-width: thin;">
+                <div class="col-12 col-lg-9 d-flex flex-column h-100">
+
+                    <div class="rounded-2 mb-3 fs-7 fs-md-6 p-3 p-md-4 text-light text-justify font-raleway flex-grow-1 shadow-sm bg-white bg-opacity-10" style=" overflow-y: clip; scrollbar-width: thin;">
                         {{ .Content }}
                     </div>
-                    <div class="rounded-5 p-2 h-25 h-md-auto" style="background: rgba(255, 255, 255, 0.2); flex-shrink: 0;">
-                        <div id="projectCarousel" class="carousel slide h-100" data-bs-ride="carousel">
-                            <div class="carousel-inner h-100">
-                                <div class="carousel-item active h-100">
-                                    <div class="d-flex justify-content-center align-items-center h-100">
-                                        <img src="https://placehold.co/180x80?text=Project+1" class="rounded border border-secondary" style="max-height: 80px;">
-                                    </div>
-                                </div>
-                                <div class="carousel-item h-100">
-                                    <div class="d-flex justify-content-center align-items-center h-100">
-                                        <img src="https://placehold.co/180x80?text=Project+4" class="rounded border border-secondary" style="max-height: 80px;">
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" style="transform: scale(0.6);"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" style="transform: scale(0.6);"></span>
-                            </button>
+                    <div class="mb-3">
+                        <h6 class="text-uppercase ls-wide text-light text-bold mb-3">Skills</h6>
+                        <div class="d-flex flex-wrap gap-2 bg-white bg-opacity-10 p-2 py-3 rounded-2">
+                            {{ range .Params.skills}}
+                            <span class="badge p-2 px-3 rounded-3 text-light bg-opacity-10 bg-white fw-bold fs-7 fs-md-6 align-self-center">{{.title }}</span>
+                            {{end }}
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Software</h6>
+                        <div class="d-flex flex-wrap gap-2 bg-white bg-opacity-10 p-2 py-3 rounded-2">
+                            {{ range .Params.software}}
+                            <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"><span class="mx-1 {{ .icon }}"></span> {{.title }} </span>
+                            {{end }} 
                         </div>
                     </div>
                 </div> 
