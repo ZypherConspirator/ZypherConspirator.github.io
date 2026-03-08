@@ -33,6 +33,4 @@ gallery:
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Gojira_xfg6ep.png
   name: Gojira
 ---
-<!--more-->
----
 {{< gallery name="gallery" class="column-1 column-md-3" showName="true" showLike="false">}}

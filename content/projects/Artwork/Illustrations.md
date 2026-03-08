@@ -37,8 +37,4 @@ gallery:
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Actual_Repairman_cleu3i.png
   name: BugFolk Concept; Technician
 ---
-<!--more-->
----
 {{< gallery name="gallery" class="column-1 column-md-3" showName="true" showLike="false">}}
-
----

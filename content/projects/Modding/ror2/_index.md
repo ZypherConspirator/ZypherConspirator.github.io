@@ -22,10 +22,13 @@ galleryEtc:
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KonoichiArti_qjftip.png
   name: Konoichi Artificer
   likes: 5440
-- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Rider_wn8wik.png
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/KuronoSilver_kdda5a.png
   name: KunoroSilver Bandit
   likes:  5324
-
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/SafeTravelLoader_ggq2kb.png
+  name: Safe Travels Loader
+- url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/FinalFantasyCloud_qwe00f.png
+  name: Final Fantasy Cloud Strife
 ---
 I focused on making skin mods for the risk of rain 2 modding community. first it started of as just messing with adding my own spin to thing which led to my freelance gig of making skin mods for this game. 
 { .text-center .px-5 }

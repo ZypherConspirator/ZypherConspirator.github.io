@@ -11,6 +11,7 @@ Row1:
   YTshort: true
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Bujang_P3_at77ti.png
 - url: https://res.cloudinary.com/zypher-dcceuipii/image/upload/c_limit,w_800/Bujang_p2_pxybfp.png
-
+---
+reimagining of a Sarawakian Legend. Designed is based of a concept for [Darah](https://youtu.be/zZaWQPOD8Ao).
 ---
 {{< gal-row name="Row1" >}}
