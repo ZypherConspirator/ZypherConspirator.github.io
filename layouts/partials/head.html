@@ -10,6 +10,8 @@
 <script src="https://kit.fontawesome.com/f823b6ad03.js" crossorigin="anonymous"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Manifest -->
+<link rel="manifest" href="manifest.json" />
 <!-- Custom CSS -->
 {{ $options := dict "targetPath" "css/style.css" "transpiler" "dartsass"}}
 {{ $style := resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}

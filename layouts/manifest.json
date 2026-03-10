@@ -1,0 +1,26 @@
+{
+    "theme_color":"#292929",
+    "background_color":"#5c727a",
+    "icons":
+    [
+        {
+            "purpose":"maskable",
+            "sizes":"512x512",
+            "src":"/img/Personal/Logo.png",
+            "type":"image/png"
+        },
+        {
+            "purpose":"any",
+            "sizes":"512x512",
+            "src":"/img/Personal/Logo.png",
+            "type":"image/png"
+        }
+    ],
+    "orientation":"any",
+    "display":"browser",
+    "dir":"auto",
+    "lang":"en-US",
+    "start_url":"zypherconspirator.github.io",
+    "name":"A.Alz Portflio",
+    "short_name":"A.Alz"
+}
