@@ -3,6 +3,9 @@
 <!-- Canvas Watermark JS -->
 {{ $CanvasScript := resources.Get "js/canvas-watermark.js"}}
 <script  src="{{ $CanvasScript.Permalink }}" defer></script>
+<!-- Modal handler JS -->
+{{ $Modalscript := resources.Get "js/modal-handler.js" | js.Build }}
+<script src="{{ $Modalscript.Permalink }}" defer></script>
 <!-- Custom JS -->
 {{ $script := resources.Get "js/PageTransition.js" | js.Build }}
 <script src="{{ $script.Permalink }}" defer></script>

@@ -46,3 +46,7 @@ block = true
 
 [markup.goldmark.renderer]
 unsafe = true 
+
+[mediaTypes]
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
