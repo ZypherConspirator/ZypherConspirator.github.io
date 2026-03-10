@@ -1,6 +1,7 @@
 ---
 title: "Project Tau40K : RoR2 Skin Modding Breakdown"
 Date: 2024-11-03
+background: https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632360/ss_dc777b5c583794c99440b196cd1d26884fb1720b.1920x1080.jpg
 layout: wiki-single
 ---
 il be chronicling my process and thoughts of making a [Risk of Rain 2](https://store.steampowered.com/app/632360/Risk_of_Rain_2/) [Skin](https://en.wikipedia.org/wiki/Skin_(video_games)) [Mod](https://en.wikipedia.org/wiki/Video_game_modding). 
