@@ -8,19 +8,19 @@ tags :
 background: http://img.youtube.com/vi/O_HC2OsMC1s/hqdefault.jpg
 video : https://www.youtube.com/embed/O_HC2OsMC1s
 weight: 19
+software:
+- title : Premiere Pro
+  icon : icon-Adobe-PR
+- title : Blender
+  icon : icon-Blender
 ---
 Unofficial TV ident of Hits Movie Channel.
 <!--more-->
 ---
 ||||||||||
-## Summary
-
-**Released on:** 2024
-
-**Made with:** Blender, Adobe Premiere Pro
-
-## Production
-
+Unofficial TV ident of Hits Movie Channel.
+||||||||||
+###### PRODUCTION CREW 
 |Crew            | Roles                                        |
 |------------|--------------------------------------------------|
 | Aiman      | Director / Animator |

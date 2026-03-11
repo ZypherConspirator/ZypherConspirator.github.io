@@ -9,22 +9,26 @@ tags :
 background: http://img.youtube.com/vi/i7h0MklKHiU/hqdefault.jpg
 video : https://www.youtube.com/embed/i7h0MklKHiU
 weight: 15
+software:
+- title : After Effect
+  icon : icon-Adobe-AE
+- title : Premiere Pro
+  icon : icon-Adobe-PR
+- title : Blender
+  icon : icon-Blender
+- title : Clip Studio Paint
+  icon : icon-CSP
 ---
-Abstract short on the patterns and identities that makes up Malaysia
+Abstract short on the patterns and identities that represents Malaysia
 <!--more-->
 ---
 ||||||||||
-## Summary
-
-**Released on:** 2024
-
-**Made with:** Clip Studio Paint, Blender, Adobe After Effects, Adobe Premiere Pro
-
-## Production
-
-|Crew            | Roles                               |
+showcase of the patterns and identities makes up the most recognizable arts of Malaysia.
+||||||||||
+###### PRODUCTION CREW 
+|Crew             | Roles                              |
 |-----------------|------------------------------------|
-| Aiman           | Director / Scriptwriter / Animator |
+| Aiman (Me)      | Director / Scriptwriter / Animator |
 | Maybelle        | Document Manager / Asset Artist    |
 | Cha             | Editor / Sound Director |
 | Nur Firdaus     | Storyboard Artist / Asset Artist |

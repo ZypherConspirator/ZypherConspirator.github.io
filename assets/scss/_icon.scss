@@ -55,10 +55,30 @@
         @extend .icon;
         background-image: url('/svg/software/adobe-substance-painter.svg');
     }
+    &-Adobe-Ani
+    {
+        @extend .icon;
+        background-image: url('/svg/software/adobe-animate.svg');
+    }
     &-Aseprite
     {
         @extend .icon;
         background-image: url('/svg/software/aseprite.svg');
+    }
+    &-Trebly
+    {
+        @extend .icon;
+        background-image: url('/svg/software/trebly.svg');
+    }
+    &-Fspy
+    {
+        @extend .icon;
+        background-image: url('/svg/software/fspy.svg');
+    }
+    &-Capcut
+    {
+        @extend .icon;
+        background-image: url('/svg/software/capcut.svg');
     }
     &-Blender
     {

@@ -44,9 +44,43 @@
                         <div class="col-12 col-md-11 h-auto">
                             <div class="h-100 bg-white bg-opacity-10 rounded-4 p-4 overflow-auto text-light border border-white border-opacity-10">
                                 {{ $ContentParts := split .Content "||||||||||" }}
-                                {{ index $ContentParts 1 | safeHTML }}
+                                <!-- Long Summary -->
+                                <div class="mb-3">
+                                    <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Plot Summary </h6>
+                                    <div class="bg-white bg-opacity-10 p-2 py-3 rounded-2">
+                                    {{ index $ContentParts 1 | safeHTML }}
+                                    </div>
+                                </div>
+                                <!-- Meta Info (Tags and software)-->
+                                
+                                <div class="mb-3">
+                                    <div class="d-flex flex-wrap gap-2">
+                                        {{ range .Params.tags}}
+                                        <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-semibold fs-7 fs-md-6 align-self-center">{{.}} </span>
+                                        {{end }} 
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Released <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"> {{.Params.Released }} </span></h6>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="text-uppercase ls-wide text-light text-bold" >Software Used </h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        {{ range .Params.software}}
+                                        <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"><span class="mx-1 {{ .icon }}"></span> {{.title }} </span>
+                                        {{end }} 
+                                    </div>
+                                </div>
+
+                                <!-- Production Team (If any)-->
+
+                                <!-- Misc Data (Canva Frame or something) -->
+                                {{ index $ContentParts 2 | safeHTML }}
                             </div>
                         </div>
+                        
                     </div>
                 </div>
 

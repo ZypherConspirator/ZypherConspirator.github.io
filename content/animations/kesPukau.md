@@ -8,18 +8,23 @@ tags :
 background: http://img.youtube.com/vi/kRjExZfpbsc/hqdefault.jpg
 video : https://www.youtube.com/embed/kRjExZfpbsc
 weight: 1
-type: animations
+software:
+- title : Animate
+  icon : icon-Adobe-Ani
+- title : Premiere Pro
+  icon : icon-Adobe-PR
+- title : Blender
+  icon : icon-Blender
+- title : Clip Studio Paint
+  icon : icon-CSP
 ---
 comedic short based on a true ghost story in UNIMAS.
 <!--more-->
 ---
 ||||||||||
-## Summary
-
-**Made with:** Clip Studio Paint, Adobe Animate,Adobe Premiere Pro
-
-## Production
-
+comedic short based on a true ghost story in UNIMAS.
+||||||||||
+###### PRODUCTION CREW 
 |Crew            | Roles                                        |
 |------------|--------------------------------------------------|
 | Aiman      | Director / Scriptwriter / Animator |
