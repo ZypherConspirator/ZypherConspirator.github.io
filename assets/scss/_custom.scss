@@ -81,6 +81,23 @@ border-bottom: 1px solid;
         transform: scale(1.1);
 	}
 }
+.note-list
+{
+	transition: box-shadow .15s ease-in-out;
+	box-shadow: none;
+	&:hover {
+       box-shadow: 0 0 0 2px var(--bs-border-color);
+	}
+}
+
+.exit-btn
+{
+	transition: box-shadow .15s ease-in-out;
+	box-shadow: none;
+	&:hover {
+       box-shadow: 0 0 0 2px var(--bs-border-color);
+	}
+}
 
 .filter-
 {
