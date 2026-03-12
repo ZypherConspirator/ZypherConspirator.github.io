@@ -22,12 +22,12 @@ comedic short based on a true ghost story in UNIMAS.
 <!--more-->
 ---
 ||||||||||
-comedic short based on a true ghost story in UNIMAS.
+comedy based on a true ghost story in UNIMAS. There was a mass hysteric rumor at the time that someone getting possessed by ghost in the university breaking into rooms.
 ||||||||||
 ###### PRODUCTION CREW 
 |Crew            | Roles                                        |
 |------------|--------------------------------------------------|
 | Aiman      | Director / Scriptwriter / Animator |
-| Maybelle   | Document Manager / Animator |
-| Cha        | Editor / Sound Director / Animator |
-| Firdaus    | Storyboard Artist / Asset Artist / Lead Animator |
+| [Maybelle](https://www.behance.net/maybelleshereenlyc)   | Document Manager / Animator |
+| [Cha](https://www.behance.net/editorchaweb)        | Editor / Sound Director / Animator |
+| [Nur Firdaus](https://www.instagram.com/noahsingka/)     | Storyboard Artist / Asset Artist / Lead Animator |

@@ -20,11 +20,11 @@ a Short about a Robot Wandering the Wasteland trying to fix its broken arm
 <!--more-->
 ---
 ||||||||||
-a Short about a Robot Wandering the Wasteland trying to fix its broken arm
+simple tale of a Robot made for war, lost his way during battle,  now Wandering the Wasteland trying to fix its broken arm
 ||||||||||
 ###### PRODUCTION CREW 
 |Crew            | Roles    |
 |-----------------|------------------------------------------------------------------------|
 | Aiman           | Director / Scriptwriter / 3D Artist (Character, Environment , Texture) |
 | Alicia          | Document Manager / 3D Artist (Environment) |
-| Firdaus         | Storyboard Artist / Animator |
+| [Nur Firdaus](https://www.instagram.com/noahsingka/)          | Storyboard Artist / Animator |

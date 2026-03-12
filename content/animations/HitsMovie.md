@@ -24,5 +24,5 @@ Unofficial TV ident of Hits Movie Channel.
 |Crew            | Roles                                        |
 |------------|--------------------------------------------------|
 | Aiman      | Director / Animator |
-| Cha        | Editor / Sound Director |
+| [Cha](https://www.behance.net/editorchaweb)        | Editor / Sound Director |
 

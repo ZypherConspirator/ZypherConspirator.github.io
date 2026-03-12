@@ -3,13 +3,13 @@
 
   {{- $id := printf "collapse-%s" .Anchor -}}
   <div class="accordion-item border-0 py-1">
-    <h{{ .Level }} class="accordion-header pb-3" id="heading-{{ .Anchor }}">
-      <button class="accordion-button collapsed px-0 bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $id }}" aria-expanded="false" aria-controls="{{ $id }}">
-        {{ .Text | safeHTML }}
-      </button>
+    <h{{ .Level }} class="accordion-header pb-2" id="heading-{{ .Anchor }}"></h>
+    <button class="accordion-button collapsed px-0 bg-transparent shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#{{ $id }}" aria-expanded="false" aria-controls="{{ $id }}" style="font-size: inherit;font-weight: inherit;">
+      {{ .Text | safeHTML }}
+    </button>
     </h{{ .Level }}>
     <div id="{{ $id }}" class="accordion-collapse collapse" aria-labelledby="heading-{{ .Anchor }}">
-      <div class="accordion-body px-0">
+      <div class="accordion-body px-0 bg-light bg-opacity-10">
 
 {{- else -}}
 

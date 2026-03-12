@@ -26,18 +26,19 @@ Experimental Minimalist 3D Short on Memory & Introspection
 <!--more-->
 ---
 ||||||||||
-Experimental Minimalist 3D Short on Memory & Introspection. This Project was directed, written, produced by me.
-All Models were made by me.
+Experimental narrative on Memory & Introspection. Shown through blurred vision of someone's point of view, memories that passes and potential and regret it may bring. the Tale is meant to be viewed twice, once regular playback and another in reverse to get the full context.
+This Project was directed, written, produced by me.
 ||||||||||
 ###### CONTRIBUTION
 Some Textures were retrieved from PolyHaven.
 Some Audio were retrieved from Pixabay.
 
-###### PRODUCTION BOOK
+###### PRODUCTION BOOK { .head-accordion }
 {{< rawhtml >}}
 <div class="h-50 d-flex">
-  <iframe loading="lazy" style="width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;background: transparent;"
+  <iframe loading="lazy" style="width: 100%; height: 50vh;"
     src="https://www.canva.com/design/DAGpfR3RT6g/_wnc4DP_pR3AfAyl_OQLtw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen" allowtransparency="true" >
   </iframe>
 </div>
 {{< /rawhtml >}}
+{{< head-accordion-end >}}

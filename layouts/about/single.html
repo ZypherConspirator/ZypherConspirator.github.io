@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="rounded-2 mb-3 p-2 bg-white bg-opacity-10 flex-grow-1">
-                        <p class="m-1 fs-2 fs-md-1 justify-content-evenly d-flex">
+                        <p class="m-1 fs-2 justify-content-evenly d-flex">
                         {{ range sort .Site.Params.social "key"}}
                             <span class="mx-1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>
                         {{ end }}

@@ -18,6 +18,12 @@
             height: 110px;
         }
     }
+    @media (max-height: 681px) {
+        & {
+            width: 70px;
+            height: 70px;
+        }
+    }
 }
 
 .icon
