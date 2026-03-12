@@ -13,78 +13,63 @@
                 <li class="nav-item"><button class="nav-link" id="details-link" data-bs-toggle="pill" data-bs-target="#view-details"></button></li>
             </ul>
 
-            <div class="tab-content flex-grow-1 overflow-hidden h-100" id="layoutTabContent">
-                
-                <div class="tab-pane fade show active h-100" id="view-cinema" role="tabpanel">
-                    <div class="row g-2 h-100">
-                        <div class="col-12 col-md-11 h-auto">
-                            <div class="h-100 bg-black bg-opacity-20 rounded-4 overflow-hidden border border-white border-opacity-10">
-                                <iframe class="w-100 h-100 border-0" src="{{ .Params.video }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-1 h-15 h-md-100" onclick="document.getElementById('details-link').click()" role="button" style="cursor: pointer;">
-                            <div class="h-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10">
-                                <div class="wm-horizontal wm-md-vertical-rl" style="letter-spacing: 3px; font-size: 0.7rem;">
-                                    DETAILS <i class="bi bi-arrow-right ms-2"></i>
-                                </div>
-                            </div>
-                        </div>
+            <div class="tab-content flex-grow-1 overflow-hidden">
+            
+            <div class="tab-pane fade show active h-100" id="view-cinema" role="tabpanel">
+                <div class="d-flex h-100 gap-2 flex-column flex-md-row">
+                    <div class="flex-grow-1 h-100 bg-black bg-opacity-40 rounded-4 overflow-hidden border border-white border-opacity-10">
+                        <iframe class="w-100 h-100 border-0" src="{{ .Params.video }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="h-10 w-auto w-md-5 h-md-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10" onclick="document.getElementById('details-link').click()" role="button" style="width: 50px; cursor: pointer;">
+                        <div class="wm-horizontal wm-md-vertical-rl small tracking-tighter">DETAILS <i class="bi bi-arrow-down mt-2"></i></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="tab-pane fade h-100" id="view-details" role="tabpanel">
-                    <div class="row g-2 h-100">
-                        <div class="col-12 col-md-1 h-15 h-md-100" onclick="document.getElementById('cinema-link').click()" role="button" style="cursor: pointer;">
-                            <div class="h-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10">
-                                <div class="wm-horizontal wm-md-vertical-rl" style="letter-spacing: 3px; font-size: 0.7rem;">
-                                    CINEMA <i class="bi bi-arrow-left ms-2"></i>
-                                </div>
+            <div class="tab-pane fade h-100" id="view-details" role="tabpanel">
+                <div class="d-flex h-100 gap-2  flex-column flex-md-row">
+                    <div class="h-10 w-auto w-md-5 h-md-100 bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center text-light opacity-50 border border-white border-opacity-10" onclick="document.getElementById('cinema-link').click()" role="button" style="width: 50px; cursor: pointer;">
+                        <div class="wm-horizontal wm-md-vertical-rl small tracking-tighter">CINEMA <i class="bi bi-arrow-up mt-2"></i></div>
+                    </div>
+                    
+                    <div class="flex-grow-1 h-100 overflow-y-auto bg-white bg-opacity-10 rounded-4 p-4 text-light border border-white border-opacity-10">
+                        {{ $ContentParts := split .Content "||||||||||" }}
+                        <!-- Long Summary -->
+                        <section class="mb-2">
+                            <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Plot Summary </h6>
+                            <div class="bg-white bg-opacity-10 p-3 rounded-3">
+                                {{ index $ContentParts 1 | safeHTML }}
                             </div>
-                        </div>
-                        <div class="col-12 col-md-11 h-auto">
-                            <div class="h-100 bg-white bg-opacity-10 rounded-4 p-4 overflow-auto text-light border border-white border-opacity-10">
-                                {{ $ContentParts := split .Content "||||||||||" }}
-                                <!-- Long Summary -->
-                                <div class="mb-3">
-                                    <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Plot Summary </h6>
-                                    <div class="bg-white bg-opacity-10 p-2 py-3 rounded-2">
-                                    {{ index $ContentParts 1 | safeHTML }}
-                                    </div>
-                                </div>
-                                <!-- Meta Info (Tags and software)-->
-                                
-                                <div class="mb-3">
-                                    <div class="d-flex flex-wrap gap-2">
-                                        {{ range .Params.tags}}
-                                        <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-semibold fs-7 fs-md-6 align-self-center">{{.}} </span>
-                                        {{end }} 
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Released <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"> {{.Params.Released }} </span></h6>
-                                </div>
-
-                                <div class="mb-3">
-                                    <h6 class="text-uppercase ls-wide text-light text-bold" >Software Used </h6>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        {{ range .Params.software}}
-                                        <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"><span class="mx-1 {{ .icon }}"></span> {{.title }} </span>
-                                        {{end }} 
-                                    </div>
-                                </div>
-
-                                <!-- Production Team (If any)-->
-
-                                <!-- Misc Data (Canva Frame or something) -->
-                                {{ index $ContentParts 2 | safeHTML }}
+                        </section>
+                        <!-- Tags -->
+                        <section class="mb-4">
+                            <div class="d-flex flex-wrap gap-2">
+                                {{ range .Params.tags }}
+                                <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-semibold fs-7 fs-md-6 align-self-center">{{.}} </span>
+                                {{ end }}
                             </div>
-                        </div>
-                        
+                        </section>
+                        <!-- Released -->
+                        <section class="mb-3">
+                            <h6 class="text-uppercase ls-wide mb-3 text-light text-bold" >Released <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"> {{.Params.Released }} </span></h6>
+                        </section>
+                        <!-- Software Used -->
+                        <section class="mb-4">
+                           <h6 class="text-uppercase ls-wide text-light text-bold" >Software Used </h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                {{ range .Params.software }}
+                                    <span class="badge m-0 rounded-3 text-light bg-opacity-10 bg-white fw-bold  fs-7 fs-md-6 align-self-center"><span class="mx-1 {{ .icon }}"></span> {{.title }} </span>
+                                {{ end }}
+                            </div>
+                        </section>
+                        <!-- Misc. Info -->
+                        <section>
+                            {{ index $ContentParts 2 | safeHTML }}
+                        </section>
+                        <div class="py-2"></div>
                     </div>
                 </div>
-
-            </div> 
+            </div>
         </div>
     </div>
 </div>

@@ -44,7 +44,8 @@ a {
 .h10 { font-size: 0.5rem; }
 
 // custom responsive height
-$height-values: (
+$size-values: (
+    5: 5%,
 	10: 10%,
 	15: 15%,
 	25: 25%,
@@ -57,18 +58,25 @@ $height-values: (
     auto: auto
 );
 
-@each $key, $value in $height-values {
+@each $key, $value in $size-values {
 	.h-#{$key} {
 		height: $value !important;
+	}
+    .w-#{$key} {
+		width: $value !important;
 	}
 }
 
 @each $breakpoint, $min-width in $grid-breakpoints {
 	@media (min-width: #{$min-width}) {
-		@each $key, $value in $height-values {
-		.h-#{$breakpoint}-#{$key} {
-			height: $value !important;
-		}
+		@each $key, $value in $size-values 
+        {
+            .h-#{$breakpoint}-#{$key} {
+                height: $value !important;
+            }
+            .w-#{$breakpoint}-#{$key} {
+                width: $value !important;
+            }
 		}
 	}
 } 
