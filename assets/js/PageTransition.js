@@ -97,6 +97,12 @@ const handleTransition = async (url, pushToHistory = true) => {
     if (currentDetails) {
         currentDetails.classList.remove('active');
         currentDetails.classList.add('exit');
+        // --- ADD SPINNER ---
+        const loader = document.createElement('div');
+        loader.id = 'page-loader';
+        loader.innerHTML = '<div class="spinner-grow text-light opacity-0"  role="status"></div>';
+        currentDetails.parentElement.appendChild(loader);
+        loader.classList.remove('opacity-0');
     }
 
     // Handle Nav Fade OUT if going home
@@ -107,8 +113,6 @@ const handleTransition = async (url, pushToHistory = true) => {
         nav.classList.add('nav-hidden');
         jumbotron.classList.add('page');
     }
-
-
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error('Network response was not ok');
@@ -138,6 +142,10 @@ const handleTransition = async (url, pushToHistory = true) => {
             } 
         
         setTimeout(() => {
+            // --- REMOVE SPINNER ---
+            const loader = document.getElementById('page-loader');
+            if (loader) loader.remove();
+            // reveal new detail
             const newDetails = document.querySelector('.details-wrapper');
             if (newDetails) newDetails.classList.add('active');
             document.dispatchEvent(new Event('pageTransitionFinished'));
