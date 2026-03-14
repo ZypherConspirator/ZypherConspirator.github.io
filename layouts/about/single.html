@@ -3,19 +3,19 @@
             <div class="row h-100 justify-content-center g-3" > 
                 
                 <div class="col-12 col-lg-3 d-flex flex-column h-auto h-md-100">
-                    <div class="rounded-2 mb-3 p-3 text-center flex-grow-0 bg-white bg-opacity-10" style="flex: 0 1 auto;">
+                    <div class="rounded-2 mb-3 p-3 px-4 text-center flex-grow-0 bg-white bg-opacity-10" style="flex: 0 1 auto;">
                         <div class="row">
-                            <div class="col-4 col-md-12 p-1">
-                            <img src="\img\Personal\Self.png" class="w-100 h-auto rounded-3 mb-0 mb-md-3" style="max-height: 260px; object-fit: cover; object-position: top;">
+                            <div class="col-4 col-md-12 p-1 ">
+                            <img src="\img\Personal\Self.png" class="w-100 h-auto rounded-3 mb-0 mb-md-3 bg-light bg-opacity-10 shadow border-1 border border-light border-opacity-10" style="max-height: 260px; object-fit: cover; object-position: top;">
                             </div>
                             <div class="col-8 col-md-12 text-center p-1 d-flex flex-column justify-content-center">
-                                <h4 class="fw-bold mb-1 text-light"> Aiman Alzafry </h4>
-                                <h5 class="fw-light small text-light"> 3D Generalist </h5>
+                                <h4 class="fw-bold mb-1 text-light"> {{ .Site.Params.detail.name_1 }} {{ .Site.Params.detail.name_2 }} </h4>
+                                <h5 class="fw-light small text-light"> {{ .Site.Params.detail.career }} </h5>
                                 <a href="/resume" ><span class="btn btn-sm btn-outline-light rounded-pill px-4"><i class="fas fa-file-download me-2"></i>Resume</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="rounded-2 mb-3 p-2 bg-white bg-opacity-10 flex-grow-1">
+                    <div class="rounded-2 mb-0 mb-md-3 p-2 bg-white bg-opacity-10 flex-grow-1">
                         <p class="m-1 fs-2 justify-content-evenly d-flex">
                         {{ range sort .Site.Params.social "key"}}
                             <span class="mx-1"><a href="{{ .url | safeURL }}" title="{{ .name }}"><i class="{{ .falogo }}"></i></a></span>

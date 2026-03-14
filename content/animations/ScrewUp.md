@@ -25,6 +25,6 @@ simple tale of a Robot made for war, lost his way during battle,  now Wandering 
 ###### PRODUCTION CREW 
 |Crew            | Roles    |
 |-----------------|------------------------------------------------------------------------|
-| Aiman           | Director / Scriptwriter / 3D Artist (Character, Environment , Texture) |
+| Me           | Director / Scriptwriter / 3D Artist (Character, Environment , Texture) |
 | Alicia          | Document Manager / 3D Artist (Environment) |
-| [Nur Firdaus](https://www.instagram.com/noahsingka/)          | Storyboard Artist / Animator |
+| [NoahSingka](https://www.instagram.com/noahsingka/)          | Storyboard Artist / Animator |

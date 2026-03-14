@@ -30,10 +30,10 @@ Experimental narrative on Memory & Introspection. Shown through blurred vision o
 This Project was directed, written, produced by me.
 ||||||||||
 ###### CONTRIBUTION
-Some Textures were retrieved from PolyHaven.
-Some Audio were retrieved from Pixabay.
+- Some Textures were retrieved from PolyHaven.
+- Some Audio were retrieved from Pixabay.
 
-###### PRODUCTION BOOK { .head-accordion }
+<!-- ###### PRODUCTION BOOK { .head-accordion }
 {{< rawhtml >}}
 <div class="h-50 d-flex">
   <iframe loading="lazy" style="width: 100%; height: 50vh;"
@@ -41,4 +41,4 @@ Some Audio were retrieved from Pixabay.
   </iframe>
 </div>
 {{< /rawhtml >}}
-{{< head-accordion-end >}}
+{{< head-accordion-end >}} -->

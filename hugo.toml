@@ -1,8 +1,14 @@
 baseURL = 'https://zypherconspirator.github.io/'
 languageCode = 'en-us'
-title = 'A.Alzafry Portfolio'
+title = 'LzyBones Portfolio'
 
-[[params.openforhire]]
+[params.detail]
+name_1 = 'Lzy'
+name_2 = 'Bones'
+career = '3D Artist'
+
+[params.openforhire]
+isOpen = true
 
 [[params.social]]
 key = 0

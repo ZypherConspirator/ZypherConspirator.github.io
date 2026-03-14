@@ -13,21 +13,24 @@
                     <source  type="video/webm" src="/vid/beetle.webm"> 
                 </video>
                 <div class="text-center px-4 mx-md-0  p-2 p-md-5 w-100 h-100 d-flex flex-column justify-content-center position-absolute top-0 start-0" style="z-index: 4;"> 
-                    {{if .Site.Params.openforhire }}
+                    {{if eq .Site.Params.openforhire.isOpen true}}
                     <div class=" justify-content-center d-flex align-items-center">
                         <a href="/resume">
                         <h1 class="fs-5 fs-md-3 text-light text-uppercase"><span class="ForHire badge rounded-pill px-5 bg-black bg-opacity-25 fw-light"> #Open-For-Hire </span></h1>
                         </a>
                     </div>
                     {{ end }}
-                    <div class="justify-content-center d-flex align-items-center rounded-pill my-1 my-md-2 bg-black bg-opacity-25">
-                        <h1 class="fs-2 fs-md-h3 fs-lg-h1 text-light text-uppercase font-tourney-light align-self-center filter-drop-shadow" style="z-index: 2;">AIMAN</h1>
-                        <span class="d-inline d-md-none align-self-center mx-2"><!-- Spacer --></span>
-                        <span class="d-none d-md-inline AceLogo align-self-center"></span>
-                        <h1 class="fs-2 fs-md-h3 fs-lg-h1 text-light text-uppercase font-tourney-light align-self-center filter-drop-shadow" style="z-index: 2;">ALZAFRY</h1>
+                    <div class="justify-content-center d-flex align-items-center my-1 my-md-2">
+                        <span class="rounded-pill px-5 bg-black bg-opacity-25 filter-drop-shadow">
+                            <h1 class="fs-2 fs-md-h3 fs-lg-h1 text-light text-uppercase font-tourney-light filter-drop-shadow d-inline-flex align-items-center" style="z-index: 2;">
+                                {{ .Site.Params.detail.name_1 }}
+                                <span class="AceLogo d-inline-flex align-items-center"></span>
+                                {{ .Site.Params.detail.name_2 }}
+                            </h1>
+                        </span>
                     </div>
                     <div class="justify-content-center d-flex align-items-center">
-                        <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-25 filter-drop-shadow"> 3D GENERALIST </span></h1>
+                        <h1 class="display-7 text-light text-uppercase font-tourney-bold"><span class="badge rounded-pill px-5 bg-black bg-opacity-25 filter-drop-shadow"> {{ .Site.Params.detail.career }} </span></h1>
                     </div>
                     <div class="d-flex justify-content-center my-3 mx-4">
                         {{ range sort .Site.Params.social "key"}}

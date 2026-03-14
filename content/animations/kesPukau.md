@@ -27,7 +27,7 @@ comedy based on a true ghost story in UNIMAS. There was a mass hysteric rumor at
 ###### PRODUCTION CREW 
 |Crew            | Roles                                        |
 |------------|--------------------------------------------------|
-| Aiman      | Director / Scriptwriter / Animator |
+| Me      | Director / Scriptwriter / Animator |
 | [Maybelle](https://www.behance.net/maybelleshereenlyc)   | Document Manager / Animator |
 | [Cha](https://www.behance.net/editorchaweb)        | Editor / Sound Director / Animator |
-| [Nur Firdaus](https://www.instagram.com/noahsingka/)     | Storyboard Artist / Asset Artist / Lead Animator |
+| [NoahSingka](https://www.instagram.com/noahsingka/)     | Storyboard Artist / Asset Artist / Lead Animator |

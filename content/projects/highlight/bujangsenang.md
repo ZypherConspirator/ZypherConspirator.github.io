@@ -13,7 +13,8 @@ Row1:
   YTshort: true
 ---
 
-reimagining of a Sarawakian Legend. Designed is based of a concept for [Darah](https://youtu.be/zZaWQPOD8Ao).
+reimagining of a Sarawakian Legend. The Creature was once a warrior revived and cursed to forever hunt those who wronged him. Iban Culture is known for their tattoo as a mark of their life and accomplishments, Bujang has them but inverted and faded to signify its anthesis.
 
+Designed is based of an unused concept for [Darah](https://youtu.be/zZaWQPOD8Ao).
 ---
 {{< gal-row name="Row1" >}}

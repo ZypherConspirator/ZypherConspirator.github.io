@@ -28,7 +28,7 @@ showcase of the patterns and identities makes up the most recognizable arts of M
 ###### PRODUCTION CREW 
 |Crew             | Roles                              |
 |-----------------|------------------------------------|
-| Aiman (Me)      | Director / Scriptwriter / Animator |
+| Me     | Director / Scriptwriter / Animator |
 | [Maybelle](https://www.behance.net/maybelleshereenlyc)        | Document Manager / Asset Artist    |
 | [Cha](https://www.behance.net/editorchaweb)             | Editor / Sound Director |
-| [Nur Firdaus](https://www.instagram.com/noahsingka/)   | Storyboard Artist / Asset Artist |
+| [NoahSingka](https://www.instagram.com/noahsingka/)   | Storyboard Artist / Asset Artist |

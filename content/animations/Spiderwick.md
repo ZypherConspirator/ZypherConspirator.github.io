@@ -26,6 +26,6 @@ Unofficial Title Sequence for The Spiderwick Chronicles The movie(2008)
 ###### PRODUCTION CREW 
 |Crew            | Roles                               |
 |-----------------|------------------------------------|
-| Aiman           | Director / Storyboard / 3D Asset Artist / 3D Animator |
+| Me           | Director / Storyboard / 3D Asset Artist / 3D Animator |
 | [Maybelle](https://www.behance.net/maybelleshereenlyc)        | Document Manager / 2D Asset Artist  |
 | [Cha](https://www.behance.net/editorchaweb)            | Editor / 2D Animator / Sound Director |
