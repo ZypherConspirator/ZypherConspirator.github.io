@@ -80,13 +80,13 @@
     opacity: 0;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease, height 0.5s ease, width 0.5s ease;
     &.h-70 {
-    height: 70vh;
+    height: 70dvh;
         &.page 
         {
-            --jumbo-page-height : 70vh;
+            --jumbo-page-height : 70dvh;
             @media (min-width: 768px) {
                 & {
-                    --jumbo-page-height : 90vh;
+                    --jumbo-page-height : 90dvh;
                 }
             }
             height: var(--jumbo-page-height);
