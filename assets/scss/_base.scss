@@ -66,6 +66,12 @@ $size-values: (
     .w-#{$key} {
 		width: $value !important;
 	}
+    .dvh-#{$key} {
+		height: #{$key}dvh !important;
+	}
+    .dvw-#{$key} {
+		width: #{$key}dvw !important;
+	}
 }
 
 @each $breakpoint, $min-width in $grid-breakpoints {
@@ -77,6 +83,12 @@ $size-values: (
             }
             .w-#{$breakpoint}-#{$key} {
                 width: $value !important;
+            }
+            .dvh-#{$breakpoint}-#{$key} {
+                height: #{$key}dvh !important;
+            }
+            .dvw-#{$breakpoint}-#{$key} {
+                width: #{$key}dvw !important;
             }
 		}
 	}
